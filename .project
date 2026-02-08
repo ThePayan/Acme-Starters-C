@@ -39,10 +39,16 @@
 			<type>2</type>
 			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-26.1.0/target/classes</locationURI>
 		</link>
-		<link>
-			<name>target/classes</name>
-			<type>2</type>
-			<location>WORKSPACE_LOC/Projects/Acme-Starters-C/target/classes/</location>
-		</link>
 	</linkedResources>
+	<filteredResources>
+		<filter>
+			<id>1770580344567</id>
+			<name></name>
+			<type>30</type>
+			<matcher>
+				<id>org.eclipse.core.resources.regexFilterMatcher</id>
+				<arguments>node_modules|\.git|__CREATED_BY_JAVA_LANGUAGE_SERVER__</arguments>
+			</matcher>
+		</filter>
+	</filteredResources>
 </projectDescription>

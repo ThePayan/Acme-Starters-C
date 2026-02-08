@@ -15,7 +15,7 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
-<div class="jumbotron">
+<div class="jumbotron" style="background-color: #C2D4D3;">
 	<h1><acme:print code="master.welcome.title"/></h1>
 	<acme:print code="master.welcome.text"/>
 </div>
