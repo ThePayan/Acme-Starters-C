@@ -16,5 +16,5 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <div class="rounded" style="background: <acme:print code='master.banner.background'/>; background-color: #041A26;">
-	<img src="images/banner.png" alt="<acme:print code='master.company.name'/>" class="img-fluid rounded"/>
+	<img src="images/bannerAcme2.png" alt="<acme:print code='master.company.name'/>" class="img-fluid rounded"/>
 </div>
