@@ -19,7 +19,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "AuditSection")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class AuditSection extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
