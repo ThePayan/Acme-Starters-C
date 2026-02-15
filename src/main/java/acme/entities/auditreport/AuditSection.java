@@ -31,7 +31,7 @@ public class AuditSection extends AbstractEntity {
 	private String				name;
 
 	@Mandatory
-	//@ValidHeader
+	//@ValidText
 	@Column
 	private String				notes;
 
