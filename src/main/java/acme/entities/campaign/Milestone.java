@@ -3,8 +3,6 @@ package acme.entities.campaign;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -18,7 +16,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "Milestone")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Milestone extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;

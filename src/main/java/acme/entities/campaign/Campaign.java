@@ -6,8 +6,6 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -26,7 +24,6 @@ import lombok.Setter;
 @Getter
 @Setter
 @Table(name = "Campaign")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Campaign extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
