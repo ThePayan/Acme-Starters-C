@@ -1,8 +1,9 @@
 
-package acme.entities.strategies;
+package acme.realms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
@@ -26,6 +27,7 @@ public class FundRaiser extends AbstractRole {
 	private String				statement;
 	@Mandatory
 	@Column
+	@Valid
 	private Boolean				agent;
 
 }
