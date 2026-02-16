@@ -21,7 +21,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
-import acme.features.spokesperson.CampaignRepository;
+import acme.features.authenticated.spokesperson.CampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
