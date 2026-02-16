@@ -93,6 +93,6 @@ public class Campaign extends AbstractEntity {
 
 	@Mandatory
 	@Column
-	private boolean draftMode;
+	private Boolean draftMode;
 
 }
