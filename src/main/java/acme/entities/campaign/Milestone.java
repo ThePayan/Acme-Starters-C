@@ -4,7 +4,6 @@ package acme.entities.campaign;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
@@ -16,7 +15,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "Milestone")
 public class Milestone extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
@@ -36,14 +34,10 @@ public class Milestone extends AbstractEntity {
 	@Column
 	private Double				effort;
 
-	/*
-	 * TODO discomment when the datatype is ready
-	 * 
-	 * @Mandatory
-	 * 
-	 * @Column
-	 * private MilestoneKind kind;
-	 */
+	@Mandatory
+	@Valid
+	@Column
+	private MilestoneKind		kind;
 
 	@Mandatory
 	@ManyToOne
