@@ -1,11 +1,8 @@
 
-package acme.entities.auditreport;
+package acme.realms;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
-import javax.persistence.Table;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
@@ -16,8 +13,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "Auditor")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Auditor extends AbstractRole {
 
 	// Serialisation identifier -----------------------------------------------

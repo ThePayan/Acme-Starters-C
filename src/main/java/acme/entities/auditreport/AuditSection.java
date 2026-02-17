@@ -3,10 +3,7 @@ package acme.entities.auditreport;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
@@ -18,7 +15,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "AuditSection")
 public class AuditSection extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------

@@ -1,86 +1,93 @@
 
 package acme.entities.auditreport;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.features.authenticated.auditreport.AuthenticatedAuditReportRepository;
+import acme.realms.Auditor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "AuditReport")
 public class AuditReport extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
-	private static final long	serialVersionUID	= 1L;
+	private static final long					serialVersionUID	= 1L;
+
+	//Hola, esto es una criminalidad, pero si esto lo pone ACME Jobs, a misa va. 🔥
+	@Transient
+	@Autowired
+	private AuthenticatedAuditReportRepository	auditReport;
 
 	// TODO: ValidTicker
 	@Mandatory
 	@Column(unique = true)
-	private String				ticker;
+	private String								ticker;
 
 	@Mandatory
 	@Column
-	private String				name;
+	private String								name;
 
 	// @ValidText TODO: Create ValidText
 	@Mandatory
 	@Column
-	private String				description;
+	private String								description;
 
 	@Mandatory
-	@ValidMoment //TODO: Create constraint future
-	// @Temporal(TemporalType.TIMESTAMP)
+	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Moment				startMoment;
+	private Date								startMoment;
 
 	@Mandatory
-	@ValidMoment //TODO: Create constraint future
-	// @Temporal(TemporalType.TIMESTAMP) Si es moment esto no funciona :/
+	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Moment				endMoment;
+	private Date								endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String				moreInfo;
+	private String								moreInfo;
 
 
-	@Transient //TODO: @Mandatory @Valid
+	@Valid
+	@Transient
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
 
-		int startYear = this.startMoment.getYear();
-		int startMonth = this.startMoment.getMonth();
-
-		int endYear = this.endMoment.getYear();
-		int endMonth = this.endMoment.getMonth();
-
-		int totalMonths = (endYear - startYear) * 12 + endMonth - startMonth;
+		LocalDate start = this.startMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		LocalDate end = this.endMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+		long totalMonths = ChronoUnit.MONTHS.between(start, end);
 
 		return (double) totalMonths;
 	}
 
-	/*
-	 * @Transient //TODO: @Mandatory @ValidNumber(positive) |
-	 * public Integer getHours() {
-	 * }
-	 */
+	@Transient
+	public Integer getAllHours() {
+		return this.auditReport.getAllHours(this.getId());
+	}
 
 
 	@Mandatory
