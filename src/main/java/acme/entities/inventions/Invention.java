@@ -1,90 +1,97 @@
 
 package acme.entities.inventions;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
+import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.features.authenticated.inventions.AuthenticatedInvention;
+import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "Invention")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Invention extends AbstractEntity {
 
-	private static final long	serialVersionUID	= 1L;
+	private static final long		serialVersionUID	= 1L;
+
+	@Transient
+	@Autowired
+	private AuthenticatedInvention	inventionRep;
 
 	//TODO: ValidTicker
 
 	@Mandatory
 	@Column(unique = true)
-	private String				ticker;
+	private String					ticker;
 
 	//TODO: ValidHeader
 	@Mandatory
 	@Column
-	private String				name;
+	private String					name;
 
 	//TODO: ValidText
 	@Mandatory
 	@Column
-	private String				description;
+	private String					description;
 
 	@Mandatory
-	@ValidMoment
-	//TODO: @Temporal(TemporalType.TIMESTAMP
+	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Moment				startMoment;
+	private Date					startMoment;
 
 	@Mandatory
-	@ValidMoment
-	//TODO: @Temporal(TemporalType.TIMESTAMP
+	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Moment				endMoment;
+	private Date					endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String				moreInfo;
+	private String					moreInfo;
 
 
-	@Transient //TODO: MANDATORY Y VALID
+	@Valid
+	@Transient
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
 
-		int startYear = this.startMoment.getYear();
-		int startMonth = this.startMoment.getMonth();
+		LocalDate start = this.startMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
-		int endYear = this.endMoment.getYear();
-		int endMonth = this.endMoment.getMonth();
+		LocalDate end = this.endMoment.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
-		int totalMonths = (endYear - startYear) * 12 + endMonth - startMonth;
+		long totalMonths = ChronoUnit.MONTHS.between(start, end);
 
 		return (double) totalMonths;
 
 	}
 
-	/*
-	 * @Transient //TODO: @Mandatory y @ValidMoney(positive)
-	 * public Money getCosts(){
-	 * }
-	 * 
-	 */
+	@Transient
+	public Money getCosts() {
+		return this.inventionRep.getSumOfCosts(this.getId());
+	}
 
 
 	@Mandatory

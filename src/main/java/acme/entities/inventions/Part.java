@@ -3,10 +3,7 @@ package acme.entities.inventions;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.Inheritance;
-import javax.persistence.InheritanceType;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
@@ -18,8 +15,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "Part")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
 public class Part extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
