@@ -22,7 +22,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
-import acme.features.authenticated.inventions.AuthenticatedInvention;
+import acme.features.authenticated.inventions.AuthenticatedInventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,44 +32,44 @@ import lombok.Setter;
 @Setter
 public class Invention extends AbstractEntity {
 
-	private static final long		serialVersionUID	= 1L;
+	private static final long					serialVersionUID	= 1L;
 
 	@Transient
 	@Autowired
-	private AuthenticatedInvention	inventionRep;
+	private AuthenticatedInventionRepository	inventionRep;
 
 	//TODO: ValidTicker
 
 	@Mandatory
 	@Column(unique = true)
-	private String					ticker;
+	private String								ticker;
 
 	//TODO: ValidHeader
 	@Mandatory
 	@Column
-	private String					name;
+	private String								name;
 
 	//TODO: ValidText
 	@Mandatory
 	@Column
-	private String					description;
+	private String								description;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Date					startMoment;
+	private Date								startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Date					endMoment;
+	private Date								endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String					moreInfo;
+	private String								moreInfo;
 
 
 	@Valid
@@ -90,7 +90,15 @@ public class Invention extends AbstractEntity {
 
 	@Transient
 	public Money getCosts() {
-		return this.inventionRep.getSumOfCosts(this.getId());
+		Double totalAmount = this.inventionRep.getSumOfCosts(this.getId());
+
+		Money money = new Money();
+
+		money.setAmount(totalAmount != null ? totalAmount : 0.0);
+
+		money.setCurrency("EUR");
+
+		return money;
 	}
 
 
