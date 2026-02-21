@@ -4,19 +4,18 @@ package acme.entities.sponsorship;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.ValidMoney;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "Donation")
 public class Donation extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
@@ -33,7 +32,7 @@ public class Donation extends AbstractEntity {
 	private String				notes;
 
 	@Mandatory
-	//@ValidMoney(positive) TODO: Implement positive attribute
+	@ValidMoney(min = 0.0)
 	@Column
 	private Money				money;
 
@@ -46,5 +45,4 @@ public class Donation extends AbstractEntity {
 	@Valid
 	@ManyToOne
 	private Sponsorship			sponsorship;
-
 }
