@@ -13,7 +13,7 @@ import javax.validation.constraints.NotBlank;
 import org.hibernate.validator.constraints.Length;
 
 @Target({
-	ElementType.FIELD, ElementType.METHOD, ElementType.PARAMETER
+	ElementType.FIELD
 })
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = {})
