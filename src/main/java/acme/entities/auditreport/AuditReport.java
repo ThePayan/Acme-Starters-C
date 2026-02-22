@@ -34,7 +34,6 @@ public class AuditReport extends AbstractEntity {
 	// Serialisation identifier -----------------------------------------------
 	private static final long					serialVersionUID	= 1L;
 
-	//Hola, esto es una criminalidad, pero si esto lo pone ACME Jobs, a misa va. 🔥
 	@Transient
 	@Autowired
 	private AuthenticatedAuditReportRepository	auditReport;
