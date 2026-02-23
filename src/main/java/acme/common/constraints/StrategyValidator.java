@@ -36,13 +36,28 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 			result = true;
 		else {
 			{
+				boolean uniqueStrategy;
+				Strategy existingStrategy;
+
+				existingStrategy = this.repository.findStrategyByTicker(strategy.getTicker());
+				uniqueStrategy = existingStrategy == null || existingStrategy.equals(strategy);
+
+				super.state(context, uniqueStrategy, "ticker", "acme.validation.duplicated-ticker.message");
+			}
+			{
 				boolean correctNumberOfTactics;
 				Integer existingTactics;
 				existingTactics = this.repository.getNumOfTactics(strategy.getId());
-				correctNumberOfTactics = existingTactics >= 1;
+				correctNumberOfTactics = !strategy.getDraftMode() && existingTactics >= 1;
 
 				if (correctNumberOfTactics)
-					super.state(context, correctNumberOfTactics, "numberOfTactics", "acme.validation.NumberOfTactics.message");
+					super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
+			}
+			{
+				boolean correctStartEndDate;
+				correctStartEndDate = !strategy.getDraftMode() && strategy.getEndMoment().after(strategy.getStartMoment()) && strategy.getStartMoment() != null && strategy.getEndMoment() != null;
+				if (correctStartEndDate)
+					super.state(context, correctStartEndDate, "*", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
 		}
