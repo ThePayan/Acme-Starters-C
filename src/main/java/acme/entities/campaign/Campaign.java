@@ -21,6 +21,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
+import acme.common.constraints.ValidTicker;
 import acme.features.authenticated.spokesperson.CampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
@@ -33,16 +36,18 @@ public class Campaign extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
 
-	//TODO: add the others validators when they'll be done
 	@Mandatory
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
 	@Mandatory
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
+	@ValidText
 	@Column
 	private String				description;
 
@@ -71,6 +76,7 @@ public class Campaign extends AbstractEntity {
 	private CampaignRepository	campaignRepository;
 
 
+	@Valid
 	@Transient
 	public Double getMonthsActive() {
 

@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
+import acme.common.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,13 +18,13 @@ public class Spokesperson extends AbstractRole {
 
 	private static final long	serialVersionUID	= 1L;
 
-	//TODO: add the others validators when they'll be done
-
 	@Mandatory
+	@ValidText
 	@Column
 	private String				cv;
 
 	@Mandatory
+	@ValidText
 	@Column
 	private String				achievements;
 
