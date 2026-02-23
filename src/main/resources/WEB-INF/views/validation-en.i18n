@@ -1,0 +1,5 @@
+# validation-en.i18n
+
+acme.validation.header.message  	= The text must have from 1 to 75 characters and must not be blank
+acme.validation.text.message 		= The text must have from 1 to 255 characters and must not be blank
+acme.validation.ticker.message		= The ticker must follow the pattern: 2 uppercase letters, 2 digits, a hyphen, and 5-10 alphanumeric characters and must not be blank
