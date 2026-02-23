@@ -22,6 +22,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
+import acme.common.constraints.ValidTicker;
 import acme.features.authenticated.sponsor.AuthenticatedSponsorRepository;
 import lombok.Getter;
 import lombok.Setter;
@@ -39,17 +42,17 @@ public class Sponsorship extends AbstractEntity {
 	private AuthenticatedSponsorRepository	sponsorRep;
 
 	@Mandatory
-	//@ValidTicker TODO: Implement custom validation
+	@ValidTicker
 	@Column(unique = true)
 	private String							ticker;
 
 	@Mandatory
-	//@ValidHeader TODO: Implement custom validation
+	@ValidHeader
 	@Column
 	private String							name;
 
 	@Mandatory
-	//@ValidText TODO: Implement custom validation
+	@ValidText
 	@Column
 	private String							description;
 

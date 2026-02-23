@@ -10,6 +10,8 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoney;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,12 +24,12 @@ public class Donation extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidHeader TODO: Implement custom validation
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
-	//@ValidText TODO: Implement custom validation
+	@ValidText
 	@Column
 	private String				notes;
 
