@@ -9,6 +9,7 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.ValidMoney;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import lombok.Getter;
@@ -32,7 +33,7 @@ public class Part extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	//@ValidMoney(positive)
+	@ValidMoney(min = 0.0)
 	@Column
 	private Money				cost;
 
