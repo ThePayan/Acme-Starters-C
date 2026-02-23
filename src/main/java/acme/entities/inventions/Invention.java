@@ -22,6 +22,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
+import acme.common.constraints.ValidTicker;
 import acme.features.authenticated.inventions.AuthenticatedInventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;
@@ -38,18 +41,17 @@ public class Invention extends AbstractEntity {
 	@Autowired
 	private AuthenticatedInventionRepository	inventionRep;
 
-	//TODO: ValidTicker
-
+	@ValidTicker
 	@Mandatory
 	@Column(unique = true)
 	private String								ticker;
 
-	//TODO: ValidHeader
+	@ValidHeader
 	@Mandatory
 	@Column
 	private String								name;
 
-	//TODO: ValidText
+	@ValidText
 	@Mandatory
 	@Column
 	private String								description;

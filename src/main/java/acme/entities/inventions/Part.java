@@ -9,6 +9,8 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -20,17 +22,17 @@ public class Part extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//TODO: ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
-	//TODO: ValidText
+	@ValidText
 	@Column
 	private String				description;
 
 	@Mandatory
-	//TODO: @ValidMoney(positive)
+	//@ValidMoney(positive)
 	@Column
 	private Money				cost;
 
