@@ -7,6 +7,8 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,9 +23,11 @@ public class FundRaiser extends AbstractRole {
 	// Attributes 
 	@Mandatory
 	@Column
+	@ValidHeader
 	private String				bank;
 	@Mandatory
 	@Column
+	@ValidText
 	private String				statement;
 	@Mandatory
 	@Column

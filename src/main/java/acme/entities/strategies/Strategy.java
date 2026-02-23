@@ -21,6 +21,10 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidStrategy;
+import acme.common.constraints.ValidText;
+import acme.common.constraints.ValidTicker;
 import acme.features.fundRaiser.StrategyRepository;
 import acme.realms.FundRaiser;
 import lombok.Getter;
@@ -29,6 +33,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidStrategy
 public class Strategy extends AbstractEntity {
 
 	// Serialisation version
@@ -37,12 +42,15 @@ public class Strategy extends AbstractEntity {
 	// Attributes
 	@Mandatory
 	@Column(unique = true)
+	@ValidTicker
 	private String				ticker;
 	@Mandatory
 	@Column
+	@ValidHeader
 	private String				name;
 	@Mandatory
 	@Column
+	@ValidText
 	private String				description;
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
@@ -69,6 +77,7 @@ public class Strategy extends AbstractEntity {
 
 
 	@Transient
+	@Valid
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
@@ -79,6 +88,7 @@ public class Strategy extends AbstractEntity {
 	}
 
 	@Transient
+	//@ValidScore, preguntar, da fallo
 	public Double getExpectedPercentage() {
 		return this.repository.getSumPercentages(this.getId());
 	}

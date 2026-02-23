@@ -11,4 +11,7 @@ public interface StrategyRepository extends AbstractRepository {
 
 	@Query("select sum(t.expectedPercentage) from Tactic t where t.strategy.id = :strategyId")
 	Double getSumPercentages(int strategyId);
+
+	@Query("select count(t) from Tactic t where t.strategy.id = :strategyId")
+	Integer getNumOfTactics(int strategyId);
 }
