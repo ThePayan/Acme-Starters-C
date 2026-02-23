@@ -21,6 +21,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.common.constraints.ValidCampaign;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
@@ -32,6 +33,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidCampaign
 public class Campaign extends AbstractEntity {
 
 	private static final long	serialVersionUID	= 1L;
