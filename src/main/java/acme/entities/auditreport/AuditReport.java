@@ -21,6 +21,9 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
+import acme.common.constraints.ValidTicker;
 import acme.features.authenticated.auditreport.AuthenticatedAuditReportRepository;
 import acme.realms.Auditor;
 import lombok.Getter;
@@ -34,21 +37,21 @@ public class AuditReport extends AbstractEntity {
 	// Serialisation identifier -----------------------------------------------
 	private static final long					serialVersionUID	= 1L;
 
-	//Hola, esto es una criminalidad, pero si esto lo pone ACME Jobs, a misa va. 🔥
 	@Transient
 	@Autowired
 	private AuthenticatedAuditReportRepository	auditReport;
 
-	// TODO: ValidTicker
+	@ValidTicker
 	@Mandatory
 	@Column(unique = true)
 	private String								ticker;
 
 	@Mandatory
 	@Column
+	@ValidHeader
 	private String								name;
 
-	// @ValidText TODO: Create ValidText
+	@ValidText
 	@Mandatory
 	@Column
 	private String								description;
