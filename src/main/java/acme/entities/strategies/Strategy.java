@@ -44,26 +44,32 @@ public class Strategy extends AbstractEntity {
 	@Column(unique = true)
 	@ValidTicker
 	private String				ticker;
+
 	@Mandatory
 	@Column
 	@ValidHeader
 	private String				name;
+
 	@Mandatory
 	@Column
 	@ValidText
 	private String				description;
+
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				startMoment;
+
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				endMoment;
+
 	@Optional
 	@ValidUrl
 	@Column
 	private String				moreInfo;
+
 	@Mandatory
 	@Column
 	@Valid
@@ -88,7 +94,6 @@ public class Strategy extends AbstractEntity {
 	}
 
 	@Transient
-	//@ValidScore, preguntar, da fallo
 	public Double getExpectedPercentage() {
 		return this.repository.getSumPercentages(this.getId());
 	}

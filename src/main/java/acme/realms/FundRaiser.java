@@ -25,10 +25,12 @@ public class FundRaiser extends AbstractRole {
 	@Column
 	@ValidHeader
 	private String				bank;
+
 	@Mandatory
 	@Column
 	@ValidText
 	private String				statement;
+
 	@Mandatory
 	@Column
 	@Valid

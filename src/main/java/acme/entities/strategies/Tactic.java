@@ -27,14 +27,17 @@ public class Tactic extends AbstractEntity {
 	@Column
 	@ValidHeader
 	private String				name;
+
 	@Mandatory
 	@Column
 	@ValidText
 	private String				notes;
+
 	@Mandatory
 	@Column
 	@ValidScore
 	private Double				expectedPercentage;
+
 	@Mandatory
 	@Valid
 	@Column
