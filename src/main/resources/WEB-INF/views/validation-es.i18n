@@ -4,3 +4,4 @@ acme.validation.header.message  	= El texto debe tener entre 1 y 75 caracteres y
 acme.validation.text.message 		= El texto debe tener entre 1 y 255 caracteres y no puede estar en blanco
 acme.validation.ticker.message		= El ticker debe tener 2 letras mayúsculas, 2 números, un guion y entre 5 y 10 caracteres
 acme.validation.NumberOfTactics.message = Las estrategias no se pueden publicar si no tienen al menos una táctica asociada
+acme.validation.NumberOfAuditSections.message = Los informes de auditoría no se pueden publicar si no tienen al menos una sección de auditoría
