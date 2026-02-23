@@ -7,6 +7,7 @@ import javax.validation.Valid;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
+import acme.common.constraints.ValidHeader;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,12 +20,12 @@ public class Auditor extends AbstractRole {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidHeader TODO: Do it lol
+	@ValidHeader
 	@Column
 	private String				firm;
 
 	@Mandatory
-	//@ValidHeader TODO: same lol
+	@ValidHeader
 	@Column
 	private String				highlights;
 

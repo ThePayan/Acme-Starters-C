@@ -9,6 +9,8 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidNumber;
+import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -21,12 +23,12 @@ public class AuditSection extends AbstractEntity {
 	private static final long	serialVersionUID	= 1L;
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				notes;
 
