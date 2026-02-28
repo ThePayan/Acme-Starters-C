@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.entities.strategies.Strategy;
-import acme.features.fundRaiser.StrategyRepository;
+import acme.features.fundraiser.StrategyRepository;
 
 @Validator
 public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy> {
@@ -48,15 +48,15 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				boolean correctNumberOfTactics;
 				Integer existingTactics;
 				existingTactics = this.repository.getNumOfTactics(strategy.getId());
-				correctNumberOfTactics = !strategy.getDraftMode() && existingTactics >= 1;
+				correctNumberOfTactics = strategy.getDraftMode() || existingTactics >= 1;
 
-				if (correctNumberOfTactics)
+				if (!correctNumberOfTactics)
 					super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 			}
 			{
 				boolean correctStartEndDate;
-				correctStartEndDate = !strategy.getDraftMode() && strategy.getEndMoment().after(strategy.getStartMoment()) && strategy.getStartMoment() != null && strategy.getEndMoment() != null;
-				if (correctStartEndDate)
+				correctStartEndDate = strategy.getEndMoment().after(strategy.getStartMoment()) && strategy.getStartMoment() != null && strategy.getEndMoment() != null;
+				if (!correctStartEndDate)
 					super.state(context, correctStartEndDate, "*", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);

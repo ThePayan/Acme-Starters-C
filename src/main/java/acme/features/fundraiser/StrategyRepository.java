@@ -1,5 +1,5 @@
 
-package acme.features.fundRaiser;
+package acme.features.fundraiser;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -16,6 +16,5 @@ public interface StrategyRepository extends AbstractRepository {
 	@Query("select count(t) from Tactic t where t.strategy.id = :strategyId")
 	Integer getNumOfTactics(int strategyId);
 
-	@Query("select s from Strategy s where s.ticker = :ticker")
 	Strategy findStrategyByTicker(String ticker);
 }

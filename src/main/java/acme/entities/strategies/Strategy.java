@@ -24,8 +24,8 @@ import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidStrategy;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.features.fundRaiser.StrategyRepository;
-import acme.realms.FundRaiser;
+import acme.features.fundraiser.StrategyRepository;
+import acme.realms.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -99,5 +99,5 @@ public class Strategy extends AbstractEntity {
 	@Mandatory
 	@ManyToOne
 	@Valid
-	private FundRaiser fundRaiser;
+	private Fundraiser fundraiser;
 }

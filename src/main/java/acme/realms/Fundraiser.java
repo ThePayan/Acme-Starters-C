@@ -15,7 +15,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-public class FundRaiser extends AbstractRole {
+public class Fundraiser extends AbstractRole {
 
 	// Serialisation version
 	private static final long	serialVersionUID	= 1L;
