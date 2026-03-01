@@ -1,0 +1,23 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:auditor
+# ticket - ValidTicker min char
+audit-report-1,SE26-ALPHA,Auditoria de Seguridad,Evaluacion profunda de las politicas de seguridad y accesos al sistema,2026/06/01 10:00,2026/06/15 14:00,https://www.acme.com/audits/0001,false,auditor-1
+# ticket - ValidTicker max char
+audit-report-2,RE26-ACCESSIB10,Auditoria de Rendimiento,Analisis de tiempos de respuesta bajo alta carga de usuarios concurrentes,2026/07/10 09:00,2026/08/20 18:00,,false,auditor-1
+# ticket - ValidTicker _ char
+audit-report-3,FI26-GDPR_RULE,Auditoria Financiera T3,Revision de presupuestos y estimaciones de costes del tercer trimestre,2026/09/01 08:00,2026/09/30 17:00,https://www.acme.com/finanzas,true,auditor-1
+# name - ValidHeader min char
+audit-report-4,PR26-PRUEBAS,"R","Este es un reporte de prueba para rellenar la paginacion",2026/10/01 10:00,2026/10/05 10:00,,true,auditor-2
+# name - ValidHeader max char
+audit-report-5,FA26-FALSOS,"Reporte Prueba 1 relleno relleno relleno relleno relleno relleno relleno r","Otro reporte falso con datos minimos para hacer test rapidos",2026/11/01 12:00,2026/11/02 12:00,,false,auditor-2
+# description - ValidText min char
+audit-report-6,UX26-USEREXP,"Auditoria de UX/UI","E",2026/03/10 09:00,2026/03/25 18:00,https://www.acme.com/audits/0004,false,auditor-2
+# descriptionn - ValidText max char
+audit-report-7,AP26-APIS_SEC,"Auditoria de APIs","Revision de seguridad y tiempos de respuesta de los endpoints publicos mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno mucho relleno j",2026/04/05 08:00,2026/04/20 15:00,,false,auditor-3
+audit-report-8,GD26-FINANCE,"Cumplimiento GDPR","Verificacion de politicas de privacidad y tratamiento de datos europeos",2026/05/02 10:00,2026/05/30 14:00,https://www.acme.com/legal,true,auditor-3
+audit-report-9,IN26-INFRASTR,"Auditoria de Infraestructura","Comprobacion de los servidores cloud y politicas de autoescalado",2026/08/01 07:00,2026/08/15 19:00,,false,auditor-3
+audit-report-10,AW26-PERFOR,"Accesibilidad Web","Estudio del cumplimiento de estandares WCAG 2.1 en la web principal",2026/09/10 10:00,2026/09/25 12:00,https://www.acme.com/a11y,true,auditor-4
+audit-report-11,PH26-GHOST,"Reporte Fantasma 1","Un reporte de prueba que nunca se termino de redactar",2027/01/01 08:00,2027/01/02 08:00,,true,auditor-4
+audit-report-12,FI26-FILLER1,"Reporte de Relleno 2","Generado automaticamente para testear la carga de datos masiva",2027/02/10 10:00,2027/02/15 10:00,,false,auditor-4
+audit-report-13,UI26-STRESSTST,"Test de estres UI","Si la interfaz no pagina esto se va a ver muy feo",2027/03/20 09:00,2027/03/21 18:00,,false,auditor-5
+audit-report-14,EX26-EXPRESS,"Auditoria Express","Algo rapido para ver si los filtros por fecha funcionan",2027/04/05 12:00,2027/04/06 14:00,,true,auditor-5
+audit-report-15,LA26-LASTREPORT,"Ultimo Reporte","El auditor ya se quedo sin ideas para los nombres de los reportes",2027/05/10 16:00,2027/05/20 16:00,,false,auditor-5

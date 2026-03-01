@@ -1,0 +1,26 @@
+key,name,notes,hours,kind,key:auditReport
+audit-section-1,AuditSection 1,Esta es la nota del AuditSection 1,2,PRELIMINARY,audit-report-4
+audit-section-2,AuditSection 2,Esta es la nota del AuditSection 2,5,PRELIMINARY,audit-report-4
+audit-section-3,AuditSection 3,Esta es la nota del AuditSection 3,7,PRELIMINARY,audit-report-5
+audit-section-4,AuditSection 4,Esta es la nota del AuditSection 4,1,EVALUATION,audit-report-4
+audit-section-5,AuditSection 5,Esta es la nota del AuditSection 5,10,EVALUATION,audit-report-5
+audit-section-6,AuditSection 6,Esta es la nota del AuditSection 6,4,EVALUATION,audit-report-5
+audit-section-7,AuditSection 7,Esta es la nota del AuditSection 7,9,EVALUATION,audit-report-4
+audit-section-8,AuditSection 8,Esta es la nota del AuditSection 8,3,CONCLUSION,audit-report-4
+audit-section-9,AuditSection 9,Esta es la nota del AuditSection 9,6,CONCLUSION,audit-report-5
+# hours - ValidNumber(positive) min
+audit-section-10,AuditSection 10,Esta es la nota del AuditSection 10,0,CONCLUSION,audit-report-5
+# name - ValidHeader - min caracter
+audit-section-11,A,Se han revisado los riesgos iniciales del proyecto frente a los requisitos del cliente,5,PRELIMINARY,audit-report-1
+audit-section-12,E,El proyecto parece viable a medio plazo tras el primer sondeo,15,PRELIMINARY,audit-report-1
+# name - ValidHeader - max caracter
+audit-section-13,Verificacion de Requisitos relleno relleno relleno relleno relleno rellenos,Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+# notes - ValidText - min caracter
+audit-section-14,Evaluacion de Seguridad,M,12,EVALUATION,audit-report-1
+# notes - ValidText - max caracter
+audit-section-15,Auditoria Financiera,Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy relleno 123456,20,EVALUATION,audit-report-3
+audit-section-16,Revision de Hardware,Los componentes fisicos operan a la temperatura adecuada bajo estres,10,EVALUATION,audit-report-2
+audit-section-17,Auditoria de Calidad,El codigo cumple con las metricas internas de calidad y no presenta bugs criticos,18,EVALUATION,audit-report-2
+audit-section-18,Inspeccion de Base de Datos,Las migraciones se ejecutaron correctamente y las tablas estan optimizadas,8,EVALUATION,audit-report-1
+audit-section-19,Conclusion de Tiempos,El desarrollo ha finalizado en la fecha prevista sin retrasos,8,CONCLUSION,audit-report-1
+audit-section-20,Dictamen Final,Se aprueba el paso a produccion sin incidencias graves,3,CONCLUSION,audit-report-2
