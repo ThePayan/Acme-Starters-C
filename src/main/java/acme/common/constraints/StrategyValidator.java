@@ -51,17 +51,16 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				Integer existingTactics;
 				existingTactics = this.repository.getNumOfTactics(strategy.getId());
 				correctNumberOfTactics = strategy.getDraftMode() || existingTactics >= 1;
-
-				if (!correctNumberOfTactics)
-					super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
+				super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 			}
 			{
 				Date startMoment = strategy.getStartMoment();
 				Date endMoment = strategy.getEndMoment();
 				boolean correctStartEndDate;
-				correctStartEndDate = startMoment.before(endMoment);
-				if (!correctStartEndDate && startMoment != null && endMoment != null)
+				if (startMoment != null && endMoment != null) {
+					correctStartEndDate = startMoment.before(endMoment);
 					super.state(context, correctStartEndDate, "*", "acme.validation.correctDates.message");
+				}
 			}
 			result = !super.hasErrors(context);
 		}
