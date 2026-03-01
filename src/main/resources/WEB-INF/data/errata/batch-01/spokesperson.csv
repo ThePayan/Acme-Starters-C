@@ -1,0 +1,8 @@
+key,cv,achievements,licensed
+spokesperson-err-1,null,"Logro",true
+spokesperson-err-2,"   ","Logro",true
+spokesperson-err-3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i","Logro",true
+spokesperson-err-4,"CV válido",null,true
+spokesperson-err-5,"CV válido","   ",true
+spokesperson-err-6,"CV válido","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",true
+spokesperson-err-7,"CV válido","Logro",null
