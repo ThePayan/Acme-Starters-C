@@ -1,0 +1,4 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
+campaign-1,ES26-PROMO,"Campaña base","Descripción base",2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/ipsum,true,spokesperson-1
+campaign-2,AA00-SHORT,A,B,2027/01/01 10:00,2027/02/01 10:00,http://a.b,false,spokesperson-2
+campaign-3,ZZ99-LONGTICKER,"Este es un titulo de campana que mide exactamente setenta y cinco caractere","Descripcion",2027/01/01 10:00,2027/02/01 10:00,http://example.org?a=1&b=2,true,spokesperson-3
