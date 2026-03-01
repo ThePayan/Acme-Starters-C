@@ -40,7 +40,7 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 		Integer existingAuditSection = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
 		boolean correctNumberOfAuditSections = existingAuditSection != null && existingAuditSection >= 1;
 
-		if (!correctNumberOfAuditSections && auditReport.getDraftMode())
+		if (!correctNumberOfAuditSections && !auditReport.getDraftMode())
 			super.state(context, false, "*", "acme.validation.NumberOfAuditSections.message");
 
 		// 3. Validación: Unicidad del Ticker
@@ -53,8 +53,8 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 		Date end = auditReport.getEndMoment();
 
 		if (start != null && end != null && auditReport.getDraftMode()) {
-			boolean isAfter = start.after(end);
-			super.state(context, isAfter, "*", "acme.validation.correctDates.message");
+			boolean isBefore = start.before(end);
+			super.state(context, isBefore, "*", "acme.validation.correctDates.message");
 		}
 
 		return !super.hasErrors(context);
