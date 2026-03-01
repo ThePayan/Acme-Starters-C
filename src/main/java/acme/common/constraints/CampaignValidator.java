@@ -1,6 +1,8 @@
 
 package acme.common.constraints;
 
+import java.util.Date;
+
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,16 +37,44 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		if (campaign == null)
 			result = true;
 		else {
-			boolean correctNumberOfMilestones;
-			Integer existingMilestones;
-			existingMilestones = this.campaignRepository.getNumOfMilestones(campaign.getId());
+			{
+				boolean correctNumberOfMilestones;
+				Integer existingMilestones;
+				existingMilestones = this.campaignRepository.getNumOfMilestones(campaign.getId());
 
-			correctNumberOfMilestones = existingMilestones >= 1;
+				correctNumberOfMilestones = existingMilestones >= 1;
 
-			if (correctNumberOfMilestones)
-				super.state(context, correctNumberOfMilestones, "numberOfMilestones", "acme.validation.NumberOfTactics.message");
+				if (!correctNumberOfMilestones && campaign.getDraftMode())
+					super.state(context, correctNumberOfMilestones, "*", "acme.validation.NumberOfMilestones.message");
+
+			}
+			{
+				boolean uniqueCampaign;
+				Campaign existingCampaign;
+
+				existingCampaign = this.campaignRepository.findCampaignByTicker(campaign.getTicker());
+				uniqueCampaign = existingCampaign == null || existingCampaign.equals(campaign);
+
+				super.state(context, uniqueCampaign, "ticker", "acme.validation.ticker.message");
+			}
+			{
+				boolean isAfter;
+
+				Date startMoment = campaign.getStartMoment();
+				Date endMoment = campaign.getEndMoment();
+				if (startMoment != null || endMoment != null) {
+
+					isAfter = startMoment.after(endMoment);
+
+					if (isAfter && campaign.getDraftMode())
+						super.state(context, isAfter, "*", "acme.validation.correctDates.message");
+				}
+
+			}
+
+			result = !super.hasErrors(context);
 		}
-		result = !super.hasErrors(context);
+
 		return result;
 	}
 
