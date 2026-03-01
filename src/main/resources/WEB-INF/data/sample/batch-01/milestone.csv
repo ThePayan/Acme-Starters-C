@@ -1,0 +1,4 @@
+key,title,achievements,effort,kind,key:campaign
+milestone-1,"Hito base","Logros base",50.0,TEASER,campaign-1
+milestone-2,A,B,0.01,ENGAGING,campaign-2
+milestone-3,"<marquee>Hacked</marquee>","' or 'A'='A",999999.99,CONVERSION,campaign-3

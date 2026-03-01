@@ -1,0 +1,19 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
+campaign-err-1,null,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-2,ab12-promo,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-3,A1-PROMO,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-4,ES26PROMO,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-5,ES26-PROMO,null,"Desc",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-6,ES26-PROMO,"   ","Desc",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-7,ES26-PROMO,"Este es un titulo de campana que mide exactamente setenta y seis caracteres.","Desc",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-8,ES26-PROMO,"Nombre",null,2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-9,ES26-PROMO,"Nombre","   ",2027/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-10,ES26-PROMO,"Nombre","Desc",null,2027/02/01 10:00,,true
+campaign-err-11,ES26-PROMO,"Nombre","Desc",2025/01/01 10:00,2027/02/01 10:00,,true
+campaign-err-12,ES26-PROMO,"Nombre","Desc",2027/01/01 10:00,null,,true
+campaign-err-13,ES26-PROMO,"Nombre","Desc",2027/01/01 10:00,2025/01/01 10:00,,true
+campaign-err-14,ES26-PROMO,"Nombre","Desc",2027/12/01 10:00,2027/01/01 10:00,,true
+campaign-err-15,ES26-PROMO,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,http://,true
+campaign-err-16,ES26-PROMO,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,ftp://a,true
+campaign-err-17,ES26-PROMO,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,http://a,true
+campaign-err-18,ES26-PROMO,"Nombre","Desc",2027/01/01 10:00,2027/02/01 10:00,,null

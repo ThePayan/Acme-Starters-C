@@ -1,0 +1,5 @@
+key,cv,achievements,licensed,key:userAccount
+spokesperson-1,"CV base estándar con datos normales.","Logros estándar conseguidos.",true,user-account-spokesperson-01
+spokesperson-2,A,B,false,user-account-spokesperson-02
+spokesperson-3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",true,user-account-spokesperson-03
+spokesperson-4,"<script>alert('Hacked!');</script>","لوريم إيبسوم โลเร็ม อิบซัม ' or 'A' = 'A",true,user-account-spokesperson-04

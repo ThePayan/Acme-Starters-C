@@ -1,0 +1,11 @@
+key,title,achievements,effort,kind
+milestone-err-1,null,"Logro",10.0,TEASER
+milestone-err-2,"   ","Logro",10.0,ENGAGING
+milestone-err-3,"Este es un titulo de campana que mide exactamente setenta y seis caracteres.","Logro",10.0,CONVERSION
+milestone-err-4,"Título",null,10.0,TEASER
+milestone-err-5,"Título","   ",10.0,ENGAGING
+milestone-err-6,"Título","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",10.0,CONVERSION
+milestone-err-7,"Título","Logro",null,TEASER
+milestone-err-8,"Título","Logro",0.0,ENGAGING
+milestone-err-9,"Título","Logro",-0.01,CONVERSION
+milestone-err-10,"Título","Logro",10.0,null

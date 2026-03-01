@@ -6,6 +6,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
+import acme.entities.campaign.Campaign;
 
 @Repository
 public interface CampaignRepository extends AbstractRepository {
@@ -15,5 +16,7 @@ public interface CampaignRepository extends AbstractRepository {
 
 	@Query("select count(m) from Milestone m where m.campaign.id = :campaignId")
 	Integer getNumOfMilestones(@Param("campaignId") int id);
+
+	Campaign findCampaignByTicker(String ticker);
 
 }
