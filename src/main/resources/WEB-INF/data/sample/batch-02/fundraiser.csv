@@ -1,0 +1,14 @@
+key,bank,statement,agent,key:user-account
+#base entity
+fundraiser-1,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-consumer-01
+fundraiser-2,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-consumer-02
+#bank variations,"","","",""
+fundraiser-3,L,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-consumer-03
+fundraiser-4,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",false,user-account-provider-01
+fundraiser-5,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-provider-02
+fundraiser-6,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",false,user-account-provider-03
+#statement variations,"","","",""
+fundraiser-7,"Lorem ipsum dolor sit amet, consectetu",L,true,user-account-anonymous-01
+fundraiser-8,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",true,user-account-administrator-01
+fundraiser-9,"Lorem ipsum dolor sit amet, consectetu",โลเร็ม อิปซัม,false,user-account-administrator1
+fundraiser-10,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,false,user-account-administrator2
