@@ -57,7 +57,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				Date startMoment = strategy.getStartMoment();
 				Date endMoment = strategy.getEndMoment();
 				boolean correctStartEndDate;
-				if (startMoment != null && endMoment != null) {
+				if (!strategy.getDraftMode() && startMoment != null && endMoment != null) {
 					correctStartEndDate = startMoment.before(endMoment);
 					super.state(context, correctStartEndDate, "*", "acme.validation.correctDates.message");
 				}
