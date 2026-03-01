@@ -62,9 +62,13 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 				Date startMoment = campaign.getStartMoment();
 				Date endMoment = campaign.getEndMoment();
-				isAfter = startMoment.after(endMoment);
-				if ((startMoment == null || endMoment == null) && isAfter && campaign.getDraftMode())
-					super.state(context, isAfter, "*", "acme.validation.correctDates.message");
+				if (startMoment != null || endMoment != null) {
+
+					isAfter = startMoment.after(endMoment);
+
+					if (isAfter && campaign.getDraftMode())
+						super.state(context, isAfter, "*", "acme.validation.correctDates.message");
+				}
 
 			}
 
