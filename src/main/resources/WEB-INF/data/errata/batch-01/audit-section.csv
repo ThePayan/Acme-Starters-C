@@ -1,0 +1,22 @@
+key,name,notes,hours,kind,key:auditReport
+
+# ==============================================================================
+# NAME - Falla por estar vacío, en blanco o superar longitud (@Mandatory / @ValidHeader)
+# ==============================================================================
+audit-section-e01,,Notas validas de la seccion,5,PRELIMINARY,audit-report-e01
+audit-section-e02," ",Notas validas de la seccion,5,PRELIMINARY,audit-report-e01
+audit-section-e03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in",Notas validas de la seccion,5,PRELIMINARY,audit-report-e01
+
+# ==============================================================================
+# NOTES - Falla por estar vacío, en blanco o superar longitud (@Mandatory / @ValidText)
+# ==============================================================================
+audit-section-e04,Seccion de prueba,,5,EVALUATION,audit-report-e01
+audit-section-e05,Seccion de prueba," ",5,EVALUATION,audit-report-e01
+audit-section-e06,Seccion de prueba,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in",5,EVALUATION,audit-report-e01
+
+# ==============================================================================
+# HOURS - Falla por ser nulo o ser un número negativo (@Mandatory / @ValidNumber(min = 0))
+# ==============================================================================
+audit-section-e07,Seccion de prueba,Notas validas de la seccion,,CONCLUSION,audit-report-e01
+audit-section-e08,Seccion de prueba,Notas validas de la seccion,-1,CONCLUSION,audit-report-e01
+audit-section-e09,Seccion de prueba,Notas validas de la seccion,-15,CONCLUSION,audit-report-e01

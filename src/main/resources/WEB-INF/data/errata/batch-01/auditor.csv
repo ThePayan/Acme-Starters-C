@@ -1,0 +1,36 @@
+key,firm,highlights,solicitor,key:userAccount
+
+# ==============================================================================
+# FIRM - Falla por estar vacío, en blanco o nulo (Mandatory / ValidHeader)
+# ==============================================================================
+auditor-01,,"Excellent audit highlights",TRUE,user-account-auditor-01
+auditor-02," ","Excellent audit highlights",TRUE,user-account-auditor-01
+auditor-03,"    ","Excellent audit highlights",TRUE,user-account-auditor-01
+
+# ==============================================================================
+# FIRM - Falla por superar la longitud máxima (256 caracteres - Sample Text)
+# ==============================================================================
+auditor-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in","Excellent audit highlights",TRUE,user-account-auditor-01
+
+# ==============================================================================
+# HIGHLIGHTS - Falla por estar vacío, en blanco o nulo (Mandatory / ValidHeader)
+# ==============================================================================
+auditor-05,"Acme Audit Firm",,TRUE,user-account-auditor-01
+auditor-06,"Acme Audit Firm"," ",TRUE,user-account-auditor-01
+auditor-07,"Acme Audit Firm","    ",TRUE,user-account-auditor-01
+
+# ==============================================================================
+# HIGHLIGHTS - Falla por superar la longitud máxima (256 caracteres - Sample Text)
+# ==============================================================================
+auditor-08,"Acme Audit Firm","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in",TRUE,user-account-auditor-01
+
+# ==============================================================================
+# SOLICITOR - Falla por ser nulo o estar vacío (Mandatory)
+# ==============================================================================
+auditor-09,"Acme Audit Firm","Excellent audit highlights",,user-account-auditor-01
+
+# ==============================================================================
+# COMBINADOS - Fallos múltiples simultáneos (comprobación robusta)
+# ==============================================================================
+auditor-10,," ",,user-account-auditor-01
+auditor-11,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in"," ",,user-account-auditor-01

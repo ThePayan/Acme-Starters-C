@@ -74,6 +74,8 @@ public class AuditReport extends AbstractEntity {
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
+		if (this.startMoment == null || this.endMoment == null)
+			return 0.0;
 		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 		double result = duration.toSeconds() / 2592000.0;
 		return result;
