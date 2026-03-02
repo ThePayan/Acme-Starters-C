@@ -41,7 +41,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 		boolean correctNumberOfInventionSections = existingInvention != null && existingInvention >= 1;
 
 		if (!correctNumberOfInventionSections && !invention.getDraftMode())
-			super.state(context, false, "*", "acme.validation.NumberOfInventionSections.message");
+			super.state(context, false, "*", "acme.validation.NumberOfInvention.message");
 
 		// 3. Validación: Unicidad del Ticker
 		Invention existingInventionTicker = this.inventionRepository.findInventionByTicker(invention.getTicker());
