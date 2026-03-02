@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.campaign.Campaign;
 import acme.features.authenticated.spokesperson.CampaignRepository;
 
@@ -36,7 +37,20 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 			Boolean draftMode = campaign.getDraftMode();
 
-			// 1. Validar el número de hitos
+			// 1. Validar que el Ticker sea único
+			{
+				boolean uniqueCampaign;
+				Campaign existingCampaign = null;
+
+				if (campaign.getTicker() != null)
+					existingCampaign = this.campaignRepository.findCampaignByTicker(campaign.getTicker());
+
+				uniqueCampaign = existingCampaign == null || existingCampaign.getId() == campaign.getId();
+
+				super.state(context, uniqueCampaign, "ticker", "acme.validation.ticker.message");
+			}
+
+			// 2. Validar el número de hitos
 			{
 				boolean correctNumberOfMilestones;
 				Integer existingMilestones = this.campaignRepository.getNumOfMilestones(campaign.getId());
@@ -51,19 +65,6 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 					super.state(context, false, "*", "acme.validation.NumberOfMilestones.message");
 			}
 
-			// 2. Validar que el Ticker sea único
-			{
-				boolean uniqueCampaign;
-				Campaign existingCampaign = null;
-
-				if (campaign.getTicker() != null)
-					existingCampaign = this.campaignRepository.findCampaignByTicker(campaign.getTicker());
-
-				uniqueCampaign = existingCampaign == null || existingCampaign.getId() == campaign.getId();
-
-				super.state(context, uniqueCampaign, "ticker", "acme.validation.ticker.message");
-			}
-
 			// 3. Validar las fechas
 			{
 				Date startMoment = campaign.getStartMoment();
@@ -71,7 +72,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 				if (startMoment != null && endMoment != null) {
 
-					boolean isAfter = startMoment.after(endMoment);
+					boolean isAfter = MomentHelper.isAfter(startMoment, endMoment);
 
 					if (isAfter && Boolean.FALSE.equals(draftMode))
 						super.state(context, false, "*", "acme.validation.correctDates.message");
