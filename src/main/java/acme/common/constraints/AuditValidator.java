@@ -37,13 +37,14 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 			return true;
 
 		else {
+		{
 			// 2. Validación: Número de secciones
 			Integer existingAuditSection = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
 			boolean correctNumberOfAuditSections = existingAuditSection != null && existingAuditSection >= 1;
 
 			if (!correctNumberOfAuditSections && Boolean.FALSE.equals(auditReport.getDraftMode()))
 				super.state(context, false, "*", "acme.validation.NumberOfAuditSections.message");
-		}
+			}
 		{
 			// 3. Validación: Unicidad del Ticker
 			AuditReport existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
