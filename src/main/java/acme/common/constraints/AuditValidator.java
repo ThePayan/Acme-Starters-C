@@ -36,25 +36,31 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 		if (auditReport == null)
 			return true;
 
-		// 2. Validación: Número de secciones
-		Integer existingAuditSection = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
-		boolean correctNumberOfAuditSections = existingAuditSection != null && existingAuditSection >= 1;
+		else {
+		{
+			// 2. Validación: Número de secciones
+			Integer existingAuditSection = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
+			boolean correctNumberOfAuditSections = existingAuditSection != null && existingAuditSection >= 1;
 
-		if (!correctNumberOfAuditSections && Boolean.FALSE.equals(auditReport.getDraftMode()))
-			super.state(context, false, "*", "acme.validation.NumberOfAuditSections.message");
+			if (!correctNumberOfAuditSections && Boolean.FALSE.equals(auditReport.getDraftMode()))
+				super.state(context, false, "*", "acme.validation.NumberOfAuditSections.message");
+			}
+		{
+			// 3. Validación: Unicidad del Ticker
+			AuditReport existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
+			boolean isUnique = existingAuditReport == null || existingAuditReport.getId() == auditReport.getId();
+			super.state(context, isUnique, "ticker", "acme.validation.ticker.message");
+		}
+		{
+			// 4. Validación: Fechas
+			Date start = auditReport.getStartMoment();
+			Date end = auditReport.getEndMoment();
 
-		// 3. Validación: Unicidad del Ticker
-		AuditReport existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
-		boolean isUnique = existingAuditReport == null || existingAuditReport.getId() == auditReport.getId();
-		super.state(context, isUnique, "ticker", "acme.validation.ticker.message");
-
-		// 4. Validación: Fechas
-		Date start = auditReport.getStartMoment();
-		Date end = auditReport.getEndMoment();
-
-		if (start != null && end != null && Boolean.TRUE.equals(auditReport.getDraftMode())) {
-			boolean isBefore = start.before(end);
-			super.state(context, isBefore, "*", "acme.validation.correctDates.message");
+			if (start != null && end != null && Boolean.TRUE.equals(auditReport.getDraftMode())) {
+				boolean isBefore = start.before(end);
+				super.state(context, isBefore, "*", "acme.validation.correctDates.message");
+			}		
+		}
 		}
 
 		return !super.hasErrors(context);
