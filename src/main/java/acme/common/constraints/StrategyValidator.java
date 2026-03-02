@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.strategies.Strategy;
 import acme.features.fundraiser.StrategyRepository;
 
@@ -37,6 +38,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 		if (strategy == null)
 			result = true;
 		else {
+			boolean isDraft = strategy.getDraftMode() != null && strategy.getDraftMode().booleanValue();
 			{
 				boolean uniqueStrategy;
 				Strategy existingStrategy;
@@ -54,13 +56,14 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 			}
 			{
-				Date startMoment = strategy.getStartMoment();
-				Date endMoment = strategy.getEndMoment();
-				boolean correctStartEndDate;
-				if (!strategy.getDraftMode() && startMoment != null && endMoment != null) {
-					correctStartEndDate = startMoment.before(endMoment);
-					super.state(context, correctStartEndDate, "*", "acme.validation.correctDates.message");
+				boolean correctDates = true;
+				if (!isDraft) {
+					Date startMoment = strategy.getStartMoment();
+					Date endMoment = strategy.getEndMoment();
+					if (startMoment != null && endMoment != null)
+						correctDates = MomentHelper.isBeforeOrEqual(startMoment, endMoment);
 				}
+				super.state(context, correctDates, "*", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
 		}
