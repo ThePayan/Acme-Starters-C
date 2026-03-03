@@ -7,6 +7,8 @@ import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
 
@@ -57,12 +59,12 @@ public class AuditReport extends AbstractEntity {
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
-	@Column
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date								startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
-	@Column
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date								endMoment;
 
 	@Optional

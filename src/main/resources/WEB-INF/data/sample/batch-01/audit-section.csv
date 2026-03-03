@@ -8,19 +8,28 @@ audit-section-6,AuditSection 6,Esta es la nota del AuditSection 6,4,EVALUATION,a
 audit-section-7,AuditSection 7,Esta es la nota del AuditSection 7,9,EVALUATION,audit-report-4
 audit-section-8,AuditSection 8,Esta es la nota del AuditSection 8,3,CONCLUSION,audit-report-4
 audit-section-9,AuditSection 9,Esta es la nota del AuditSection 9,6,CONCLUSION,audit-report-5
-# hours - ValidNumber(positive) min
+# hours - ValidNumber(positive) standard variation
 audit-section-10,AuditSection 10,Esta es la nota del AuditSection 10,0,CONCLUSION,audit-report-5
-# name - ValidHeader - min caracter
-audit-section-11,A,Se han revisado los riesgos iniciales del proyecto frente a los requisitos del cliente,5,PRELIMINARY,audit-report-1
-audit-section-12,E,El proyecto parece viable a medio plazo tras el primer sondeo,15,PRELIMINARY,audit-report-1
-# name - ValidHeader - max caracter
-audit-section-13,Verificacion de Requisitos relleno relleno relleno relleno relleno rellenos,Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
-# notes - ValidText - min caracter
-audit-section-14,Evaluacion de Seguridad,M,12,EVALUATION,audit-report-1
-# notes - ValidText - max caracter
-audit-section-15,Auditoria Financiera,Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy relleno Hola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy rellenoHola soy relleno 123456,20,EVALUATION,audit-report-3
-audit-section-16,Revision de Hardware,Los componentes fisicos operan a la temperatura adecuada bajo estres,10,EVALUATION,audit-report-2
-audit-section-17,Auditoria de Calidad,El codigo cumple con las metricas internas de calidad y no presenta bugs criticos,18,EVALUATION,audit-report-2
-audit-section-18,Inspeccion de Base de Datos,Las migraciones se ejecutaron correctamente y las tablas estan optimizadas,8,EVALUATION,audit-report-1
-audit-section-19,Conclusion de Tiempos,El desarrollo ha finalizado en la fecha prevista sin retrasos,8,CONCLUSION,audit-report-1
-audit-section-20,Dictamen Final,Se aprueba el paso a produccion sin incidencias graves,3,CONCLUSION,audit-report-2
+audit-section-11,AuditSection 10,Esta es la nota del AuditSection 10,50,CONCLUSION,audit-report-5
+audit-section-12,AuditSection 10,Esta es la nota del AuditSection 10,1,CONCLUSION,audit-report-5
+# name - ValidHeader - standard variation
+audit-section-13,"L",Se han revisado los riesgos iniciales del proyecto frente a los requisitos del cliente,5,PRELIMINARY,audit-report-1
+audit-section-14,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t",El proyecto parece viable a medio plazo tras el primer sondeo,15,PRELIMINARY,audit-report-1
+audit-section-15,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+audit-section-16,"โลเร็ม อิปซัม",Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+audit-section-17,"لوريم إيبسوم",Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+audit-section-18,"洛伦·伊普森",Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+audit-section-19,"<marquee>Hacked</marquee>",Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+audit-section-20,"<script>alert(‘Hacked!’);</script>",Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+audit-section-21,"' or 'A' = 'A ",Todos los requisitos funcionales han sido testeados preliminarmente,14,PRELIMINARY,audit-report-2
+
+# notes - ValidText - standard variation
+audit-section-22,Evaluacion de Seguridad,M,12,EVALUATION,audit-report-1
+audit-section-23,Auditoria Financiera,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",20,EVALUATION,audit-report-3
+audit-section-24,Revision de Hardware,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",10,EVALUATION,audit-report-2
+audit-section-25,Auditoria de Calidad,"โลเร็ม อิปซัม",18,EVALUATION,audit-report-2
+audit-section-26,Inspeccion de Base de Datos,"لوريم إيبسوم",8,EVALUATION,audit-report-1
+audit-section-27,Conclusion de Tiempos,"洛伦·伊普森",8,CONCLUSION,audit-report-1
+audit-section-28,Dictamen Final,"<marquee>Hacked</marquee>",3,CONCLUSION,audit-report-2
+audit-section-29,Dictamen Final,"<script>alert(‘Hacked!’);</script>",3,CONCLUSION,audit-report-2
+audit-section-30,Dictamen Final,"' or 'A' = 'A ",3,CONCLUSION,audit-report-2
