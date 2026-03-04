@@ -1,4 +1,18 @@
 key,title,achievements,effort,kind,key:campaign
-milestone-1,"Hito base","Logros base",50.0,TEASER,campaign-1
-milestone-2,A,B,0.01,ENGAGING,campaign-2
-milestone-3,"<marquee>Hacked</marquee>","' or 'A'='A",999999.99,CONVERSION,campaign-3
+# base entity,,,,,
+milestone-base,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+# title - valid variations (Max 75 chars),,,,,
+milestone-01,L,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+milestone-02,Lo,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+milestone-03,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod te,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+milestone-04,لوريم إيبسوم โลเร็ม,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+# achievements - valid variations (Max 255 chars),,,,,
+milestone-05,Lorem ipsum dolor sit amet consectetu,L,50.00,TEASER,campaign-00
+milestone-06,Lorem ipsum dolor sit amet consectetu,Lo,50.00,TEASER,campaign-00
+milestone-07,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep,50.00,TEASER,campaign-00
+# effort - valid variations (Positive Double),,,,,
+milestone-08,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,0.01,TEASER,campaign-00
+milestone-09,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,999999.99,TEASER,campaign-00
+# kind - valid variations (Enum),,,,,
+milestone-10,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,ENGAGING,campaign-00
+milestone-11,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,CONVERSION,campaign-00

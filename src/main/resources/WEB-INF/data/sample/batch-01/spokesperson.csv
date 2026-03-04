@@ -1,5 +1,46 @@
 key,cv,achievements,licensed,key:userAccount
-spokesperson-1,"CV base estándar con datos normales.","Logros estándar conseguidos.",true,user-account-spokesperson-01
-spokesperson-2,A,B,false,user-account-spokesperson-02
-spokesperson-3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",true,user-account-spokesperson-03
-spokesperson-4,"<script>alert('Hacked!');</script>","لوريم إيبسوم โลเร็ม อิบซัม ' or 'A' = 'A",true,user-account-spokesperson-04
+# ==========================================,,,,
+# --- ENTIDAD BASE ---,,,,
+# ==========================================,,,,
+# spokesperson-00: Todo correcto y estándar. Referencia para el resto.,,,,
+spokesperson-00,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet,true,user-account-spokesperson-00
+# ==========================================,,,,
+# --- VARIACIONES OAT EN EL ATRIBUTO: CV ---,,,,
+# ==========================================,,,,
+# Límites inferiores (Boundary testing),,,,
+spokesperson-01,L,Lorem ipsum dolor sit amet,true,user-account-spokesperson-01
+spokesperson-02,Lo,Lorem ipsum dolor sit amet,true,user-account-spokesperson-02
+# Límite superior exacto (@ValidText max 255 chars),,,,
+spokesperson-03,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep,Lorem ipsum dolor sit amet,true,user-account-spokesperson-03
+# Alfabetos y caracteres internacionales (Thai, Árabe, Chino),,,,
+spokesperson-05,โลเร็ม อิปซัม,Lorem ipsum dolor sit amet,true,user-account-spokesperson-05
+spokesperson-06,لوريم إيبسوم,Lorem ipsum dolor sit amet,true,user-account-spokesperson-06
+spokesperson-07,洛伦·伊普森,Lorem ipsum dolor sit amet,true,user-account-spokesperson-07
+# Pruebas de inyección y caracteres especiales (Validando que @SafeHtml los acepta si no son maliciosos o los escapa),,,,
+spokesperson-08,<marquee>Hacked</marquee>,Lorem ipsum dolor sit amet,true,user-account-spokesperson-08
+spokesperson-09,<script>alert('Hacked!');</script>,Lorem ipsum dolor sit amet,true,user-account-spokesperson-09
+spokesperson-10,' or 'A' = 'A,Lorem ipsum dolor sit amet,true,user-account-spokesperson-10
+
+# ==========================================,,,,
+# --- VARIACIONES OAT EN EL ATRIBUTO: ACHIEVEMENTS ---,,,,
+# ==========================================,,,,
+# Límites inferiores (Boundary testing),,,,
+spokesperson-11,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,L,true,user-account-spokesperson-11
+spokesperson-12,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lo,true,user-account-spokesperson-12
+# Variaciones de longitud intermedias,,,,
+spokesperson-13,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod t,true,user-account-spokesperson-13
+spokesperson-14,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod te,true,user-account-spokesperson-14
+# Alfabetos y caracteres internacionales,,,,
+spokesperson-15,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,โลเร็ม อิปซัม,true,user-account-spokesperson-15
+spokesperson-16,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,لوريم إيبسوم,true,user-account-spokesperson-16
+spokesperson-17,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,洛伦·伊普森,true,user-account-spokesperson-17
+# Pruebas de inyección y caracteres especiales,,,,
+spokesperson-18,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,<marquee>Hacked</marquee>,true,user-account-spokesperson-18
+spokesperson-19,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,<script>alert('Hacked!');</script>,true,user-account-spokesperson-19
+spokesperson-20,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,' or 'A' = 'A,true,user-account-spokesperson-20
+
+# ==========================================,,,,
+# --- VARIACIONES OAT EN EL ATRIBUTO: LICENSED ---,,,,
+# ==========================================,,,,
+# spokesperson-21: Comprobando que el booleano 'false' se guarda y procesa correctamente,,,,
+spokesperson-21,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet,false,user-account-spokesperson-21
