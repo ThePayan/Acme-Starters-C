@@ -1,18 +1,26 @@
 key,title,achievements,effort,kind,key:campaign
-# base entity,,,,,
+# Entidad base perfecta,,,,,
 milestone-base,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
-# title - valid variations (Max 75 chars),,,,,
+# TITLE: limites minimos,,,,,
 milestone-01,L,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
 milestone-02,Lo,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+# TITLE: limites maximos (75 y 74 caracteres),,,,,
 milestone-03,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod te,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
-milestone-04,لوريم إيبسوم โลเร็ม,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
-# achievements - valid variations (Max 255 chars),,,,,
-milestone-05,Lorem ipsum dolor sit amet consectetu,L,50.00,TEASER,campaign-00
-milestone-06,Lorem ipsum dolor sit amet consectetu,Lo,50.00,TEASER,campaign-00
-milestone-07,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep,50.00,TEASER,campaign-00
-# effort - valid variations (Positive Double),,,,,
-milestone-08,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,0.01,TEASER,campaign-00
-milestone-09,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,999999.99,TEASER,campaign-00
-# kind - valid variations (Enum),,,,,
-milestone-10,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,ENGAGING,campaign-00
-milestone-11,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,CONVERSION,campaign-00
+milestone-04,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod temp,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+# TITLE: alfabetos internacionales,,,,,
+milestone-05,لوريم إيبسوم โลเร็ม,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,TEASER,campaign-00
+# ACHIEVEMENTS: limites minimos,,,,,
+milestone-06,Lorem ipsum dolor sit amet consectetu,L,50.00,TEASER,campaign-00
+milestone-07,Lorem ipsum dolor sit amet consectetu,Lo,50.00,TEASER,campaign-00
+# ACHIEVEMENTS: limites maximos (255 y 254),,,,,
+milestone-08,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep,50.00,TEASER,campaign-00
+milestone-09,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in re,50.00,TEASER,campaign-00
+# EFFORT: limites minimos validos,,,,,
+milestone-10,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,0.00,TEASER,campaign-00
+milestone-11,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,0.01,TEASER,campaign-00
+# EFFORT: limites maximos validos,,,,,
+milestone-12,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,999999.99,TEASER,campaign-00
+milestone-15,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,999999.98,TEASER,campaign-00
+# KIND: variaciones del Enum,,,,,
+milestone-13,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,ENGAGING,campaign-00
+milestone-14,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,50.00,CONVERSION,campaign-00
