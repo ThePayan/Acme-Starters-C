@@ -46,7 +46,7 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 
 		// 3. Validación: Unicidad del Ticker
 		AuditReport existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
-		boolean isUnique = existingAuditReport == null || existingAuditReport.getId() == auditReport.getId();
+		boolean isUnique = existingAuditReport == null || existingAuditReport.equals(auditReport);
 		super.state(context, isUnique, "ticker", "acme.validation.ticker.message");
 
 		// 4. Validación: Fechas
