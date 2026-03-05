@@ -1,8 +1,6 @@
 
 package acme.common.constraints;
 
-import java.util.Date;
-
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,13 +55,11 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 			}
 			{
 				boolean correctDates = true;
-				if (!isDraft) {
-					Date startMoment = strategy.getStartMoment();
-					Date endMoment = strategy.getEndMoment();
-					if (startMoment != null && endMoment != null)
-						correctDates = MomentHelper.isBeforeOrEqual(startMoment, endMoment);
-				}
-				super.state(context, correctDates, "*", "acme.validation.correctDates.message");
+
+				if (!isDraft && strategy.getStartMoment() != null && strategy.getEndMoment() != null)
+					correctDates = MomentHelper.isBefore(strategy.getStartMoment(), strategy.getEndMoment());
+
+				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
 		}
