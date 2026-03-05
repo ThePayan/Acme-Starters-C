@@ -1,11 +1,9 @@
 key,cv,achievements,licensed
-# cv: vacío,,,
+# cv - standard variations,,,
 errata-spokesperson-01,,Lorem ipsum dolor sit amet,true
-# cv: 256 caracteres (límite 255),,,
 errata-spokesperson-02,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in repa,Lorem ipsum dolor sit amet,true
-# achievements: vacío,,,
+# achievements - standard variations,,,
 errata-spokesperson-03,Lorem ipsum dolor sit amet,,true
-# achievements: 256 caracteres (límite 255),,,
 errata-spokesperson-04,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in repa,true
-# licensed: nulo/vacío,,,
+# licensed - standard variations,,,
 errata-spokesperson-05,Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,

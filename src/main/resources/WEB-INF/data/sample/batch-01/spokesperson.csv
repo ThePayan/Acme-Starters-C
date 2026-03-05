@@ -1,33 +1,27 @@
 key,cv,achievements,licensed,key:userAccount
-# Entidad base perfecta,,,,
+# base entity,,,,
 spokesperson-00,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet,true,user-account-spokesperson-00
-# CV: limites minimos (1 y 2 caracteres),,,,
+# cv - standard variations,,,,
 spokesperson-01,L,Lorem ipsum dolor sit amet,true,user-account-spokesperson-01
 spokesperson-02,Lo,Lorem ipsum dolor sit amet,true,user-account-spokesperson-02
-# CV: limites maximos (255 y 254 caracteres),,,,
 spokesperson-03,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep,Lorem ipsum dolor sit amet,true,user-account-spokesperson-03
 spokesperson-04,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in re,Lorem ipsum dolor sit amet,true,user-account-spokesperson-04
-# CV: alfabetos internacionales,,,,
 spokesperson-05,โลเร็ม อิปซัม,Lorem ipsum dolor sit amet,true,user-account-spokesperson-05
 spokesperson-06,لوريم إيبسوم,Lorem ipsum dolor sit amet,true,user-account-spokesperson-06
 spokesperson-07,洛伦·伊普森,Lorem ipsum dolor sit amet,true,user-account-spokesperson-07
-# CV: inyecciones de codigo toleradas,,,,
 spokesperson-08,<marquee>Hacked</marquee>,Lorem ipsum dolor sit amet,true,user-account-spokesperson-08
 spokesperson-09,<script>alert('Hacked!');</script>,Lorem ipsum dolor sit amet,true,user-account-spokesperson-09
 spokesperson-10,' or 'A' = 'A,Lorem ipsum dolor sit amet,true,user-account-spokesperson-10
-# ACHIEVEMENTS: limites minimos e intermedios,,,,
+# achievements - standard variations,,,,
 spokesperson-11,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,L,true,user-account-spokesperson-11
 spokesperson-12,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lo,true,user-account-spokesperson-12
 spokesperson-13,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod t,true,user-account-spokesperson-13
-# ACHIEVEMENTS: limites maximos (255 y 254),,,,
 spokesperson-14,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in rep,true,user-account-spokesperson-14
 spokesperson-15,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in re,true,user-account-spokesperson-15
-# ACHIEVEMENTS: alfabetos internacionales,,,,
 spokesperson-16,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,โลเร็ม อิปซัม,true,user-account-spokesperson-16
 spokesperson-17,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,لوريم إيبسوم,true,user-account-spokesperson-17
 spokesperson-18,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,洛伦·伊普森,true,user-account-spokesperson-18
-# ACHIEVEMENTS: inyecciones toleradas,,,,
 spokesperson-19,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,<script>alert('Hacked!');</script>,true,user-account-spokesperson-19
 spokesperson-20,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,' or 'A' = 'A,true,user-account-spokesperson-20
-# LICENSED: probando booleano en falso,,,,
+# licensed - standard variations,,,,
 spokesperson-21,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,Lorem ipsum dolor sit amet,false,user-account-spokesperson-21

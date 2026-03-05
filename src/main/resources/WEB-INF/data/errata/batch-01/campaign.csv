@@ -1,22 +1,17 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode
-# ticker: vacío,,,,,,,
+# ticker - standard variations,,,,,,,
 errata-campaign-01,,Lorem ipsum,Lorem ipsum,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# ticker: sin guion y en minúsculas,,,,,,,
 errata-campaign-02,es2600000,Lorem ipsum,Lorem ipsum,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# ticker: demasiado largo,,,,,,,
 errata-campaign-03,ES26-00000000000000,Lorem ipsum,Lorem ipsum,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# name: vacío,,,,,,,
+# name - standard variation,,,,,,,
 errata-campaign-04,ES26-ERR04,,Lorem ipsum,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# name: 76 caracteres (límite 75),,,,,,,
 errata-campaign-05,ES26-ERR05,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor,Lorem ipsum,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# description: vacío,,,,,,,
+# description - standard variations,,,,,,,
 errata-campaign-06,ES26-ERR06,Lorem ipsum,,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# description: 256 caracteres (límite 255),,,,,,,
 errata-campaign-07,ES26-ERR07,Lorem ipsum,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in repa,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# fechas: inicio en el pasado,,,,,,,
+# fechas - standard variations,,,,,,,
 errata-campaign-08,ES26-ERR08,Lorem ipsum,Lorem ipsum,2000/01/01 10:00,2027/02/01 10:00,http://lorem.com,TRUE
-# fechas: fin antes que inicio,,,,,,,
 errata-campaign-09,ES26-ERR09,Lorem ipsum,Lorem ipsum,2027/01/01 10:00,2026/02/01 10:00,http://lorem.com,TRUE
-# url: vacía o malformada,,,,,,,
+# url - standard variations,,,,,,,
 errata-campaign-10,ES26-ERR10,Lorem ipsum,Lorem ipsum,2027/01/01 10:00,2027/02/01 10:00,http://,TRUE
 errata-campaign-11,ES26-ERR11,Lorem ipsum,Lorem ipsum,2027/01/01 10:00,2027/02/01 10:00,texto-sin-url,TRUE

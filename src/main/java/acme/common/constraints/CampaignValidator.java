@@ -37,7 +37,6 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 			Boolean draftMode = campaign.getDraftMode();
 
-			// 1. Validar que el Ticker sea único
 			{
 				boolean uniqueCampaign;
 				Campaign existingCampaign = null;
@@ -50,12 +49,10 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 				super.state(context, uniqueCampaign, "ticker", "acme.validation.ticker.message");
 			}
 
-			// 2. Validar el número de hitos
 			{
 				boolean correctNumberOfMilestones;
 				Integer existingMilestones = this.campaignRepository.getNumOfMilestones(campaign.getId());
 
-				// Por si la query de base de datos devuelve nulo
 				if (existingMilestones == null)
 					existingMilestones = 0;
 
@@ -65,7 +62,6 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 					super.state(context, false, "*", "acme.validation.NumberOfMilestones.message");
 			}
 
-			// 3. Validar las fechas
 			{
 				Date startMoment = campaign.getStartMoment();
 				Date endMoment = campaign.getEndMoment();
