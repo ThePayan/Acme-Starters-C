@@ -1,9 +1,7 @@
 
 package acme.entities.inventions;
 
-import java.time.LocalDate;
-import java.time.ZoneId;
-import java.time.temporal.ChronoUnit;
+import java.time.Duration;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -22,6 +20,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
@@ -85,7 +84,6 @@ public class Invention extends AbstractEntity {
 		long totalMonths = ChronoUnit.MONTHS.between(start, end);
 
 		return (double) totalMonths;
-
 	}
 
 	@Transient

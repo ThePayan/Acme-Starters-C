@@ -18,7 +18,7 @@ import javax.validation.constraints.Pattern;
 @ReportAsSingleViolation
 
 @Pattern(regexp = "^[A-Z]{2}[0-9]{2}-\\w{5,10}$")
-@NotBlank //Preguntar, no se si el import está bien
+@NotBlank
 
 public @interface ValidTicker {
 
