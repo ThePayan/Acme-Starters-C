@@ -7,3 +7,4 @@ acme.validation.correctDates.message 		= The start moment must be before end mom
 acme.validation.duplicated-ticker.message = The ticker is duplicated
 acme.validation.numberOfTactics.message = Strategies cannot be published unless they have at least one tactic
 acme.validation.numberOfMilestones.message = Campaigns cannot be published unless they have at least one milestone
+acme.validation.currency.message= The currency must be in Euros
