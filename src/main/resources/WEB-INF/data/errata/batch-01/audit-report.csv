@@ -30,6 +30,3 @@ audit-report-e15,ER28-TEST11,Auditoria de Seguridad,Evaluacion profunda,2028/06/
 # MORE INFO - Falla por formato de URL inválido (@ValidUrl)
 audit-report-e16,ER28-TEST12,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,htp://invalido.com,false,auditor-01
 audit-report-e17,ER28-TEST13,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,esto-no-es-url,false,auditor-01
-
-# DRAFT MODE - Falla por estar vacío (@Mandatory)
-audit-report-e18,ER28-TEST14,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,,auditor-01

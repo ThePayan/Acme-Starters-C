@@ -1,8 +1,6 @@
 
 package acme.common.constraints;
 
-import java.util.Date;
-
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,28 +34,31 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 		// 1. Si es null
 		if (auditReport == null)
 			return true;
+		else {
+			{
+				// 2. Validación: Número de secciones
+				Integer existingAuditSection = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
+				boolean correctNumberOfAuditSections = existingAuditSection != null && existingAuditSection >= 1;
 
-		// 2. Validación: Número de secciones
-		Integer existingAuditSection = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
-		boolean correctNumberOfAuditSections = existingAuditSection != null && existingAuditSection >= 1;
+				if (!correctNumberOfAuditSections && Boolean.FALSE.equals(auditReport.getDraftMode()))
+					super.state(context, false, "draftMode", "acme.validation.numberOfAuditSections.message");
+			}
+			{
+				// 3. Validación: Unicidad del Ticker
+				AuditReport existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
+				boolean isUnique = existingAuditReport == null || existingAuditReport.getId() == auditReport.getId();
+				super.state(context, isUnique, "ticker", "acme.validation.ticker.message");
+			}
+			{
+				// 4. Validación: Fechas
+				{
+					boolean correctDates = true;
 
-		if (!correctNumberOfAuditSections && Boolean.FALSE.equals(auditReport.getDraftMode()))
-			super.state(context, false, "draftMode", "acme.validation.numberOfAuditSections.message");
+					if (!auditReport.getDraftMode() && auditReport.getStartMoment() != null && auditReport.getEndMoment() != null)
+						correctDates = MomentHelper.isBefore(auditReport.getStartMoment(), auditReport.getEndMoment());
 
-		// 3. Validación: Unicidad del Ticker
-		AuditReport existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
-		boolean isUnique = existingAuditReport == null || existingAuditReport.getId() == auditReport.getId();
-		super.state(context, isUnique, "ticker", "acme.validation.ticker.message");
-
-		// 4. Validación: Fechas
-		Date startMoment = auditReport.getStartMoment();
-		Date endMoment = auditReport.getEndMoment();
-
-		if (startMoment != null && endMoment != null && Boolean.FALSE.equals(auditReport.getDraftMode())) {
-			boolean correctDates = MomentHelper.isBefore(startMoment, endMoment);
-			if (!correctDates) {
-				super.state(context, false, "endMoment", "acme.validation.correctDates.message");
-				return false; // Salimos para no acumular más errores en el "*"
+					super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
+				}
 			}
 		}
 		return !super.hasErrors(context);
