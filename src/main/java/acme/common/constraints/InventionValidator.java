@@ -9,24 +9,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.inventions.Invention;
 import acme.features.authenticated.inventions.AuthenticatedInventionRepository;
 
 @Validator
 public class InventionValidator extends AbstractValidator<ValidInvention, Invention> {
 
-	// Internal state ---------------------------------------------------------
-
 	@Autowired
 	private AuthenticatedInventionRepository inventionRepository;
 
-	// ConstraintValidator interface ------------------------------------------
-
-
-	@Override
-	protected void initialise(final ValidInvention annotation) {
-		assert annotation != null;
-	}
 
 	@Override
 	public boolean isValid(final Invention invention, final ConstraintValidatorContext context) {
@@ -37,39 +29,45 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 		if (invention == null)
 			result = true;
 		else {
-			{
-				boolean correctNumberOfParts;
-				Integer existingParts;
-				existingParts = this.inventionRepository.getNumOfParts(invention.getId());
 
-				correctNumberOfParts = existingParts >= 1;
+			Boolean draftMode = invention.getDraftMode();
 
-				if (!correctNumberOfParts && invention.getDraftMode())
-					super.state(context, correctNumberOfParts, "*", "acme.validation.numberOfParts.message");
-
-			}
 			{
 				boolean uniqueInvention;
-				Invention existingInvention;
+				Invention existingInvention = null;
 
-				existingInvention = this.inventionRepository.findInventionByTicker(invention.getTicker());
-				uniqueInvention = existingInvention == null || existingInvention.equals(invention);
+				if (invention.getTicker() != null)
+					existingInvention = this.inventionRepository.findInventionByTicker(invention.getTicker());
+
+				uniqueInvention = existingInvention == null || existingInvention.getId() == invention.getId();
 
 				super.state(context, uniqueInvention, "ticker", "acme.validation.ticker.message");
 			}
-			{
-				boolean isAfter;
 
+			{
+				boolean correctNumberOfParts;
+				Integer existingParts = this.inventionRepository.getNumOfParts(invention.getId());
+
+				if (existingParts == null)
+					existingParts = 0;
+
+				correctNumberOfParts = existingParts >= 1;
+
+				if (!correctNumberOfParts && Boolean.FALSE.equals(draftMode))
+					super.state(context, false, "*", "acme.validation.numberOfParts.message");
+			}
+
+			{
 				Date startMoment = invention.getStartMoment();
 				Date endMoment = invention.getEndMoment();
-				if (startMoment != null || endMoment != null) {
 
-					isAfter = startMoment.after(endMoment);
+				if (startMoment != null && endMoment != null) {
 
-					if (isAfter && invention.getDraftMode())
-						super.state(context, isAfter, "*", "acme.validation.correctDates.message");
+					boolean isAfter = MomentHelper.isAfter(startMoment, endMoment);
+
+					if (isAfter && Boolean.FALSE.equals(draftMode))
+						super.state(context, false, "*", "acme.validation.correctDates.message");
 				}
-
 			}
 
 			result = !super.hasErrors(context);
