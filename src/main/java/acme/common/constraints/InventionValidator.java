@@ -32,31 +32,49 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 	public boolean isValid(final Invention invention, final ConstraintValidatorContext context) {
 		assert context != null;
 
-		// 1. Si es null
+		boolean result;
+
 		if (invention == null)
-			return true;
+			result = true;
+		else {
+			{
+				boolean correctNumberOfParts;
+				Integer existingParts;
+				existingParts = this.inventionRepository.getNumOfParts(invention.getId());
 
-		// 2. Validación: Número de secciones
-		Integer existingInvention = this.inventionRepository.getNumberOfInventions(invention.getId());
-		boolean correctNumberOfInventionSections = existingInvention != null && existingInvention >= 1;
+				correctNumberOfParts = existingParts >= 1;
 
-		if (!correctNumberOfInventionSections && !invention.getDraftMode())
-			super.state(context, false, "*", "acme.validation.NumberOfInvention.message");
+				if (!correctNumberOfParts && invention.getDraftMode())
+					super.state(context, correctNumberOfParts, "*", "acme.validation.numberOfParts.message");
 
-		// 3. Validación: Unicidad del Ticker
-		Invention existingInventionTicker = this.inventionRepository.findInventionByTicker(invention.getTicker());
-		boolean isUnique = existingInventionTicker == null || existingInventionTicker.getId() == invention.getId();
-		super.state(context, isUnique, "ticker", "acme.validation.ticker.message");
+			}
+			{
+				boolean uniqueInvention;
+				Invention existingInvention;
 
-		// 4. Validación: Fechas
-		Date start = invention.getStartMoment();
-		Date end = invention.getEndMoment();
+				existingInvention = this.inventionRepository.findInventionByTicker(invention.getTicker());
+				uniqueInvention = existingInvention == null || existingInvention.equals(invention);
 
-		if (start != null && end != null && invention.getDraftMode()) {
-			boolean isBefore = start.before(end);
-			super.state(context, isBefore, "*", "acme.validation.correctDates.message");
+				super.state(context, uniqueInvention, "ticker", "acme.validation.ticker.message");
+			}
+			{
+				boolean isAfter;
+
+				Date startMoment = invention.getStartMoment();
+				Date endMoment = invention.getEndMoment();
+				if (startMoment != null || endMoment != null) {
+
+					isAfter = startMoment.after(endMoment);
+
+					if (isAfter && invention.getDraftMode())
+						super.state(context, isAfter, "*", "acme.validation.correctDates.message");
+				}
+
+			}
+
+			result = !super.hasErrors(context);
 		}
 
-		return !super.hasErrors(context);
+		return result;
 	}
 }
