@@ -5,3 +5,26 @@ user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路�
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
+user-account-sponsor-01,true,"UserIdentity{name: 'Sponsor1', surname: 'Sponsor', email: 'sponsor1@acme.com'}",sponsor1,sponsor1
+user-account-sponsor-02,true,"UserIdentity{name: 'Sponsor2', surname: 'Sponsor', email: 'sponsor2@acme.com'}",sponsor2,sponsor2
+user-account-sponsor-03,true,"UserIdentity{name: 'Sponsor3', surname: 'Sponsor', email: 'sponsor3@acme.com'}",sponsor3,sponsor3
+user-account-sponsor-04,true,"UserIdentity{name: 'Sponsor4', surname: 'Sponsor', email: 'sponsor4@acme.com'}",sponsor4,sponsor4
+user-account-sponsor-05,true,"UserIdentity{name: 'Sponsor5', surname: 'Sponsor', email: 'sponsor5@acme.com'}",sponsor5,sponsor5
+user-account-sponsor-06,true,"UserIdentity{name: 'Sponsor6', surname: 'Sponsor', email: 'sponsor6@acme.com'}",sponsor6,sponsor6
+user-account-sponsor-07,true,"UserIdentity{name: 'Sponsor7', surname: 'Sponsor', email: 'sponsor7@acme.com'}",sponsor7,sponsor7
+user-account-sponsor-08,true,"UserIdentity{name: 'Sponsor8', surname: 'Sponsor', email: 'sponsor8@acme.com'}",sponsor8,sponsor8
+user-account-sponsor-09,true,"UserIdentity{name: 'Sponsor9', surname: 'Sponsor', email: 'sponsor9@acme.com'}",sponsor9,sponsor9
+user-account-sponsor-10,true,"UserIdentity{name: 'Sponsor10', surname: 'Sponsor', email: 'sponsor10@acme.com'}",sponsor10,sponsor10
+user-account-sponsor-11,true,"UserIdentity{name: 'Sponsor11', surname: 'Sponsor', email: 'sponsor11@acme.com'}",sponsor11,sponsor11
+user-account-sponsor-12,true,"UserIdentity{name: 'Sponsor12', surname: 'Sponsor', email: 'sponsor12@acme.com'}",sponsor12,sponsor12
+user-account-sponsor-13,true,"UserIdentity{name: 'Sponsor13', surname: 'Sponsor', email: 'sponsor13@acme.com'}",sponsor13,sponsor13
+user-account-sponsor-14,true,"UserIdentity{name: 'Sponsor14', surname: 'Sponsor', email: 'sponsor14@acme.com'}",sponsor14,sponsor14
+user-account-sponsor-15,true,"UserIdentity{name: 'Sponsor15', surname: 'Sponsor', email: 'sponsor15@acme.com'}",sponsor15,sponsor15
+user-account-sponsor-16,true,"UserIdentity{name: 'Sponsor16', surname: 'Sponsor', email: 'sponsor16@acme.com'}",sponsor16,sponsor16
+user-account-sponsor-17,true,"UserIdentity{name: 'Sponsor17', surname: 'Sponsor', email: 'sponsor17@acme.com'}",sponsor17,sponsor17
+user-account-sponsor-18,true,"UserIdentity{name: 'Sponsor18', surname: 'Sponsor', email: 'sponsor18@acme.com'}",sponsor18,sponsor18
+user-account-sponsor-19,true,"UserIdentity{name: 'Sponsor19', surname: 'Sponsor', email: 'sponsor19@acme.com'}",sponsor19,sponsor19
+user-account-sponsor-20,true,"UserIdentity{name: 'Sponsor20', surname: 'Sponsor', email: 'sponsor20@acme.com'}",sponsor20,sponsor20
+user-account-sponsor-21,true,"UserIdentity{name: 'Sponsor21', surname: 'Sponsor', email: 'sponsor21@acme.com'}",sponsor21,sponsor21
+user-account-sponsor-22,true,"UserIdentity{name: 'Sponsor22', surname: 'Sponsor', email: 'sponsor22@acme.com'}",sponsor22,sponsor22
+user-account-sponsor-23,true,"UserIdentity{name: 'Sponsor23', surname: 'Sponsor', email: 'sponsor23@acme.com'}",sponsor23,sponsor23
