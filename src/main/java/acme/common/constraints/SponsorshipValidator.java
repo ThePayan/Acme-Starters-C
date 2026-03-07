@@ -38,7 +38,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 		if (sponsorship == null)
 			result = true;
 		else {
-			boolean isDraft = sponsorship.getDraftMode() != null && sponsorship.getDraftMode().booleanValue();
+			boolean isDraft = sponsorship.getDraftMode();
 			{
 				boolean uniqueSponsorship;
 				Sponsorship existingSponsorship = null;
@@ -52,24 +52,18 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 			{
 				boolean correctNumberOfDonations = true;
 				if (!isDraft) {
-					Integer sponsorshipId = sponsorship.getId();
-					Integer numDonations = this.repository.getNumOfDonations(sponsorshipId);
-
-					if (numDonations == null)
-						numDonations = 0;
-					correctNumberOfDonations = numDonations > 0;
+					Integer existingDonations = this.repository.getNumOfDonations(sponsorship.getId());
+					correctNumberOfDonations = existingDonations != null && existingDonations >= 1;
 				}
 				super.state(context, correctNumberOfDonations, "*", "acme.validation.numberOfDonations");
 			}
 			{
 				boolean correctDates = true;
-				if (!isDraft) {
-					Date startMoment = sponsorship.getStartMoment();
-					Date endMoment = sponsorship.getEndMoment();
-					if (startMoment != null && endMoment != null)
-						correctDates = MomentHelper.isBeforeOrEqual(startMoment, endMoment);
-				}
-				super.state(context, correctDates, "*", "acme.validation.correctDates.message");
+				Date startMoment = sponsorship.getStartMoment();
+				Date endMoment = sponsorship.getEndMoment();
+				if (!isDraft && startMoment != null && endMoment != null)
+					correctDates = MomentHelper.isBefore(startMoment, endMoment);
+				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
 		}
