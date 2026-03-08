@@ -1,7 +1,52 @@
 key,enabled,identity,password,username
+user-account-base,true,"UserIdentity{name: 'Lorem ipsum dolor sit amet, consectetu', surname: 'Lorem ipsum dolor sit amet, consectetu', email: 'base@acme.com'}",password123,userbase
 user-account-consumer-01,true,"UserIdentity{name: 'Peter', surname: 'Consumer', email: 'peter@acme.com'}",consumer1,consumer1
 user-account-consumer-02,true,"UserIdentity{name: 'Mary', surname: '貸んい建濯よ芝弾テソ Λορεμ ιπσθμ', email: 'mary@acme.com'}",consumer2,consumer2
 user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路可良 ᏥᏲᏎᎭ', email: 'manolo@acme.com'}",consumer3,consumer3
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
+user-account-spokesperson-00,true,"UserIdentity{name: 'Valid', surname: 'Base', email: 's00@acme.com'}",pass,spokesperson00
+user-account-spokesperson-01,true,"UserIdentity{name: 'Mary', surname: '貸んい建濯ょ芝弾テソ Λορεμ ιπσθμ', email: 's01@acme.com'}",pass,spokesperson01
+user-account-spokesperson-02,true,"UserIdentity{name: 'Manolo', surname: '之乎路可良 ѦѮ', email: 's02@acme.com'}",pass,spokesperson02
+user-account-spokesperson-03,true,"UserIdentity{name: 'Martina', surname: 'коза', email: 's03@acme.com'}",pass,spokesperson03
+user-account-spokesperson-04,false,"UserIdentity{name: 'Antonia', surname: 'אבטיח Éløzå', email: 's04@acme.com'}",pass,spokesperson04
+user-account-spokesperson-05,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's05@acme.com'}",pass,spokesperson05
+user-account-spokesperson-06,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's06@acme.com'}",pass,spokesperson06
+user-account-spokesperson-07,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's07@acme.com'}",pass,spokesperson07
+user-account-spokesperson-08,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's08@acme.com'}",pass,spokesperson08
+user-account-spokesperson-09,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's09@acme.com'}",pass,spokesperson09
+user-account-spokesperson-10,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's10@acme.com'}",pass,spokesperson10
+user-account-spokesperson-11,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's11@acme.com'}",pass,spokesperson11
+user-account-spokesperson-12,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's12@acme.com'}",pass,spokesperson12
+user-account-spokesperson-13,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's13@acme.com'}",pass,spokesperson13
+user-account-spokesperson-14,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's14@acme.com'}",pass,spokesperson14
+user-account-spokesperson-15,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's15@acme.com'}",pass,spokesperson15
+user-account-spokesperson-16,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's16@acme.com'}",pass,spokesperson16
+user-account-spokesperson-17,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's17@acme.com'}",pass,spokesperson17
+user-account-spokesperson-18,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's18@acme.com'}",pass,spokesperson18
+user-account-spokesperson-19,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's19@acme.com'}",pass,spokesperson19
+user-account-spokesperson-20,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's20@acme.com'}",pass,spokesperson20
+user-account-spokesperson-21,true,"UserIdentity{name: 'Lorem', surname: 'Ipsum', email: 's21@acme.com'}",pass,spokesperson21
+user-account-fundraiser-01,true,"UserIdentity{name: 'Mateo', surname: 'Rodríguez', email: 'mateo.rod92@email.com'}",fundraiser1,fundraiser1
+user-account-fundraiser-02,true,"UserIdentity{name: 'Valeria', surname: 'Garmendia', email: 'v.garmendia@mail.net'}",fundraiser2,fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Adrián', surname: 'Castillo', email: 'adri_castillo@webmail.es'}",fundraiser3,fundraiser3
+user-account-fundraiser-04,true,"UserIdentity{name: 'Sofía', surname: 'Villalobos', email: 'sofia.v-88@proweb.com'}",fundraiser4,fundraiser4
+user-account-fundraiser-05,true,"UserIdentity{name: 'Thiago', surname: 'Méndez', email: 'thiago.mendez@fastmail.com'}",fundraiser5,fundraiser5
+user-account-fundraiser-06,true,"UserIdentity{name: 'Isabella', surname: 'Padrón', email: 'isabella.p-dev@cloudmail.org'}",fundraiser6,fundraiser6
+user-account-fundraiser-07,true,"UserIdentity{name: 'Julián', surname: 'Soria', email: 'julian_soria@inter.net'}",fundraiser7,fundraiser7
+user-account-fundraiser-08,true,"UserIdentity{name: 'Lucía', surname: 'Ferrero', email: 'lferrero.pro@digitalmail.com'}",fundraiser8,fundraiser8
+user-account-fundraiser-09,true,"UserIdentity{name: 'Diego', surname: 'Aranda', email: 'd.aranda_95@servidor.es'}",fundraiser9,fundraiser9
+user-account-fundraiser-10,true,"UserIdentity{name: 'Camila', surname: 'Benítez', email: 'cami.benitez@enlace.com'}",fundraiser10,fundraiser10
+user-account-fundraiser-11,true,"UserIdentity{name: 'Nicolás', surname: 'Duarte', email: 'nico.duarte_oficial@mail.com'}",fundraiser11,fundraiser11
+user-account-fundraiser-12,true,"UserIdentity{name: 'Martina', surname: 'Guevara', email: 'martina.g@vuelo.net'}",fundraiser12,fundraiser12
+user-account-fundraiser-13,true,"UserIdentity{name: 'Bruno', surname: 'Salgado', email: 'bruno_sal_90@buzon.es'}",fundraiser13,fundraiser13
+user-account-fundraiser-14,true,"UserIdentity{name: 'Elena', surname: 'Figueroa', email: 'efigueroa.web@correo.com'}",fundraiser14,fundraiser14
+user-account-fundraiser-15,true,"UserIdentity{name: 'Sebastián', surname: 'Luján', email: 'sebastian.lujan.26@global.net'}",fundraiser15,fundraiser15
+user-account-fundraiser-16,true,"UserIdentity{name: 'Natalia', surname: 'Cisneros', email: 'naty_cisneros@esencia.com'}",fundraiser16,fundraiser16
+user-account-fundraiser-17,true,"UserIdentity{name: 'Joaquín', surname: 'Peralta', email: 'j.peralta@nube.es'}",fundraiser17,fundraiser17
+user-account-fundraiser-18,true,"UserIdentity{name: 'Renata', surname: 'Olmos', email: 'renata_olmos84@vanguardia.com'}",fundraiser18,fundraiser18
+user-account-fundraiser-19,true,"UserIdentity{name: 'Felipe', surname: 'Rozas', email: 'felipe.rozas@espacio.net'}",fundraiser19,fundraiser19
+user-account-fundraiser-20,true,"UserIdentity{name: 'Victoria', surname: 'Meneses', email: 'vicky.meneses@estudio.com'}",fundraiser20,fundraiser20
+user-account-fundraiser-21,true,"UserIdentity{name: 'Leonardo', surname: 'Basurto', email: 'leo_basurto@horizonte.es'}",fundraiser21,fundraiser21
+user-account-fundraiser-22,true,"UserIdentity{name: 'Carmen', surname: 'Marin', email: 'elcorreodecarmen8@gmail.com'}",fundraiser22,fundraiser22

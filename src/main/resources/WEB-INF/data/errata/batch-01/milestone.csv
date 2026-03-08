@@ -1,0 +1,12 @@
+key,title,achievements,effort,kind
+# title - standard variations,,,,
+errata-milestone-01,,Lorem ipsum,50.00,TEASER
+errata-milestone-02,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor,Lorem ipsum,50.00,TEASER
+# achievements - standard variations,,,,
+errata-milestone-03,Lorem ipsum,,50.00,TEASER
+errata-milestone-04,Lorem ipsum,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat Duis aute irure dolor in repa,50.00,TEASER
+# effort - standard variations,,,,
+errata-milestone-05,Lorem ipsum,Lorem ipsum,,TEASER
+errata-milestone-06,Lorem ipsum,Lorem ipsum,-0.01,TEASER
+# kind - standard variations,,,,
+errata-milestone-07,Lorem ipsum,Lorem ipsum,50.00,
