@@ -1,16 +1,16 @@
 key,name,notes,expectedPercentage,kind,key:strategy
-#Base
+#base entity
 tactic-1,"","",50.00,SUBTLE,strategy-1
-#Different name
+#name - standard variations
 tactic-2,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.00,SUBTLE,strategy-1
 tactic-3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.00,SUBTLE,strategy-1
-#Different notes
+#notes - standard variations
 tactic-4,"Lorem ipsum dolor sit amet, consectetu","",50.00,SUBTLE,strategy-1
 tactic-5,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",50.00,SUBTLE,strategy-1
-#Different percentage
+#percentage - standard variations
 tactic-6,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","",SUBTLE,strategy-1
 tactic-7,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",-0.01,SUBTLE,strategy-1
 tactic-8,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",100.01,SUBTLE,strategy-1
-#Different kind
-tactic-9,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",100.01,"",strategy-1
-#Different strategy
+#kind - standard variations
+tactic-9,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.00,"",strategy-1
+#strategy - standard variations

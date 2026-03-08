@@ -1,9 +1,10 @@
 key,bank,statement,agent
 #base entity
 fundraiser-1,"","",true
-#bank variations
+#bank - standard variations
 fundraiser-2,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true
 fundraiser-3,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",false
-#statement variations
+#statement - standard variations
 fundraiser-4,"Lorem ipsum dolor sit amet, consectetu","",true
 fundraiser-5,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",true
+#agent - standard variations

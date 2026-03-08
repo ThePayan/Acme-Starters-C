@@ -1,23 +1,30 @@
 key,ticker,name,description,startMoment,endMoment,MoreInfo,draftMode,key:fundraiser
-#Base
+#base entity
 strategy-1,"","","","","","",false,fundraiser-1
-#Different tickers
-strategy-2,A11-aaaaa,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
-strategy-3,AP90-AAAAAAAAAAAA,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
-#Different names
-strategy-4,AC13-hoLAS,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
-strategy-5,AD13-hoLAS,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+#tickers - standard variations,"","","","",""
+strategy-2,A11-aaaaa,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+strategy-3,AP90-AAAAAAAAAAAA,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+#names - standard variations
+strategy-4,AC13-hoLAS,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+strategy-5,AD13-hoLAS,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
 #Different description,"","","","",""
-strategy-6,AH13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","",2025/08/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
-strategy-7,AI13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",2025/08/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
-#Different start,"","","","",""
-strategy-8,AM13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","",2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
-strategy-9,AN13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/1/7 23:59,2200/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
-#Different end
-strategy-10,AO13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,"",http://lorem.com/ipsum,false,fundraiser-1
-strategy-11,AB14-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2201/1/1 00:01,http://lorem.com/ipsum,false,fundraiser-1
-#Different URL,"","","","",""
-strategy-12,AB15-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2200/12/31 23:59,http://,false,fundraiser-1
-strategy-13,AB13-hoLAS1,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2200/12/31 23:59,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",false,fundraiser-1
-#Different draftMode
-#Different fundraiser,"","","",""
+strategy-6,AH13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+strategy-7,AI13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+#start-moment - standard variations
+strategy-8,AM13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","",2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+strategy-9,AN13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2024/12/31 23:59,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+strategy-10,AN13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2201/01/01 00:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+strategy-11,AN13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2114/01/01 00:00,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+#end-moment - standard variations
+strategy-12,AO13-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,"",http://lorem.com/ipsum,false,fundraiser-1
+strategy-13,AB14-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2024/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1
+strategy-14,AB14-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2201/01/01 00:00,http://lorem.com/ipsum,false,fundraiser-1
+strategy-15,AB14-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2112/12/31 23:58,http://lorem.com/ipsum,false,fundraiser-1
+#URL - standard variations
+strategy-16,AB15-hoLAS,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://,false,fundraiser-1
+strategy-17,AB13-hoLAS1,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,ftp://,false,fundraiser-1
+strategy-18,AB13-hoLAS1,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://a,false,fundraiser-1
+strategy-19,AB13-hoLAS1,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,ftp://a,false,fundraiser-1
+strategy-20,AB13-hoLAS1,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",false,fundraiser-1
+#draftMode - standard variations,"","","","",""
+#fundraiser - standard variations
