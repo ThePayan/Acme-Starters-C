@@ -1,6 +1,8 @@
 
 package acme.common.constraints;
 
+import java.util.Date;
+
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,7 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.entities.strategies.Strategy;
-import acme.features.fundRaiser.StrategyRepository;
+import acme.features.fundraiser.StrategyRepository;
 
 @Validator
 public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy> {
@@ -36,13 +38,29 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 			result = true;
 		else {
 			{
+				boolean uniqueStrategy;
+				Strategy existingStrategy;
+
+				existingStrategy = this.repository.findStrategyByTicker(strategy.getTicker());
+				uniqueStrategy = existingStrategy == null || existingStrategy.equals(strategy);
+
+				super.state(context, uniqueStrategy, "ticker", "acme.validation.duplicated-ticker.message");
+			}
+			{
 				boolean correctNumberOfTactics;
 				Integer existingTactics;
 				existingTactics = this.repository.getNumOfTactics(strategy.getId());
-				correctNumberOfTactics = existingTactics >= 1;
-
-				if (correctNumberOfTactics)
-					super.state(context, correctNumberOfTactics, "numberOfTactics", "acme.validation.NumberOfTactics.message");
+				correctNumberOfTactics = strategy.getDraftMode() || existingTactics >= 1;
+				super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
+			}
+			{
+				Date startMoment = strategy.getStartMoment();
+				Date endMoment = strategy.getEndMoment();
+				boolean correctStartEndDate;
+				if (!strategy.getDraftMode() && startMoment != null && endMoment != null) {
+					correctStartEndDate = startMoment.before(endMoment);
+					super.state(context, correctStartEndDate, "*", "acme.validation.correctDates.message");
+				}
 			}
 			result = !super.hasErrors(context);
 		}
