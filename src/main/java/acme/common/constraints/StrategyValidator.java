@@ -7,8 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.strategies.Strategy;
-import acme.features.fundRaiser.StrategyRepository;
+import acme.features.fundraiser.StrategyRepository;
 
 @Validator
 public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy> {
@@ -35,14 +36,35 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 		if (strategy == null)
 			result = true;
 		else {
+			boolean isDraft = strategy.getDraftMode() != null && strategy.getDraftMode().booleanValue();
 			{
-				boolean correctNumberOfTactics;
-				Integer existingTactics;
-				existingTactics = this.repository.getNumOfTactics(strategy.getId());
-				correctNumberOfTactics = existingTactics >= 1;
+				boolean uniqueStrategy;
+				Strategy existingStrategy;
 
-				if (correctNumberOfTactics)
-					super.state(context, correctNumberOfTactics, "numberOfTactics", "acme.validation.NumberOfTactics.message");
+				existingStrategy = this.repository.findStrategyByTicker(strategy.getTicker());
+				uniqueStrategy = existingStrategy == null || existingStrategy.equals(strategy);
+
+				super.state(context, uniqueStrategy, "ticker", "acme.validation.duplicated-ticker.message");
+			}
+			{
+				boolean correctNumberOfTactics = true;
+				if (!strategy.getDraftMode()) {
+					Integer existingTactics;
+					existingTactics = this.repository.getNumOfTactics(strategy.getId());
+					if (existingTactics == null)
+						existingTactics = 0;
+
+					correctNumberOfTactics = existingTactics >= 1;
+				}
+				super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
+			}
+			{
+				boolean correctDates = true;
+
+				if (!isDraft && strategy.getStartMoment() != null && strategy.getEndMoment() != null)
+					correctDates = MomentHelper.isBefore(strategy.getStartMoment(), strategy.getEndMoment());
+
+				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
 		}
