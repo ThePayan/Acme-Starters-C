@@ -1,14 +1,13 @@
 
 package acme.common.constraints;
 
-import java.util.Date;
-
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.strategies.Strategy;
 import acme.features.fundraiser.StrategyRepository;
 
@@ -37,6 +36,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 		if (strategy == null)
 			result = true;
 		else {
+			boolean isDraft = strategy.getDraftMode() != null && strategy.getDraftMode().booleanValue();
 			{
 				boolean uniqueStrategy;
 				Strategy existingStrategy;
@@ -47,20 +47,24 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				super.state(context, uniqueStrategy, "ticker", "acme.validation.duplicated-ticker.message");
 			}
 			{
-				boolean correctNumberOfTactics;
-				Integer existingTactics;
-				existingTactics = this.repository.getNumOfTactics(strategy.getId());
-				correctNumberOfTactics = strategy.getDraftMode() || existingTactics >= 1;
+				boolean correctNumberOfTactics = true;
+				if (!strategy.getDraftMode()) {
+					Integer existingTactics;
+					existingTactics = this.repository.getNumOfTactics(strategy.getId());
+					if (existingTactics == null)
+						existingTactics = 0;
+
+					correctNumberOfTactics = existingTactics >= 1;
+				}
 				super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 			}
 			{
-				Date startMoment = strategy.getStartMoment();
-				Date endMoment = strategy.getEndMoment();
-				boolean correctStartEndDate;
-				if (!strategy.getDraftMode() && startMoment != null && endMoment != null) {
-					correctStartEndDate = startMoment.before(endMoment);
-					super.state(context, correctStartEndDate, "*", "acme.validation.correctDates.message");
-				}
+				boolean correctDates = true;
+
+				if (!isDraft && strategy.getStartMoment() != null && strategy.getEndMoment() != null)
+					correctDates = MomentHelper.isBefore(strategy.getStartMoment(), strategy.getEndMoment());
+
+				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
 		}
