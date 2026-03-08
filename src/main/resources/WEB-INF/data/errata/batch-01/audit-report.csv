@@ -1,32 +1,30 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:auditor
-
-# TICKER - Falla por estar vacío, en blanco o tener formato inválido (@Mandatory / @ValidTicker)
+# ticker - standard variations
 audit-report-e01,,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
 audit-report-e02," ",Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
 audit-report-e03,ticker-invalido,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
 audit-report-e04,TICKER@MALO,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
-
-# NAME - Falla por vacío o por exceder la longitud (@Mandatory / @ValidHeader)
+# name - standard variations
 audit-report-e05,ER28-TEST01,,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
 audit-report-e06,ER28-TEST02," ",Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
-audit-report-e07,ER28-TEST03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in",Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
-
-# DESCRIPTION - Falla por vacío o por exceder la longitud (@Mandatory / @ValidText)
+audit-report-e07,ER28-TEST03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod temp",Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
+# description - standard variations
 audit-report-e08,ER28-TEST04,Auditoria de Seguridad,,2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
 audit-report-e09,ER28-TEST05,Auditoria de Seguridad," ",2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
 audit-report-e10,ER28-TEST06,Auditoria de Seguridad,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in",2028/06/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
-
-# START MOMENT - Falla por vacío o por estar en el pasado (@Mandatory / ENFORCE_FUTURE)
+# start moment - standard variations
 audit-report-e11,ER28-TEST07,Auditoria de Seguridad,Evaluacion profunda,,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
-audit-report-e12,ER28-TEST08,Auditoria de Seguridad,Evaluacion profunda,2020/01/01 10:00,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
-
-# END MOMENT - Falla por vacío o por estar en el pasado (@Mandatory / ENFORCE_FUTURE)
-audit-report-e13,ER28-TEST09,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,,https://www.acme.com/audits/1,false,auditor-01
-audit-report-e14,ER28-TEST10,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2020/01/01 10:00,https://www.acme.com/audits/1,false,auditor-01
-
-# LOGICA TEMPORAL CUSTÓMICA - startMoment después de endMoment (@ValidAudit)
-audit-report-e15,ER28-TEST11,Auditoria de Seguridad,Evaluacion profunda,2028/06/15 14:00,2028/06/01 10:00,https://www.acme.com/audits/1,false,auditor-01
-
-# MORE INFO - Falla por formato de URL inválido (@ValidUrl)
-audit-report-e16,ER28-TEST12,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,htp://invalido.com,false,auditor-01
-audit-report-e17,ER28-TEST13,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,esto-no-es-url,false,auditor-01
+audit-report-e12,ER28-TEST08,Auditoria de Seguridad,Evaluacion profunda,2024/12/31 23:59,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
+audit-report-e13,ER28-TEST09,Auditoria de Seguridad,Evaluacion profunda,2201/01/01 00:01,2028/06/15 14:00,https://www.acme.com/audits/1,false,auditor-01
+audit-report-e14,ER28-TEST10,Auditoria de Seguridad,Evaluacion profunda,2026/06/15 10:00,2026/06/15 9:59,https://www.acme.com/audits/1,false,auditor-01
+# end moment - standard variations
+audit-report-e15,ER28-TEST11,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,,https://www.acme.com/audits/1,false,auditor-01
+audit-report-e16,ER28-TEST12,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2024/12/31 23:59,https://www.acme.com/audits/1,false,auditor-01
+audit-report-e17,ER28-TEST13,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2201/01/01 00:01,https://www.acme.com/audits/1,false,auditor-01
+audit-report-e18,ER28-TEST14,Auditoria de Seguridad,Evaluacion profunda,2026/06/15 10:00,2026/06/15 9:59,https://www.acme.com/audits/1,false,auditor-01
+# more info - standard variations
+audit-report-e19,ER28-TEST15,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,http://,false,auditor-01
+audit-report-e20,ER28-TEST16,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,ftp://,false,auditor-01
+audit-report-e21,ER28-TEST17,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,http://a,false,auditor-01
+audit-report-e22,ER28-TEST18,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,ftp://a,false,auditor-01
+audit-report-e23,ER28-TEST19,Auditoria de Seguridad,Evaluacion profunda,2028/06/01 10:00,2028/06/15 14:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",false,auditor-01

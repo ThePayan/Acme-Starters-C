@@ -1,6 +1,8 @@
 
 package acme.common.constraints;
 
+import java.util.Date;
+
 import javax.validation.ConstraintValidatorContext;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,36 +33,40 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 	public boolean isValid(final AuditReport auditReport, final ConstraintValidatorContext context) {
 		assert context != null;
 
-		// 1. Si es null
+		boolean result;
+
 		if (auditReport == null)
-			return true;
+			result = true;
 		else {
+			boolean isDraft = auditReport.getDraftMode();
 			{
-				// 2. Validación: Número de secciones
-				Integer existingAuditSection = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
-				boolean correctNumberOfAuditSections = existingAuditSection != null && existingAuditSection >= 1;
+				boolean uniqueAuditReport;
+				AuditReport existingAuditReport = null;
 
-				if (!correctNumberOfAuditSections && Boolean.FALSE.equals(auditReport.getDraftMode()))
-					super.state(context, false, "draftMode", "acme.validation.numberOfAuditSections.message");
+				if (auditReport.getTicker() != null)
+					existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
+				uniqueAuditReport = existingAuditReport == null || existingAuditReport.equals(auditReport);
+
+				super.state(context, uniqueAuditReport, "ticker", "acme.validation.duplicated-ticker-message");
 			}
 			{
-				// 3. Validación: Unicidad del Ticker
-				AuditReport existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
-				boolean isUnique = existingAuditReport == null || existingAuditReport.getId() == auditReport.getId();
-				super.state(context, isUnique, "ticker", "acme.validation.ticker.message");
-			}
-			{
-				// 4. Validación: Fechas
-				{
-					boolean correctDates = true;
-
-					if (!auditReport.getDraftMode() && auditReport.getStartMoment() != null && auditReport.getEndMoment() != null)
-						correctDates = MomentHelper.isBefore(auditReport.getStartMoment(), auditReport.getEndMoment());
-
-					super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
+				boolean correctNumberOfAuditSections = true;
+				if (!isDraft) {
+					Integer existingAuditSections = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
+					correctNumberOfAuditSections = existingAuditSections != null && existingAuditSections >= 1;
 				}
+				super.state(context, correctNumberOfAuditSections, "draftMode", "acme.validation.numberOfDonations");
 			}
+			{
+				boolean correctDates = true;
+				Date startMoment = auditReport.getStartMoment();
+				Date endMoment = auditReport.getEndMoment();
+				if (!isDraft && startMoment != null && endMoment != null)
+					correctDates = MomentHelper.isBefore(startMoment, endMoment);
+				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
+			}
+			result = !super.hasErrors(context);
 		}
-		return !super.hasErrors(context);
+		return result;
 	}
 }
