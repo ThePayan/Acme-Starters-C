@@ -1,0 +1,13 @@
+key,firm,highlights,solicitor,key:userAccount
+# firm - standard variations
+auditor-01,,"Excellent audit highlights",TRUE,user-account-auditor-01
+auditor-02," ","Excellent audit highlights",TRUE,user-account-auditor-01
+auditor-03,"    ","Excellent audit highlights",TRUE,user-account-auditor-01
+auditor-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Excellent audit highlights",TRUE,user-account-auditor-01
+# highlights - standard variations
+auditor-05,"Acme Audit Firm",,TRUE,user-account-auditor-01
+auditor-06,"Acme Audit Firm"," ",TRUE,user-account-auditor-01
+auditor-07,"Acme Audit Firm","    ",TRUE,user-account-auditor-01
+auditor-08,"Acme Audit Firm","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem",TRUE,user-account-auditor-01
+# solicitor - standard variations
+auditor-09,"Acme Audit Firm","Excellent audit highlights",,user-account-auditor-01
