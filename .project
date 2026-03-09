@@ -36,13 +36,13 @@
 	<linkedResources>
 		<link>
 			<name>acme-framework</name>
-			<type>2</type>
-			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-26.2.0/target/classes</locationURI>
+			<type>3</type>
+			<locationURI>WORKSPACE_LOC/Frameworks/Acme-Framework-26.3.0/target/classes</locationURI>
 		</link>
 	</linkedResources>
 	<filteredResources>
 		<filter>
-			<id>1770580344567</id>
+			<id>1773062764339</id>
 			<name></name>
 			<type>30</type>
 			<matcher>
