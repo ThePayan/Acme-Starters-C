@@ -25,6 +25,7 @@ import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
 import acme.features.authenticated.sponsor.AuthenticatedSponsorRepository;
+import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
