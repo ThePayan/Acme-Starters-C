@@ -6,6 +6,27 @@ user-account-consumer-03,true,"UserIdentity{name: 'Manolo', surname: '之乎路�
 user-account-provider-01,true,"UserIdentity{name: 'Laurel', surname: 'Provider', email: 'laurel@acme.com'}",provider1,provider1
 user-account-provider-02,true,"UserIdentity{name: 'Martina', surname: 'коза თხა', email: 'martina@acme.com'}",provider2,provider2
 user-account-provider-03,true,"UserIdentity{name: 'Antonia', surname: 'אבטיח Æløzå', email: 'antonia@acme.com'}",provider3,provider3
+user-account-auditor-01,true,"UserIdentity{name: 'Maria', surname: 'Lechuga', email: 'lechuguita@acme.com'}",auditor1,auditor1
+user-account-auditor-02,true,"UserIdentity{name: 'Jadou', surname: 'Nguyen', email: 'iamyellowlol@acme.com'}",auditor2,auditor2
+user-account-auditor-03,true,"UserIdentity{name: 'Miguelillo', surname: 'Eggs', email: 'dedbaideilait@acme.com'}",auditor3,auditor3
+user-account-auditor-04,true,"UserIdentity{name: 'Faustino', surname: 'Suspenso', email: 'fisicalol@acme.com'}",auditor4,auditor4
+user-account-auditor-05,true,"UserIdentity{name: 'Natalia', surname: 'Quintana', email: 'fandevegeta@acme.com'}",auditor5,auditor5
+user-account-auditor-06,true,"UserIdentity{name: 'Auditor6', surname: 'Report', email: 'prueba6@acme.com'}",auditor5,auditor6
+user-account-auditor-07,true,"UserIdentity{name: 'Auditor7', surname: 'Report', email: 'prueba7@acme.com'}",auditor5,auditor7
+user-account-auditor-08,true,"UserIdentity{name: 'Auditor8', surname: 'Report', email: 'prueba8@acme.com'}",auditor5,auditor8
+user-account-auditor-09,true,"UserIdentity{name: 'Auditor9', surname: 'Report', email: 'prueba9@acme.com'}",auditor5,auditor9
+user-account-auditor-10,true,"UserIdentity{name: 'Auditor10', surname: 'Report', email: 'prueba10@acme.com'}",auditor5,auditor10
+user-account-auditor-11,true,"UserIdentity{name: 'Auditor11', surname: 'Report', email: 'prueba11@acme.com'}",auditor5,auditor11
+user-account-auditor-12,true,"UserIdentity{name: 'Auditor12', surname: 'Report', email: 'prueba12@acme.com'}",auditor5,auditor12
+user-account-auditor-13,true,"UserIdentity{name: 'Auditor13', surname: 'Report', email: 'prueba13@acme.com'}",auditor5,auditor13
+user-account-auditor-14,true,"UserIdentity{name: 'Auditor14', surname: 'Report', email: 'prueba14@acme.com'}",auditor5,auditor14
+user-account-auditor-15,true,"UserIdentity{name: 'Auditor15', surname: 'Report', email: 'prueba15@acme.com'}",auditor5,auditor15
+user-account-auditor-16,true,"UserIdentity{name: 'Auditor16', surname: 'Report', email: 'prueba16@acme.com'}",auditor5,auditor16
+user-account-auditor-17,true,"UserIdentity{name: 'Auditor17', surname: 'Report', email: 'prueba17@acme.com'}",auditor5,auditor17
+user-account-auditor-18,true,"UserIdentity{name: 'Auditor18', surname: 'Report', email: 'prueba18@acme.com'}",auditor5,auditor18
+user-account-auditor-19,true,"UserIdentity{name: 'Auditor19', surname: 'Report', email: 'prueba19@acme.com'}",auditor5,auditor19
+user-account-auditor-20,true,"UserIdentity{name: 'Auditor20', surname: 'Report', email: 'prueba20@acme.com'}",auditor5,auditor20
+user-account-auditor-21,true,"UserIdentity{name: 'Auditor21', surname: 'Report', email: 'prueba21@acme.com'}",auditor5,auditor21
 user-account-spokesperson-00,true,"UserIdentity{name: 'Valid', surname: 'Base', email: 's00@acme.com'}",pass,spokesperson00
 user-account-spokesperson-01,true,"UserIdentity{name: 'Mary', surname: '貸んい建濯ょ芝弾テソ Λορεμ ιπσθμ', email: 's01@acme.com'}",pass,spokesperson01
 user-account-spokesperson-02,true,"UserIdentity{name: 'Manolo', surname: '之乎路可良 ѦѮ', email: 's02@acme.com'}",pass,spokesperson02
