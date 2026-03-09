@@ -59,7 +59,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 				correctNumberOfMilestones = existingMilestones >= 1;
 
 				if (!correctNumberOfMilestones && Boolean.FALSE.equals(draftMode))
-					super.state(context, false, "draftMode", "acme.validation.NumberOfMilestones.message");
+					super.state(context, false, "*", "acme.validation.NumberOfMilestones.message");
 			}
 
 			{

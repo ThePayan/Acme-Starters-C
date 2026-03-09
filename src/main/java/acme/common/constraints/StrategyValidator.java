@@ -56,7 +56,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 
 					correctNumberOfTactics = existingTactics >= 1;
 				}
-				super.state(context, correctNumberOfTactics, "draftMode", "acme.validation.numberOfTactics.message");
+				super.state(context, correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 			}
 			{
 				boolean correctDates = true;
