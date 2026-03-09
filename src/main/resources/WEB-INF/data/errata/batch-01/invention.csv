@@ -1,0 +1,31 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:inventor
+#base entity
+invention-1,"","","","","","",false,inventor-1
+#tickers - standard variations,"","","","",""
+invention-2,A11-aaaaa,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+invention-3,AP90-AAAAAAAAAAAA,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,invention-1
+#names - standard variations
+invention-4,JA00-oooo1,"","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+invention-5,JA00-oooo2,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+#Different description,"","","","",""
+invention-6,JA00-oooo3,"Lorem ipsum dolor sit amet, consectetu","",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+invention-7,JA00-oooo4,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",2025/08/01 0:00,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+#start-moment - standard variations
+invention-8,JA00-oooo5,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","",2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+invention-9,JA00-oooo6,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2024/12/31 23:59,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+invention-10,JA00-oooo7,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2201/01/01 00:00,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+invention-11,JA00-oooo8,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2114/01/01 00:00,2113/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+#end-moment - standard variations
+invention-12,JA00-oooo9,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,"",http://lorem.com/ipsum,false,inventor-1
+invention-13,JA00-ooo10,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2024/12/31 23:59,http://lorem.com/ipsum,false,inventor-1
+invention-14,JA00-ooo11,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2201/01/01 00:00,http://lorem.com/ipsum,false,inventor-1
+invention-15,JA00-ooo12,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2112/12/31 23:58,http://lorem.com/ipsum,false,inventor-1
+#URL - standard variations
+invention-16,JA00-ooo13,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://,false,inventor-1
+invention-17,JA00-ooo14,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,ftp://,false,inventor-1
+invention-18,JA00-ooo15,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://a,false,inventor-1
+invention-19,JA00-ooo16,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,ftp://a,false,inventor-1
+invention-20,JA00-ooo17,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/08/01 0:00,2113/12/31 23:59,http://a,false,inventor-1
+
+
+
