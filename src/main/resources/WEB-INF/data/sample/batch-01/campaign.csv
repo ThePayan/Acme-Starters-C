@@ -31,5 +31,3 @@ campaign-25,ES26-00025,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor s
 campaign-26,ES26-00026,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://example.org/,TRUE,spokesperson-00
 campaign-27,ES26-00027,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://example.org/a/b?,TRUE,spokesperson-00
 campaign-28,ES26-00028,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://example.org/a/b?a&b,TRUE,spokesperson-00
-# draftMode - standard variations,,,,,,,,
-campaign-21,ES26-00021,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/21,FALSE,spokesperson-21
