@@ -1,7 +1,7 @@
 
 package acme.entities.sponsorship;
 
-import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -25,7 +25,6 @@ import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
 import acme.features.authenticated.sponsor.AuthenticatedSponsorRepository;
-import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -36,6 +35,10 @@ public class Sponsorship extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
 	private static final long				serialVersionUID	= 1L;
+
+	@Transient
+	@Autowired
+	private AuthenticatedSponsorRepository	sponsorRep;
 
 	@Mandatory
 	@ValidTicker
@@ -67,19 +70,14 @@ public class Sponsorship extends AbstractEntity {
 	@Column
 	private String							moreInfo;
 
-	@Transient
-	@Autowired
-	private AuthenticatedSponsorRepository	sponsorRep;
-
 
 	@Transient
 	@Valid
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
+		double result = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
 
-		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
-		double result = duration.toSeconds() / 2592000.0;
 		return result;
 	}
 
