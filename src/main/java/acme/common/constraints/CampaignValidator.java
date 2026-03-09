@@ -9,18 +9,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.campaign.Campaign;
 import acme.features.authenticated.spokesperson.CampaignRepository;
 
 @Validator
 public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign> {
 
-	// Internal state ---------------------------------------------------------
-
 	@Autowired
 	private CampaignRepository campaignRepository;
-
-	// ConstraintValidator interface ------------------------------------------
 
 
 	@Override
@@ -37,39 +34,45 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 		if (campaign == null)
 			result = true;
 		else {
-			{
-				boolean correctNumberOfMilestones;
-				Integer existingMilestones;
-				existingMilestones = this.campaignRepository.getNumOfMilestones(campaign.getId());
 
-				correctNumberOfMilestones = existingMilestones >= 1;
+			Boolean draftMode = campaign.getDraftMode();
 
-				if (!correctNumberOfMilestones && campaign.getDraftMode())
-					super.state(context, correctNumberOfMilestones, "*", "acme.validation.NumberOfMilestones.message");
-
-			}
 			{
 				boolean uniqueCampaign;
-				Campaign existingCampaign;
+				Campaign existingCampaign = null;
 
-				existingCampaign = this.campaignRepository.findCampaignByTicker(campaign.getTicker());
-				uniqueCampaign = existingCampaign == null || existingCampaign.equals(campaign);
+				if (campaign.getTicker() != null)
+					existingCampaign = this.campaignRepository.findCampaignByTicker(campaign.getTicker());
+
+				uniqueCampaign = existingCampaign == null || existingCampaign.getId() == campaign.getId();
 
 				super.state(context, uniqueCampaign, "ticker", "acme.validation.ticker.message");
 			}
-			{
-				boolean isAfter;
 
+			{
+				boolean correctNumberOfMilestones;
+				Integer existingMilestones = this.campaignRepository.getNumOfMilestones(campaign.getId());
+
+				if (existingMilestones == null)
+					existingMilestones = 0;
+
+				correctNumberOfMilestones = existingMilestones >= 1;
+
+				if (!correctNumberOfMilestones && Boolean.FALSE.equals(draftMode))
+					super.state(context, false, "*", "acme.validation.NumberOfMilestones.message");
+			}
+
+			{
 				Date startMoment = campaign.getStartMoment();
 				Date endMoment = campaign.getEndMoment();
-				if (startMoment != null || endMoment != null) {
 
-					isAfter = startMoment.after(endMoment);
+				if (startMoment != null && endMoment != null) {
 
-					if (isAfter && campaign.getDraftMode())
-						super.state(context, isAfter, "*", "acme.validation.correctDates.message");
+					boolean isAfter = MomentHelper.isAfter(startMoment, endMoment);
+
+					if (isAfter && Boolean.FALSE.equals(draftMode))
+						super.state(context, false, "isAfter", "acme.validation.correctDates.message");
 				}
-
 			}
 
 			result = !super.hasErrors(context);
@@ -77,5 +80,4 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 		return result;
 	}
-
 }

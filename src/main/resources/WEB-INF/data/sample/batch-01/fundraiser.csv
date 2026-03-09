@@ -1,0 +1,27 @@
+key,bank,statement,agent,key:user-account
+#base entity
+fundraiser-1,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-01
+#bank - standard variations
+fundraiser-2,L,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-02
+fundraiser-3,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-03
+fundraiser-4,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-04
+fundraiser-5,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-05
+fundraiser-6,โลเร็ม อิปซัม,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-06
+fundraiser-7,لوريم إيبسوم,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-07
+fundraiser-8,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-08
+fundraiser-9,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-09
+fundraiser-10,<script>alert(‘Hacked!’);</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-10
+fundraiser-11,' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-fundraiser-11
+#statement - standard variations
+fundraiser-12,"Lorem ipsum dolor sit amet, consectetu",L,true,user-account-fundraiser-12
+fundraiser-13,"Lorem ipsum dolor sit amet, consectetu",Lo,true,user-account-fundraiser-13
+fundraiser-14,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",true,user-account-fundraiser-14
+fundraiser-15,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",true,user-account-fundraiser-15
+fundraiser-16,"Lorem ipsum dolor sit amet, consectetu",洛伦·伊普森,true,user-account-fundraiser-16
+fundraiser-17,"Lorem ipsum dolor sit amet, consectetu",لوريم إيبسوم,true,user-account-fundraiser-17
+fundraiser-18,"Lorem ipsum dolor sit amet, consectetu",โลเร็ม อิปซัม,false,user-account-fundraiser-18
+fundraiser-19,"Lorem ipsum dolor sit amet, consectetu",<marquee>Hacked</marquee>,true,user-account-fundraiser-19
+fundraiser-20,"Lorem ipsum dolor sit amet, consectetu",<script>alert(‘Hacked!’);</script>,true,user-account-fundraiser-20
+fundraiser-21,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,true,user-account-fundraiser-21
+#agent - standard variations
+fundraiser-22,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",false,user-account-fundraiser-22

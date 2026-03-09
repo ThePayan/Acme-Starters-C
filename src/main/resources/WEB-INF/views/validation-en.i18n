@@ -7,5 +7,7 @@ acme.validation.correctDates.message          = The start moment must be before 
 acme.validation.duplicated-ticker.message     = The ticker is duplicated
 acme.validation.numberOfTactics.message       = Strategies cannot be published unless they have at least one tactic
 acme.validation.numberOfMilestones.message    = Campaigns cannot be published unless they have at least one milestone
+acme.validation.numberOfAuditSections.message = Audit Reports cannot be published unless they have at least one audit section
+acme.validation.numberOfParts.message         = Inventions cannot be published unless they have at least one part
 acme.validation.numberOfDonations.message     = Sponsorships cannot be published unless they have at least one donation
 acme.validation.currency.message              = The currency must be in Euros
