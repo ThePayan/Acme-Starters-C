@@ -12,6 +12,7 @@
 
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
+master.menu.anonymous.auditReport-list = Lista de reportes de auditoría
 
 # master.menu.administrator ###################################################
 

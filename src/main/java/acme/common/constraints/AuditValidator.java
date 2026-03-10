@@ -11,7 +11,7 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.auditreport.AuditReport;
-import acme.features.authenticated.auditreport.AuthenticatedAuditReportRepository;
+import acme.features.any.auditreport.AnyAuditReportRepository;
 
 @Validator
 public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
@@ -19,7 +19,7 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedAuditReportRepository auditRepository;
+	private AnyAuditReportRepository auditRepository;
 
 	// ConstraintValidator interface ------------------------------------------
 
