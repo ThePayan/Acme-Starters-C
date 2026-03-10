@@ -8,26 +8,26 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.auditReport.form.title = Detalles del reporte de auditoría
-any.auditReport.list.title = Lista de reportes de auditoría
+any.audit-report.form.title = Detalles del reporte de auditoría
+any.audit-report.list.title = Lista de reportes de auditoría
 
-any.auditReport.form.label.ticker = Referencia:
-any.auditReport.list.label.auditor.firm = Empresa:
-any.auditReport.form.label.auditSection = Sección de la auditoría:
-any.auditReport.form.label.name = Nombre:
-any.auditReport.form.label.startMoment = Fecha Inicio:
-any.auditReport.form.label.endMoment = Fecha Final:
-any.auditReport.form.label.moreInfo = Más información: (Opcional)
-any.auditReport.form.label.description = Descripción:
+any.audit-report.form.label.ticker = Referencia:
+any.audit-report.list.label.auditor.firm = Empresa:
+any.audit-report.form.label.auditSection = Sección de la auditoría:
+any.audit-report.form.label.name = Nombre:
+any.audit-report.form.label.startMoment = Fecha Inicio:
+any.audit-report.form.label.endMoment = Fecha Final:
+any.audit-report.form.label.moreInfo = Más información: (Opcional)
+any.audit-report.form.label.description = Descripción:
 any.audit-report.form.label.monthsActive = Meses Activo:
 any.audit-report.form.label.hours = Horas:
 
-any.auditReport.form.button.auditSections = Secciones de auditoría
-any.auditReport.form.button.auditor = Auditor
+any.audit-report.form.button.audit-sections = Secciones de auditoría
+any.audit-report.form.button.auditor = Auditor
 
-any.auditReport.list.label.ticker = Referencia  
-any.auditReport.list.label.startMoment = Fecha Inicio
-any.auditReport.list.label.endMoment = Fecha Final
-any.auditReport.list.label.name = Nombre
-any.auditReport.list.label.description = Descripción
-any.auditReport.list.label.moreInfo = Más Información
+any.audit-report.list.label.ticker = Referencia  
+any.audit-report.list.label.startMoment = Fecha Inicio
+any.audit-report.list.label.endMoment = Fecha Final
+any.audit-report.list.label.name = Nombre
+any.audit-report.list.label.description = Descripción
+any.audit-report.list.label.moreInfo = Más Información

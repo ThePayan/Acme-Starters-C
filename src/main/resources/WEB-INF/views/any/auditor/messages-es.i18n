@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.auditReport.form.title = Detalles del auditor
+any.auditor.form.title = Detalles del auditor
 
 any.auditor.form.label.firm = Empresa:
 any.auditor.form.label.highlights = Destacados:

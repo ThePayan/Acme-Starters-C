@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 any.audit-section.form.title = Detalles de la sección de auditoría
-any.auditReport.list.title = Lista de secciones de auditoría
+any.audit-section.list.title = Lista de secciones de auditoría
 
 any.audit-section.form.label.name = Nombre:
 any.audit-section.form.label.notes = Notas:
