@@ -15,7 +15,7 @@ public interface AuthenticatedInventionRepository extends AbstractRepository {
 	Double getSumOfCosts(int id);
 
 	@Query("SELECT COUNT(s) FROM Part s WHERE s.invention.id = :id")
-	Integer getNumOfParts(@Param("inventionId") int id);
+	Integer getNumOfParts(@Param("id") int id);
 
 	Invention findInventionByTicker(String ticker);
 }

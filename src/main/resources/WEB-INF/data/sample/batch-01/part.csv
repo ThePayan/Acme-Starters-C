@@ -1,4 +1,4 @@
-key,name,descriptions,cost,kind,key:invention
+key,name,description,cost,kind,key:invention
 part-base,"Lorem ipsum dolor sit amet consectetu","Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut",EUR 500000.00,CORE,invention-00
 # name - standard variations,,,,,
 part-01,"L","Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut",EUR 500000.00,CORE,invention-00
