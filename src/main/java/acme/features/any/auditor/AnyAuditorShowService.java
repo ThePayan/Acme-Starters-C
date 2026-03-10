@@ -25,7 +25,7 @@ public class AnyAuditorShowService extends AbstractService<Any, Auditor> {
 	public void load() {
 		int id;
 
-		id = super.getRequest().getData("auditorId", int.class);
+		id = super.getRequest().getData("audit-reportId", int.class);
 		this.auditor = this.repository.findAuditorByAuditReportId(id);
 	}
 
