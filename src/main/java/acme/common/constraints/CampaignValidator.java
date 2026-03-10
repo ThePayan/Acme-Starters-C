@@ -71,7 +71,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 					boolean isAfter = MomentHelper.isAfter(startMoment, endMoment);
 
 					if (isAfter && Boolean.FALSE.equals(draftMode))
-						super.state(context, false, "*", "acme.validation.correctDates.message");
+						super.state(context, false, "isAfter", "acme.validation.correctDates.message");
 				}
 			}
 
