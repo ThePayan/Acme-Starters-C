@@ -9,7 +9,7 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.strategies.Strategy;
-import acme.features.fundraiser.StrategyRepository;
+import acme.features.any.strategy.AnyStrategyRepository;
 
 @Validator
 public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy> {
@@ -17,7 +17,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private StrategyRepository repository;
+	private AnyStrategyRepository repository;
 
 	// ConstraintValidator interface ------------------------------------------
 
