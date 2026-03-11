@@ -16,8 +16,8 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:form-textbox code="any.audit-section.list.label.name" path="name"/>
-	<acme:form-textbox code="any.audit-section.list.label.notes" path="notes"/>
-	<acme:form-integer code="any.audit-section.list.label.hours" path="hours"/>
-	<acme:form-textbox code="any.audit-section.list.label.kind" path="kind"/>
+	<acme:form-textbox code="any.audit-section.form.label.name" path="name"/>
+	<acme:form-textbox code="any.audit-section.form.label.notes" path="notes"/>
+	<acme:form-integer code="any.audit-section.form.label.hours" path="hours"/>
+	<acme:form-textbox code="any.audit-section.form.label.kind" path="kind"/>
 </acme:form>
