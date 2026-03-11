@@ -12,7 +12,6 @@ any.audit-report.form.title = Detalles del reporte de auditoría
 any.audit-report.list.title = Lista de reportes de auditoría
 
 any.audit-report.form.label.ticker = Referencia:
-any.audit-report.list.label.auditor.firm = Empresa:
 any.audit-report.form.label.auditSection = Sección de la auditoría:
 any.audit-report.form.label.name = Nombre:
 any.audit-report.form.label.startMoment = Fecha Inicio:
@@ -26,6 +25,7 @@ any.audit-report.form.button.audit-sections = Secciones de auditoría
 any.audit-report.form.button.auditor = Auditor
 
 any.audit-report.list.label.ticker = Referencia  
+any.audit-report.list.label.auditor.firm = Empresa
 any.audit-report.list.label.startMoment = Fecha Inicio
 any.audit-report.list.label.endMoment = Fecha Final
 any.audit-report.list.label.name = Nombre
