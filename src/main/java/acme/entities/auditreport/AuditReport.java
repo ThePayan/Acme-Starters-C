@@ -24,7 +24,7 @@ import acme.common.constraints.ValidAudit;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.features.authenticated.auditreport.AuthenticatedAuditReportRepository;
+import acme.features.any.auditreport.AnyAuditReportRepository;
 import acme.realms.Auditor;
 import lombok.Getter;
 import lombok.Setter;
@@ -40,7 +40,7 @@ public class AuditReport extends AbstractEntity {
 
 	@Transient
 	@Autowired
-	private AuthenticatedAuditReportRepository	auditReport;
+	private AnyAuditReportRepository	auditReport;
 
 	@ValidTicker
 	@Mandatory
