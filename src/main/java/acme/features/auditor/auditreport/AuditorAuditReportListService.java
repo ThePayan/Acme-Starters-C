@@ -1,5 +1,5 @@
 /*
- * AuditorAuditReportShowService.java
+ * AuditorAuditReportListService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,57 +10,47 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.feature.auditor.auditreport;
+package acme.features.auditor.auditreport;
+
+import java.util.Collection;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.auditreport.AuditReport;
 import acme.realms.Auditor;
 
 @Service
-public class AuditorAuditReportShowService extends AbstractService<Auditor, AuditReport> {
+public class AuditorAuditReportListService extends AbstractService<Auditor, AuditReport> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	private AuditorAuditReportRepository	repository;
 
-	private AuditReport						auditReport;
+	private Collection<AuditReport>			auditReports;
 
 	// AbstractService interface -------------------------------------------
 
 
 	@Override
-	public void load() {
-		int id;
-
-		id = super.getRequest().getData("id", int.class);
-		this.auditReport = this.repository.findAuditReportById(id);
+	public void authorise() {
+		super.setAuthorised(true);
 	}
 
 	@Override
-	public void authorise() {
-		boolean status;
+	public void load() {
+		int auditorId;
 
-		status = this.auditReport != null && //
-			(this.auditReport.getAuditor().isPrincipal() || !this.auditReport.getDraftMode());
-
-		super.setAuthorised(status);
+		auditorId = super.getRequest().getPrincipal().getActiveRealm().getId();
+		this.auditReports = this.repository.findAuditReportsByAuditorId(auditorId);
 	}
 
 	@Override
 	public void unbind() {
-		Tuple tuple;
-		double months = this.auditReport.getMonthsActive();
-		int hours = this.auditReport.getAllHours();
-		tuple = super.unbindObject(this.auditReport, //
-			"ticker", "startMoment", "endMoment", "name", //
-			"description", "moreInfo");
-		tuple.put("monthsActive", months);
-		tuple.put("allHours", hours);
+		super.unbindObjects(this.auditReports, //
+			"ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 	}
 
 }

@@ -1,5 +1,5 @@
 /*
- * AuditorAuditReportController.java
+ * AuditorAuditSectionController.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.feature.auditor.auditreport;
+package acme.features.auditor.auditsection;
 
 import javax.annotation.PostConstruct;
 
@@ -18,11 +18,11 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 
 import acme.client.controllers.AbstractController;
-import acme.entities.auditreport.AuditReport;
+import acme.entities.auditreport.AuditSection;
 import acme.realms.Auditor;
 
 @Controller
-public class AuditorAuditReportController extends AbstractController<Auditor, AuditReport> {
+public class AuditorAuditSectionController extends AbstractController<Auditor, AuditSection> {
 
 	// Constructors -----------------------------------------------------------
 
@@ -30,13 +30,11 @@ public class AuditorAuditReportController extends AbstractController<Auditor, Au
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("list", AuditorAuditReportListService.class);
-		super.addBasicCommand("show", AuditorAuditReportShowService.class);
-		super.addBasicCommand("create", AuditorAuditReportCreateService.class);
-		super.addBasicCommand("update", AuditorAuditReportUpdateService.class);
-		super.addBasicCommand("delete", AuditorAuditReportDeleteService.class);
-
-		super.addCustomCommand("publish", "update", AuditorAuditReportPublishService.class);
+		super.addBasicCommand("list", AuditorAuditSectionListService.class);
+		super.addBasicCommand("show", AuditorAuditSectionShowService.class);
+		super.addBasicCommand("create", AuditorAuditSectionCreateService.class);
+		super.addBasicCommand("update", AuditorAuditSectionUpdateService.class);
+		super.addBasicCommand("delete", AuditorAuditSectionDeleteService.class);
 	}
 
 }

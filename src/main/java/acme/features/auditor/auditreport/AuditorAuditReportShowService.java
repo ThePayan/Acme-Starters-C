@@ -1,5 +1,5 @@
 /*
- * AuditorAuditReportListService.java
+ * AuditorAuditReportShowService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,9 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.feature.auditor.auditreport;
-
-import java.util.Collection;
+package acme.features.auditor.auditreport;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,35 +20,41 @@ import acme.entities.auditreport.AuditReport;
 import acme.realms.Auditor;
 
 @Service
-public class AuditorAuditReportListService extends AbstractService<Auditor, AuditReport> {
+public class AuditorAuditReportShowService extends AbstractService<Auditor, AuditReport> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	private AuditorAuditReportRepository	repository;
 
-	private Collection<AuditReport>			auditReports;
+	private AuditReport						auditReport;
 
 	// AbstractService interface -------------------------------------------
 
 
 	@Override
-	public void authorise() {
-		super.setAuthorised(true);
+	public void load() {
+		int id;
+
+		id = super.getRequest().getData("id", int.class);
+		this.auditReport = this.repository.findAuditReportById(id);
 	}
 
 	@Override
-	public void load() {
-		int auditorId;
+	public void authorise() {
+		boolean status;
 
-		auditorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		this.auditReports = this.repository.findAuditReportsByAuditorId(auditorId);
+		status = this.auditReport != null && //
+			(this.auditReport.getAuditor().isPrincipal() || !this.auditReport.getDraftMode());
+
+		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObjects(this.auditReports, //
-			"ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		super.unbindObject(this.auditReport, //
+			"ticker", "startMoment", "endMoment", "name", //
+			"description", "moreInfo", "draftMode");
 	}
 
 }

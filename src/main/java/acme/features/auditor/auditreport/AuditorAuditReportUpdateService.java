@@ -1,5 +1,5 @@
 /*
- * AuditorAuditReportCreateService.java
+ * AuditorAuditReportUpdateService.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.feature.auditor.auditreport;
+package acme.features.auditor.auditreport;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,7 +20,7 @@ import acme.entities.auditreport.AuditReport;
 import acme.realms.Auditor;
 
 @Service
-public class AuditorAuditReportCreateService extends AbstractService<Auditor, AuditReport> {
+public class AuditorAuditReportUpdateService extends AbstractService<Auditor, AuditReport> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -29,27 +29,28 @@ public class AuditorAuditReportCreateService extends AbstractService<Auditor, Au
 
 	private AuditReport						auditReport;
 
-	// AbstractService interface -------------------------------------------
+	// AbstractService interface ----------------------------------------------
 
 
 	@Override
 	public void load() {
-		Auditor auditor;
+		int id;
 
-		auditor = (Auditor) super.getRequest().getPrincipal().getActiveRealm();
-
-		this.auditReport = super.newObject(AuditReport.class);
-		this.auditReport.setDraftMode(true);
-		this.auditReport.setAuditor(auditor);
+		id = super.getRequest().getData("id", int.class);
+		this.auditReport = this.repository.findAuditReportById(id);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+
+		status = this.auditReport != null && this.auditReport.getDraftMode() && this.auditReport.getAuditor().isPrincipal();
+		super.setAuthorised(status);
 	}
 
 	@Override
 	public void bind() {
+
 		super.bindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 	}
 
@@ -68,4 +69,5 @@ public class AuditorAuditReportCreateService extends AbstractService<Auditor, Au
 
 		super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 	}
+
 }

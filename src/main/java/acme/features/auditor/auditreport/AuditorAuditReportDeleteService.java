@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.feature.auditor.auditreport;
+package acme.features.auditor.auditreport;
 
 import java.util.Collection;
 
