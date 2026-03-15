@@ -1,4 +1,4 @@
-# messages-es.i18n
+# messages-en.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
 #
@@ -8,9 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.auditor.form.title = Detalles del auditor
+authenticated.auditor.form.title = Auditor data
 
-any.auditor.form.label.firm = Firma:
-any.auditor.form.label.highlights = Destacados:
-any.auditor.form.label.solicitor = Abogado
-any.auditor.form.label.userName = Nombre de usuario:
+authenticated.auditor.form.label.firm = Firm: 
+authenticated.auditor.form.label.highlights = Highlights:
+authenticated.auditor.form.label.solicitor = Solicitor:
+
+authenticated.auditor.form.button.create = Register
+authenticated.auditor.form.button.update = Update

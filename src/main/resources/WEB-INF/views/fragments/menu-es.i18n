@@ -14,6 +14,12 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.audit-report-list = Lista de reportes de auditoría
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.favourite-link = Enlace favorito
+master.menu.authenticated.audit-report-list = Lista de reportes de auditoría
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -21,6 +27,11 @@ master.menu.administrator.list-user-accounts = Ver cuentas de usuario
 master.menu.administrator.populate-db-initial = Poblar BD (inicial)
 master.menu.administrator.populate-db-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-system-down = Parar el sistema
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audits-reports = Mis reportes de auditoría
 
 # master.menu.provider ########################################################
 
@@ -36,6 +47,8 @@ master.menu.consumer.favourite-link = Enlace favorito
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-profile = Perfil general
+master.menu.user-account.become-auditor = Hacerse auditor
+master.menu.user-account.auditor-profile = Perfil de auditor
 master.menu.user-account.become-provider = Hacerse proveedor
 master.menu.user-account.provider-profile = Perfil de proveedor
 master.menu.user-account.become-consumer = Hazte consumidor
