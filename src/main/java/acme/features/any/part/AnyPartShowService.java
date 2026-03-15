@@ -1,0 +1,48 @@
+
+package acme.features.any.part;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import acme.client.components.principals.Any;
+import acme.client.services.AbstractService;
+import acme.entities.auditreport.AuditSection;
+import acme.entities.inventions.Part;
+import acme.features.any.auditsection.AnyAuditSectionRepository;
+
+@Service
+public class AnyPartShowService extends AbstractService<Any, Part> {
+
+	Autowired
+
+	private AnyPartRepository	repository;
+
+	private Part				part;
+
+	// AbstractService interface -------------------------------------------
+
+
+	@Override
+	public void load() {
+		int id;
+
+		id = super.getRequest().getData("id", int.class);
+		this.part = this.repository.findById(id);
+	}
+
+	@Override
+	public void authorise() {
+		boolean status;
+
+		status = this.part != null && !this.part.getInvention().getDraftMode();
+
+		super.setAuthorised(status);
+	}
+
+	@Override
+	public void unbind() {
+		super.unbindObject(this.part, //
+			"name", "description", "cost", "kind");
+	}
+
+}

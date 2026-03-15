@@ -24,7 +24,7 @@ import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.features.authenticated.inventions.AuthenticatedInventionRepository;
+import acme.features.any.invention.AnyInventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -38,7 +38,7 @@ public class Invention extends AbstractEntity {
 
 	@Transient
 	@Autowired
-	private AuthenticatedInventionRepository	inventionRep;
+	private AnyInventionRepository	inventionRep;
 
 	@ValidTicker
 	@Mandatory
