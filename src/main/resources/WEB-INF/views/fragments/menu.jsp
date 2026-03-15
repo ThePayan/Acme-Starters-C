@@ -19,11 +19,13 @@
 <acme:menu-bar>
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
 			<acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
+			<acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
 			<acme:menu-suboption code="master.menu.administrator.list-user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
@@ -44,6 +46,7 @@
 
 	<acme:menu-right>		
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
 			<acme:menu-suboption code="master.menu.user-account.general-profile" action="/authenticated/user-account/update"/>
 			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRealm('Provider')"/>
