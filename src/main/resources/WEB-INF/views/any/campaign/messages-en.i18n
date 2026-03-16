@@ -18,6 +18,8 @@ any.campaign.form.label.startMoment = Start Moment
 any.campaign.form.label.endMoment = End Moment
 any.campaign.form.label.moreInfo = More Info
 any.campaign.form.label.spokesperson = Spokesperson
+any.campaign.form.label.monthsActive = Months Active
+any.campaign.form.label.effort = Effort
 
 any.campaign.form.button.milestones = Milestones
 any.campaign.form.button.spokesperson = Spokesperson
@@ -29,4 +31,5 @@ any.campaign.list.label.startMoment = Start Moment
 any.campaign.list.label.endMoment = End Moment
 any.campaign.list.label.moreInfo = More Info
 any.campaign.list.label.spokesperson = Spokesperson
+
 
