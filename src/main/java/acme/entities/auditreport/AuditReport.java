@@ -18,6 +18,7 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidAudit;
@@ -73,6 +74,7 @@ public class AuditReport extends AbstractEntity {
 	private String						moreInfo;
 
 
+	@Mandatory
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
@@ -83,6 +85,8 @@ public class AuditReport extends AbstractEntity {
 		return result;
 	}
 
+	@Mandatory
+	@ValidNumber(min = 0)
 	@Transient
 	public Integer getAllHours() {
 		Integer horas = this.auditReport.getAllHours(this.getId());
@@ -99,7 +103,7 @@ public class AuditReport extends AbstractEntity {
 
 	@Mandatory
 	@Valid
-	@ManyToOne(optional = false)
+	@ManyToOne
 	private Auditor	auditor;
 
 }
