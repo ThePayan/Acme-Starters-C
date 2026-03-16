@@ -61,7 +61,7 @@ public class AuditorAuditSectionListService extends AbstractService<Auditor, Aud
 		super.unbindObjects(this.auditSections, "name", "notes", "hours", "kind");
 
 		showCreate = this.auditReport.getDraftMode() && this.auditReport.getAuditor().isPrincipal();
-		super.unbindGlobal("audit-reportId", this.auditReport.getId());
+		super.unbindGlobal("auditReportId", this.auditReport.getId());
 		super.unbindGlobal("showCreate", showCreate);
 	}
 
