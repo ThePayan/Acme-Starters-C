@@ -36,7 +36,7 @@ public class AnyInventionListService extends AbstractService<Any, Invention> {
 	@Override
 	public void unbind() {
 		super.unbindObjects(this.inventions, //
-			"ticker", "inventor.bio", "startMoment", "endMoment", "name", //
+			"ticker", "inventor.firm", "startMoment", "endMoment", "name", //
 			"description", "moreInfo");
 	}
 
