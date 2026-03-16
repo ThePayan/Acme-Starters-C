@@ -22,9 +22,10 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidInvention;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.features.authenticated.inventions.AuthenticatedInventionRepository;
+import acme.features.any.invention.AnyInventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,43 +33,44 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidInvention
 public class Invention extends AbstractEntity {
 
-	private static final long					serialVersionUID	= 1L;
+	private static final long		serialVersionUID	= 1L;
 
 	@Transient
 	@Autowired
-	private AuthenticatedInventionRepository	inventionRep;
+	private AnyInventionRepository	inventionRep;
 
 	@ValidTicker
 	@Mandatory
 	@Column(unique = true)
-	private String								ticker;
+	private String					ticker;
 
 	@ValidHeader
 	@Mandatory
 	@Column
-	private String								name;
+	private String					name;
 
 	@ValidText
 	@Mandatory
 	@Column
-	private String								description;
+	private String					description;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date								startMoment;
+	private Date					startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date								endMoment;
+	private Date					endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String								moreInfo;
+	private String					moreInfo;
 
 
 	@Valid
@@ -76,9 +78,9 @@ public class Invention extends AbstractEntity {
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
-		double result = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
+		double res = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
 
-		return result;
+		return res;
 	}
 
 	@Transient

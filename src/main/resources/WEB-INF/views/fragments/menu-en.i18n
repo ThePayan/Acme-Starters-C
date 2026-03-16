@@ -14,6 +14,8 @@ master.menu.anonymous = Anonymous
 master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.strategy-list = List of strategies
 master.menu.anonymous.audit-report-list = List Audit Report
+master.menu.anonymous.invention-list = List Invention
+
 
 # master.menu.administrator ###################################################
 
