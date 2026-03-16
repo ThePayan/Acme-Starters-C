@@ -24,7 +24,7 @@ import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidStrategy;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.features.fundraiser.StrategyRepository;
+import acme.features.any.strategy.AnyStrategyRepository;
 import acme.realms.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
@@ -78,7 +78,7 @@ public class Strategy extends AbstractEntity {
 
 	@Transient
 	@Autowired
-	private StrategyRepository	repository;
+	private AnyStrategyRepository	repository;
 
 
 	@Transient
