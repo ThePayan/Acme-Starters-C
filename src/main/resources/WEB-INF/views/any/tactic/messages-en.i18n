@@ -1,0 +1,22 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+any.tactic.form.title = Tactic form
+any.tactic.list.title = Listing of tactics
+
+any.tactic.form.label.name = Name:
+any.tactic.form.label.notes = Notes:
+any.tactic.form.label.expectedPercentage = Expected Percentage:
+any.tactic.form.label.kind = Kind:
+
+any.tactic.list.label.name = Name
+any.tactic.list.label.notes = Notes
+any.tactic.list.label.expectedPercentage = Expected Percentage
+any.tactic.list.label.kind = Kind
