@@ -19,6 +19,7 @@
 <acme:menu-bar>
 	<acme:menu-left>
 		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
 			<acme:menu-separator />
 			<acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
