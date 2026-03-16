@@ -22,7 +22,7 @@
 	<acme:form-moment code="any.invention.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="any.invention.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textarea code="any.invention.form.label.description" path="description"/>
-	<acme:form-double code="any.invention.form.label.monthsActive" path="monthsActive"/>
+	<acme:form-double code="any.invention.form.label.months" path="months"/>
 	<acme:form-integer code="any.invention.form.label.costs" path="costs"/>
 	
 	<acme:button code="any.invention.form.button.parts" action="/any/invention/list?inventionId=${id}"/>

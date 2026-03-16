@@ -19,5 +19,5 @@
 	<acme:form-textbox code="any.part.form.label.name" path="name"/>
 	<acme:form-textbox code="any.part.form.label.description" path="description"/>
 	<acme:form-integer code="any.part.form.label.cost" path="cost"/>
-	<acme:form-textbox code="any.audit-section.form.label.kind" path="kind"/>
+	<acme:form-textbox code="any.part.form.label.kind" path="kind"/>
 </acme:form>

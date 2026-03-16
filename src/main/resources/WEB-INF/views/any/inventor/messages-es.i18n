@@ -8,9 +8,9 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.auditor.form.title = Detalles del auditor
+any.inventor.form.title = Detalles del auditor
 
-any.auditor.form.label.bio = Biografía:
-any.auditor.form.label.keyWords = Palabras destacadas:
-any.auditor.form.label.licensed = Licenciado:
-any.auditor.form.label.userName = Nombre de usuario:
+any.inventor.form.label.bio = Biografía:
+any.inventor.form.label.keyWords = Palabras destacadas:
+any.inventor.form.label.licensed = Licenciado:
+any.inventor.form.label.userName = Nombre de usuario:

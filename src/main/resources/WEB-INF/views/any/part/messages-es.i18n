@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.part.form.title = Detalles de la sección de auditoría
-any.part.list.title = Lista de secciones de auditoría
+any.part.form.title = Detalles de la sección de partes
+any.part.list.title = Listado de las partes
 
 any.part.form.label.name = Nombre:
 any.part.form.label.description = Descripción:
@@ -17,7 +17,7 @@ any.part.form.label.cost = Coste:
 any.part.form.label.kind = Tipo:
 
 
-any.audit-section.list.label.name = Nombre
-any.audit-section.list.label.description = Descripción
-any.audit-section.list.label.cost = Coste
-any.audit-section.list.label.kind = Tipo
+any.part.list.label.name = Nombre
+any.part.list.label.description = Descripción
+any.part.list.label.cost = Coste
+any.part.list.label.kind = Tipo

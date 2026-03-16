@@ -17,7 +17,7 @@
 
 <acme:list>
 	<acme:list-column code="any.inventor.list.label.ticker" path="ticker" width="20%"/>
-	<acme:list-column code="any.inventor.list.label.inventor.bio" path="auditor.bio" width="20%"/>
+	<acme:list-column code="any.inventor.list.label.inventor.bio" path="inventor.bio" width="20%"/>
 	<acme:list-column code="any.inventor.list.label.startMoment" path="startMoment" width="20%"/>
 	<acme:list-column code="any.inventor.list.label.endMoment" path="endMoment" width="20%"/>
 	<acme:list-column code="any.inventor.list.label.name" path="name" width="60%"/>

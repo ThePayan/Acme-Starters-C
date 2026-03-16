@@ -17,7 +17,7 @@
 
 <acme:form>
 	<acme:form-textbox	code="any.inventor.form.label.userName" path="userName"/>
-	<acme:form-textbox 	code="any.inventor.form.label.firm" path="bio"/>
-	<acme:form-textbox 	code="any.inventor.form.label.highlights" path="keyWords"/>
-	<acme:form-checkbox	code="any.inventor.form.label.solicitor" path="licensed"/>
+	<acme:form-textbox 	code="any.inventor.form.label.bio" path="bio"/>
+	<acme:form-textbox 	code="any.inventor.form.label.keyWords" path="keyWords"/>
+	<acme:form-checkbox	code="any.inventor.form.label.licensede" path="licensed"/>
 </acme:form>

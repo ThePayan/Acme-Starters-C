@@ -12,17 +12,17 @@ any.audit-report.form.title = Detalles del reporte de invenciones
 any.audit-report.list.title = Lista de reportes de invenciones
 
 any.inventor.form.label.ticker = Referencia:
-any.inventor.form.label.auditSection = Sección de la invención:
+any.inventor.form.label.part = Sección de la parte:
 any.inventor.form.label.name = Nombre:
 any.inventor.form.label.startMoment = Fecha Inicio:
 any.inventor.form.label.endMoment = Fecha Final:
 any.inventor.form.label.moreInfo = Más información: (Opcional)
 any.inventor.form.label.description = Descripción:
-any.inventor.form.label.monthsActive = Meses Activo:
+any.inventor.form.label.months = Meses Activo:
 any.inventor.form.label.costs = Costes:
 
-any.inventor.form.button.audit-sections = Secciones de invención
-any.inventor.form.button.auditor = Inventor
+any.inventor.form.button.parts = Seccion de partes
+any.inventor.form.button.inventor = Inventor
 
 any.inventor.list.label.ticker = Referencia  
 any.inventor.list.label.inventor.bio = Biografía

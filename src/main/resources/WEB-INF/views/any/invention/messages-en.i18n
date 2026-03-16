@@ -17,7 +17,7 @@ any.inventor.form.label.startMoment = Start Moment:
 any.inventor.form.label.endMoment = End Moment:
 any.inventor.form.label.moreInfo = More info: (Optional)
 any.inventor.form.label.description = Description:
-any.inventor.form.label.monthsActive = Months Active:
+any.inventor.form.label.months = Months Active:
 any.inventor.form.label.hours = Hours:
 
 any.inventor.form.button.parts = Parts

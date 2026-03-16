@@ -6,14 +6,12 @@ import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
-import acme.entities.auditreport.AuditSection;
 import acme.entities.inventions.Part;
-import acme.features.any.auditsection.AnyAuditSectionRepository;
 
 @Service
 public class AnyPartShowService extends AbstractService<Any, Part> {
 
-	Autowired
+	@Autowired
 
 	private AnyPartRepository	repository;
 
