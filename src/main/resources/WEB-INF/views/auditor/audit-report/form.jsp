@@ -22,6 +22,8 @@
 	<acme:form-moment code="auditor.audit-report.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="auditor.audit-report.form.label.endMoment" path="endMoment"/>
 	<acme:form-url code="auditor.audit-report.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-double code="auditor.audit-report.form.label.monthsActive" path="monthsActive" readonly="true"/>
+	<acme:form-integer code="auditor.audit-report.form.label.allHours" path="allHours" readonly="true"/>
 	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">

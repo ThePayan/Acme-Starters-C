@@ -19,7 +19,7 @@
 	<acme:form-textbox code="auditor.audit-section.form.label.name" path="name"/>
 	<acme:form-textarea code="auditor.audit-section.form.label.notes" path="notes"/>
 	<acme:form-integer code="auditor.audit-section.form.label.hours" path="hours"/>
-	<acme:form-textbox code="auditor.audit-section.form.label.kind" path="kind"/>
+	<acme:form-select code="auditor.audit-section.form.label.kind" path="kind" choices="${kind}"/>
 	
 	<jstl:choose>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete') && draftMode == true}">

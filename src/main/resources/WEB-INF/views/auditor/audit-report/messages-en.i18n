@@ -17,7 +17,8 @@ auditor.audit-report.form.label.description = Description:
 auditor.audit-report.form.label.startMoment = Start Moment:
 auditor.audit-report.form.label.endMoment = End Moment:
 auditor.audit-report.form.label.moreInfo = More info: (Optional)
-
+auditor.audit-report.form.label.monthsActive = Months Active:
+auditor.audit-report.form.label.allHours = Total Hours:
 		
 auditor.audit-report.form.button.audit-sections = Audit Sections
 auditor.audit-report.form.button.update = Update

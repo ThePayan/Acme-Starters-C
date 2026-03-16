@@ -16,8 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.auditreport.AuditSection;
+import acme.entities.auditreport.SectionKind;
 import acme.realms.Auditor;
 
 @Service
@@ -53,9 +55,13 @@ public class AuditorAuditSectionShowService extends AbstractService<Auditor, Aud
 
 	@Override
 	public void unbind() {
+		SelectChoices choices;
 		Tuple tuple;
 
-		tuple = super.unbindObject(this.auditSection, "name", "notes", "hours", "kind");
+		choices = SelectChoices.from(SectionKind.class, this.auditSection.getKind());
+
+		tuple = super.unbindObject(this.auditSection, "name", "notes", "hours");
+		tuple.put("kind", choices);
 		tuple.put("audit-reportId", this.auditSection.getAuditReport().getId());
 		tuple.put("draftMode", this.auditSection.getAuditReport().getDraftMode());
 	}
