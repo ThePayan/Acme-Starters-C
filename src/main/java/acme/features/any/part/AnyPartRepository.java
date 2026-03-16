@@ -18,7 +18,7 @@ public interface AnyPartRepository {
 	@Query("SELECT prt FROM Part prt WHERE prt.id = :id")
 	Part findById(int id);
 
-	@Query("SELECT in FROM Invention prt JOIN prt.invention in WHERE in.id = :id")
+	@Query("SELECT i FROM Invention prt JOIN prt.invention i WHERE i.id = :id")
 	Invention findInventionById(int id);
 
 }

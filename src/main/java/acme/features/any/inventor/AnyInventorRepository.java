@@ -17,7 +17,7 @@ public interface AnyInventorRepository extends AbstractRepository {
 	@Query("SELECT ua FROM Inventor i JOIN i.userAccount ua WHERE i.id = :id")
 	UserAccount findUserAccountByInventorId(int id);
 
-	@Query("SELECT i FROM Invention in JOIN in.inventor i WHERE in.id = :id")
+	@Query("SELECT i FROM Invention inver JOIN inver.inventor i WHERE inver.id = :id")
 	Inventor findInventorByInventionId(int id);
 
 }
