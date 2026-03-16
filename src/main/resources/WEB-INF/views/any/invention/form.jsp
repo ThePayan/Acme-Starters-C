@@ -25,6 +25,6 @@
 	<acme:form-double code="any.invention.form.label.months" path="months"/>
 	<acme:form-integer code="any.invention.form.label.costs" path="costs"/>
 	
-	<acme:button code="any.invention.form.button.parts" action="/any/invention/list?inventionId=${id}"/>
+	<acme:button code="any.invention.form.button.parts" action="/any/part/list?inventionId=${id}"/>
 	<acme:button code="any.invention.form.button.inventor" action="/any/inventor/show?inventionId=${id}"/>
 </acme:form>
