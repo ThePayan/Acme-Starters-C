@@ -40,7 +40,7 @@ public class AnyInventorShowService extends AbstractService<Any, Inventor> {
 		Tuple tuple;
 
 		userAccount = this.repository.findUserAccountByInventorId(this.inventor.getId());
-		tuple = super.unbindObject(this.inventor, "bio", "description", "licensed");
+		tuple = super.unbindObject(this.inventor, "bio", "keyWords", "licensed");
 		tuple.put("userName", userAccount.getUsername());
 
 	}

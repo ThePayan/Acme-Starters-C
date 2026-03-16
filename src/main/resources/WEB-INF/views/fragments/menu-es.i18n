@@ -13,6 +13,8 @@
 master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.audit-report-list = Lista de reportes de auditoría
+master.menu.anonymous.invention-list = Lista de invenciones
+
 
 # master.menu.administrator ###################################################
 

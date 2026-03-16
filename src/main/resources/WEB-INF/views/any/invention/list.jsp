@@ -16,11 +16,11 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="any.inventor.list.label.ticker" path="ticker" width="20%"/>
-	<acme:list-column code="any.inventor.list.label.inventor.bio" path="inventor.bio" width="20%"/>
-	<acme:list-column code="any.inventor.list.label.startMoment" path="startMoment" width="20%"/>
-	<acme:list-column code="any.inventor.list.label.endMoment" path="endMoment" width="20%"/>
-	<acme:list-column code="any.inventor.list.label.name" path="name" width="60%"/>
-	<acme:list-column code="any.inventor.list.label.description" path="name" width="20%"/>
-	<acme:list-column code="any.inventor.list.label.moreInfo" path="moreInfo" width="20%"/>
+	<acme:list-column code="any.invention.list.label.ticker" path="ticker" width="20%"/>
+	<acme:list-column code="any.invention.list.label.inventor.bio" path="inventor.bio" width="20%"/>
+	<acme:list-column code="any.invention.list.label.startMoment" path="startMoment" width="20%"/>
+	<acme:list-column code="any.invention.list.label.endMoment" path="endMoment" width="20%"/>
+	<acme:list-column code="any.invention.list.label.name" path="name" width="60%"/>
+	<acme:list-column code="any.invention.list.label.description" path="name" width="20%"/>
+	<acme:list-column code="any.invention.list.label.moreInfo" path="moreInfo" width="20%"/>
 </acme:list>

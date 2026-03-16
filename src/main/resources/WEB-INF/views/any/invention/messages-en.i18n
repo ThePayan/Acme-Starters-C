@@ -8,25 +8,25 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.inventor.form.title = Invention form
-any.inventor.list.title = Listing of Inventions
+any.invention.form.title = Invention form
+any.invention.list.title = Listing of Inventions
 
-any.inventor.form.label.ticker = Ticker:
-any.inventor.form.label.name = Name:
-any.inventor.form.label.startMoment = Start Moment:
-any.inventor.form.label.endMoment = End Moment:
-any.inventor.form.label.moreInfo = More info: (Optional)
-any.inventor.form.label.description = Description:
-any.inventor.form.label.months = Months Active:
-any.inventor.form.label.hours = Hours:
+any.invention.form.label.ticker = Ticker:
+any.invention.form.label.name = Name:
+any.invention.form.label.startMoment = Start Moment:
+any.invention.form.label.endMoment = End Moment:
+any.invention.form.label.moreInfo = More info: (Optional)
+any.invention.form.label.description = Description:
+any.invention.form.label.monthsActive = Months Active:
+any.invention.form.label.Costs = Costs:
 
-any.inventor.form.button.parts = Parts
-any.inventor.form.button.inventor = Inventor
+any.invention.form.button.parts = Parts
+any.invention.form.button.inventor = Inventor
 
-any.inventor.list.label.ticker = Ticker 
-any.inventor.list.label.inventor.bio = Bio
-any.inventor.list.label.startMoment = Start Moment
-any.inventor.list.label.endMoment = End Moment
-any.inventor.list.label.name = Name 
-any.inventor.list.label.description = Description
-any.inventor.list.label.moreInfo = More Info
+any.invention.list.label.ticker = Ticker 
+any.invention.list.label.inventor.bio = Bio
+any.invention.list.label.startMoment = Start Moment
+any.invention.list.label.endMoment = End Moment
+any.invention.list.label.name = Name 
+any.invention.list.label.description = Description
+any.invention.list.label.moreInfo = More Info
