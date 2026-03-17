@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
-import acme.client.helpers.MomentHelper;
 import acme.entities.campaign.Campaign;
 import acme.features.any.campaign.AnyCampaignRepository;
 
@@ -65,13 +64,11 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 			{
 				Date startMoment = campaign.getStartMoment();
 				Date endMoment = campaign.getEndMoment();
+				boolean validTimeInterval;
 
 				if (startMoment != null && endMoment != null) {
-
-					boolean isAfter = MomentHelper.isAfter(startMoment, endMoment);
-
-					if (isAfter && Boolean.FALSE.equals(draftMode))
-						super.state(context, false, "isAfter", "acme.validation.correctDates.message");
+					validTimeInterval = startMoment.before(endMoment);
+					super.state(context, validTimeInterval, "*", "acme.validation.correctDates.message");
 				}
 			}
 

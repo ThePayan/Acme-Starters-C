@@ -32,8 +32,7 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 	public void authorise() {
 		boolean status;
 
-		status = this.campaign != null && //
-			(this.campaign.getSpokesperson().isPrincipal() || !this.campaign.getDraftMode());
+		status = this.campaign != null && this.campaign.getSpokesperson().isPrincipal();
 
 		super.setAuthorised(status);
 	}

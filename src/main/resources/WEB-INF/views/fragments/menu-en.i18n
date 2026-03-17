@@ -21,7 +21,7 @@ master.menu.anonymous.list-campaigns = Campaign List
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.favourite-link = Favourite link
-master.menu.authenticated.list-campaigns = List Campaign
+master.menu.authenticated.list-campaigns = Campaign List
 
 # master.menu.administrator ###################################################
 
@@ -46,7 +46,7 @@ master.menu.consumer.favourite-link = Favourite link
 
 master.menu.spokesperson = Spokesperson
 master.menu.consumer.favourite-link = Favourite link
-master.menu.spokesperson.list-campaigns = Campaign List
+master.menu.spokesperson.list-campaigns = My campaigns
 
 # master.menu.user-account ####################################################
 
