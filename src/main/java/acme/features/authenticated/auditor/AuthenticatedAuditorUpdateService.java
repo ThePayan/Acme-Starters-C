@@ -38,7 +38,7 @@ public class AuthenticatedAuditorUpdateService extends AbstractService<Authentic
 		int userAccountId;
 
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
-		this.auditor = this.repository.findOneEmployerByUserAccountId(userAccountId);
+		this.auditor = this.repository.findOneAuditorByUserAccountId(userAccountId);
 	}
 
 	@Override

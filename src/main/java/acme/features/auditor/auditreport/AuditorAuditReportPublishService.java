@@ -56,11 +56,15 @@ public class AuditorAuditReportPublishService extends AbstractService<Auditor, A
 	@Override
 	public void validate() {
 		super.validateObject(this.auditReport);
-
 		{
 			boolean correctNumberOfAuditSections;
 			correctNumberOfAuditSections = this.repository.getNumberOfAuditSectionsByAuditReportId(this.auditReport.getId()) >= 1;
 			super.state(correctNumberOfAuditSections, "*", "acme.validation.numberOfAuditSections.message");
+		}
+		{
+			boolean isBefore;
+			isBefore = this.auditReport.getStartMoment().before(this.auditReport.getEndMoment());
+			super.state(isBefore, "*", "acme.validation.correctDates.message");
 		}
 	}
 

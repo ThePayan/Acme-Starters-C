@@ -23,7 +23,7 @@ import acme.realms.Auditor;
 public interface AuthenticatedAuditorRepository extends AbstractRepository {
 
 	@Query("select au from Auditor au where au.userAccount.id = :id")
-	Auditor findOneEmployerByUserAccountId(int id);
+	Auditor findOneAuditorByUserAccountId(int id);
 
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);
