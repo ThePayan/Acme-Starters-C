@@ -31,7 +31,8 @@ public class AnyAuditorShowService extends AbstractService<Any, Auditor> {
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+
+		super.setAuthorised(this.auditor != null);
 	}
 
 	@Override
