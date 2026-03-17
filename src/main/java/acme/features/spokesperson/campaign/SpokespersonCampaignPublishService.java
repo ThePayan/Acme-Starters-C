@@ -49,6 +49,11 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 			correctNumberOfAuditSections = this.repository.getNumberOfMilestonesByACampaignId(this.campaign.getId()) >= 1;
 			super.state(correctNumberOfAuditSections, "*", "acme.validation.numberOfMilestones.message");
 		}
+		{
+			boolean isBefore;
+			isBefore = this.campaign.getStartMoment().before(this.campaign.getEndMoment());
+			super.state(isBefore, "*", "acme.validation.correctDates.message");
+		}
 	}
 
 	@Override
