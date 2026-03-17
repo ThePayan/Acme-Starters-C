@@ -22,5 +22,5 @@
 	<acme:list-column code="any.sponsorship.list.label.endMoment" path="endMoment" width="10%"/>
 	<acme:list-column code="any.sponsorship.list.label.description" path="description" width="20%"/>
 	<acme:list-column code="any.sponsorship.list.label.moreInfo" path="moreInfo" width="20%"/>
-	<acme:list-hidden path="sponsor.im"/>
+	<acme:list-hidden path="sponsorId"/>
 </acme:list>

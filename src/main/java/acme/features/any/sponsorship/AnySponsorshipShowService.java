@@ -42,7 +42,8 @@ public class AnySponsorshipShowService extends AbstractService<Any, Sponsorship>
 
 	@Override
 	public void unbind() {
-		Double months = this.sponsorship.getMonthsActive();
+		double months = this.sponsorship.getMonthsActive();
+		int sponsorId = this.sponsorship.getSponsor().getId();
 		Money money = this.sponsorship.getTotalMoney();
 		Tuple tuple;
 
@@ -51,6 +52,7 @@ public class AnySponsorshipShowService extends AbstractService<Any, Sponsorship>
 			"startMoment", "endMoment", "moreInfo");
 		tuple.put("monthsActive", months);
 		tuple.put("totalMoney", money);
+		tuple.put("sponsorId", sponsorId);
 	}
 
 }

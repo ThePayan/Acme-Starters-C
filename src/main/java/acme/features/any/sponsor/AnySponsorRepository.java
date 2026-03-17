@@ -17,7 +17,4 @@ public interface AnySponsorRepository extends AbstractRepository {
 	@Query("SELECT ua FROM Sponsor s JOIN s.userAccount ua WHERE s.id = :id")
 	UserAccount findUserAccountBySponsorId(int id);
 
-	@Query("SELECT s FROM Sponsorship ss JOIN ss.sponsor s WHERE ss.id = :id")
-	Sponsor findSponsorBySponsorshipId(int id);
-
 }
