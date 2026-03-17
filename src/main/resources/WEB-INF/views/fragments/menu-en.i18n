@@ -17,6 +17,12 @@ master.menu.anonymous.audit-report-list = List Audit Report
 master.menu.anonymous.invention-list = List Invention
 
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.favourite-link = Favourite link
+master.menu.authenticated.invention-list = List Invention
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator
@@ -24,6 +30,11 @@ master.menu.administrator.list-user-accounts = List user accounts
 master.menu.administrator.populate-db-initial = Populate DB (initial)
 master.menu.administrator.populate-db-sample = Populate DB (samples)
 master.menu.administrator.shut-system-down = Shut system down
+
+# master.menu.inventor ########################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-my-inventions = My Inventions
 
 # master.menu.provider ########################################################
 
@@ -43,5 +54,5 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
-
-master.menu.anonymous.list-campaigns = Campaign List
+master.menu.user-account.become-inventor = Become an inventor
+master.menu.user-account.inventor-profile = Inventor profile
