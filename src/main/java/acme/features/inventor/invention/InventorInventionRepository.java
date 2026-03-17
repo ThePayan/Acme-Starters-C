@@ -22,7 +22,7 @@ public interface InventorInventionRepository extends AbstractRepository {
 	@Query("select prt from Part prt where prt.invention.id = :inventionId")
 	Collection<Part> findPartsByInventionId(int inventionId);
 
-	@Query("SELECT COUNT(s) FROM Part s WHERE s.invetion.id = :id")
+	@Query("SELECT COUNT(s) FROM Part s WHERE s.invention.id = :id")
 	Integer getNumberOfPartsByInventionId(int id);
 
 }
