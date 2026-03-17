@@ -22,9 +22,10 @@ import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidHeader;
+import acme.common.constraints.ValidSponsorship;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.features.authenticated.sponsor.AuthenticatedSponsorRepository;
+import acme.features.any.sponsorship.AnySponsorshipRepository;
 import acme.realms.Sponsor;
 import lombok.Getter;
 import lombok.Setter;
@@ -32,44 +33,45 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidSponsorship
 public class Sponsorship extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
-	private static final long				serialVersionUID	= 1L;
+	private static final long			serialVersionUID	= 1L;
 
 	@Transient
 	@Autowired
-	private AuthenticatedSponsorRepository	sponsorRep;
+	private AnySponsorshipRepository	sponsorRep;
 
 	@Mandatory
 	@ValidTicker
 	@Column(unique = true)
-	private String							ticker;
+	private String						ticker;
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	private String							name;
+	private String						name;
 
 	@Mandatory
 	@ValidText
 	@Column
-	private String							description;
+	private String						description;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date							startMoment;
+	private Date						startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date							endMoment;
+	private Date						endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String							moreInfo;
+	private String						moreInfo;
 
 
 	@Transient

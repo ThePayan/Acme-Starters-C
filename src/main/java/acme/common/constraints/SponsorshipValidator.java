@@ -11,7 +11,7 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.sponsorship.Sponsorship;
-import acme.features.authenticated.sponsor.AuthenticatedSponsorRepository;
+import acme.features.any.sponsorship.AnySponsorshipRepository;
 
 @Validator
 public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sponsorship> {
@@ -19,7 +19,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedSponsorRepository repository;
+	private AnySponsorshipRepository repository;
 
 	// ConstraintValidator interface ------------------------------------------
 
