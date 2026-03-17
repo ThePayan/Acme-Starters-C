@@ -51,7 +51,7 @@
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.spokesperson.list-campaigns" action="/spokesperson/campaign/list"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

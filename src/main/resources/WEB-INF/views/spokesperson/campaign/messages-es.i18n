@@ -1,0 +1,36 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+spokesperson.campaign.form.title = Formulario de campaña
+spokesperson.campaign.list.title = Listado de campañas
+
+spokesperson.campaign.form.label.ticker = Ticker
+spokesperson.campaign.form.label.name = Nombre
+spokesperson.campaign.form.label.description = Descripción
+spokesperson.campaign.form.label.startMoment = Momento de inicio
+spokesperson.campaign.form.label.endMoment = Momento de fin
+spokesperson.campaign.form.label.moreInfo = Más información
+spokesperson.campaign.form.label.monthsActive = Meses activos
+spokesperson.campaign.form.label.effort = Esfuerzo
+
+spokesperson.campaign.form.button.milestone = Hitos
+spokesperson.campaign.form.button.update = Actualizar
+spokesperson.campaign.form.button.delete = Eliminar
+spokesperson.campaign.form.button.publish = Publicar
+spokesperson.campaign.form.button.create = Crear
+
+any.campaign.list.label.ticker = Ticker
+any.campaign.list.label.name = Nombre
+any.campaign.list.label.description = Descripción
+any.campaign.list.label.startMoment = Momento de inicio
+any.campaign.list.label.endMoment = Momento de fin
+any.campaign.list.label.moreInfo = Más información
+
+spokesperson.campaign.list.button.create = Crear

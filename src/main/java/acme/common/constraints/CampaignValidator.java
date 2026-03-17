@@ -46,7 +46,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 				uniqueCampaign = existingCampaign == null || existingCampaign.getId() == campaign.getId();
 
-				super.state(context, uniqueCampaign, "ticker", "acme.validation.ticker.message");
+				super.state(context, uniqueCampaign, "ticker", "acme.validation.duplicated-ticker.message");
 			}
 
 			{
