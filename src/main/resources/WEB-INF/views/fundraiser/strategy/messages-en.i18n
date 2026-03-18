@@ -8,7 +8,7 @@
 # purposes.  The copyright owner does not offer fundraiser warranties or representations, nor do
 # they accept fundraiser liabilities with respect to them.
 
-fundraiser.strategy.form.title = strategy form 
+fundraiser.strategy.form.title = Strategy form 
 fundraiser.strategy.list.title = Listing of strategies
 
 fundraiser.strategy.form.label.ticker = Ticker:
@@ -18,9 +18,9 @@ fundraiser.strategy.form.label.endMoment = End Moment:
 fundraiser.strategy.form.label.moreInfo = More info: (Optional)
 fundraiser.strategy.form.label.description = Description:
 fundraiser.strategy.form.label.monthsActive = Months Active:
-fundraiser.strategy.form.label.expectedPercentages = expectedPercentages:
+fundraiser.strategy.form.label.expectedPercentage = Expected Percentages:
 		
-fundraiser.strategy.form.button.tactic = tactics
+fundraiser.strategy.form.button.tactic = Tactics
 fundraiser.strategy.form.button.update = Update
 fundraiser.strategy.form.button.delete = Delete
 fundraiser.strategy.form.button.publish = Publish

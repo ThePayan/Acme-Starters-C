@@ -4,6 +4,7 @@ package acme.features.fundraiser.strategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.strategies.Strategy;
 import acme.realms.Fundraiser;
@@ -36,7 +37,12 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		Tuple tuple;
+		double months = this.strategy.getMonthsActive();
+		double expectedPercentage = this.strategy.getExpectedPercentage();
+		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("expectedPercentage", expectedPercentage);
 	}
 
 }
