@@ -15,6 +15,7 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.strategy-list = List of strategies
 master.menu.anonymous.audit-report-list = List Audit Report
 master.menu.anonymous.invention-list = List Invention
+master.menu.anonymous.sponsorship-list = Sponsorships list
 master.menu.anonymous.list-campaigns = Campaign List
 
 # master.menu.administrator ###################################################
@@ -56,5 +57,3 @@ master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
 master.menu.user-account.become-fundraiser = Become an fundraiser
 master.menu.user-account.fundraiser-profile = fundraiser profile
-
-
