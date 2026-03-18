@@ -50,6 +50,11 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 			correctNumberOfParts = this.repository.getNumberOfPartsByInventionId(this.invention.getId()) >= 1;
 			super.state(correctNumberOfParts, "*", "acme.validation.numberOfParts.message");
 		}
+		{
+			boolean isBefore;
+			isBefore = this.invention.getStartMoment().before(this.invention.getEndMoment());
+			super.state(isBefore, "*", "acme.validation.correctDates.message");
+		}
 	}
 
 	@Override

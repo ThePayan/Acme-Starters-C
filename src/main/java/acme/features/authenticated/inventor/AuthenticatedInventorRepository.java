@@ -12,7 +12,7 @@ import acme.realms.Inventor;
 public interface AuthenticatedInventorRepository extends AbstractRepository {
 
 	@Query("select inven from Inventor inven where inven.userAccount.id = :id")
-	Inventor findOneEmployerByUserAccountId(int id);
+	Inventor findOneInventorByUserAccountId(int id);
 
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);

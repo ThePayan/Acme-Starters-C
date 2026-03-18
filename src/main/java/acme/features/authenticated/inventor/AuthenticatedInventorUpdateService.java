@@ -27,7 +27,7 @@ public class AuthenticatedInventorUpdateService extends AbstractService<Authenti
 		int userAccountId;
 
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
-		this.inventor = this.repository.findOneEmployerByUserAccountId(userAccountId);
+		this.inventor = this.repository.findOneInventorByUserAccountId(userAccountId);
 	}
 
 	@Override
