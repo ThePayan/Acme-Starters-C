@@ -60,6 +60,11 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 			correctNumberOfTactics = this.repository.getNumOfTacticsByStrategyId(this.strategy.getId()) >= 1;
 			super.state(correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 		}
+		{
+			boolean isBefore;
+			isBefore = this.strategy.getStartMoment().before(this.strategy.getEndMoment());
+			super.state(isBefore, "*", "acme.validation.correctDates.message");
+		}
 	}
 
 	@Override
