@@ -1,20 +1,22 @@
 
-package acme.features.any.strategy;
+package acme.features.fundraiser.strategy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
-import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
 import acme.entities.strategies.Strategy;
+import acme.realms.Fundraiser;
 
 @Service
-public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
+public class FundraiserStrategyShowService extends AbstractService<Fundraiser, Strategy> {
 
+	// Internal state ---------------------------------------------------------
 	@Autowired
-	private AnyStrategyRepository	repository;
-	private Strategy				strategy;
+	private FundraiserStrategyRepository	repository;
+
+	private Strategy						strategy;
 
 	// AbstractService interface -------------------------------------------
 
@@ -29,7 +31,7 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 	@Override
 	public void authorise() {
 		boolean status;
-		status = this.strategy != null && !this.strategy.getDraftMode();
+		status = this.strategy != null && (this.strategy.getFundraiser().isPrincipal() || !this.strategy.getDraftMode());
 		super.setAuthorised(status);
 	}
 
@@ -37,12 +39,10 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 	public void unbind() {
 		Tuple tuple;
 		double months = this.strategy.getMonthsActive();
-		double percentages = this.strategy.getExpectedPercentage();
-		int fundraiserId = this.strategy.getFundraiser().getId();
-		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		double expectedPercentage = this.strategy.getExpectedPercentage();
+		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 		tuple.put("monthsActive", months);
-		tuple.put("expectedPercentages", percentages);
-		tuple.put("fundraiserId", fundraiserId);
+		tuple.put("expectedPercentage", expectedPercentage);
 	}
 
 }
