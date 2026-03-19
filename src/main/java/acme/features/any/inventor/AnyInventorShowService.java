@@ -25,13 +25,13 @@ public class AnyInventorShowService extends AbstractService<Any, Inventor> {
 	public void load() {
 		int id;
 
-		id = super.getRequest().getData("inventionId", int.class);
-		this.inventor = this.repository.findInventorByInventionId(id);
+		id = super.getRequest().getData("inventorId", int.class);
+		this.inventor = this.repository.findInventorById(id);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		super.setAuthorised(this.inventor != null);
 	}
 
 	@Override

@@ -17,26 +17,26 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:menu-bar>
-    <acme:menu-left>
-        <acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-            <acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
-            <acme:menu-separator />
-            <acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
-            <acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
-            <acme:menu-suboption code="master.menu.anonymous.invention-list" action="/any/invention/list"/>
-            <acme:menu-suboption code="master.menu.anonymous.sponsorship-list" action="/any/sponsorship/list"/>
-            <acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list"/>
-        </acme:menu-option>
-        
-        <acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
-            <acme:menu-suboption code="master.menu.authenticated.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
-            <acme:menu-separator />
-            <acme:menu-suboption code="master.menu.authenticated.strategy-list" action="/any/strategy/list"/>
-            <acme:menu-suboption code="master.menu.authenticated.audit-report-list" action="/any/audit-report/list"/>
-            <acme:menu-suboption code="master.menu.authenticated.invention-list" action="/any/invention/list"/>
-            <acme:menu-suboption code="master.menu.authenticated.sponsorship-list" action="/any/sponsorship/list"/>
-            <acme:menu-suboption code="master.menu.authenticated.list-campaigns" action="/any/campaign/list"/>
-        </acme:menu-option>
+<acme:menu-left>
+		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.invention-list" action="/any/invention/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.sponsorship-list" action="/any/sponsorship/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
+			<acme:menu-separator />
+			<acme:menu-suboption code="master.menu.authenticated.strategy-list" action="/any/strategy/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.audit-report-list" action="/any/audit-report/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.invention-list" action="/any/invention/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.sponsorship-list" action="/any/sponsorship/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.list-campaigns" action="/any/campaign/list"/>
+		</acme:menu-option>
 
         <acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
             <acme:menu-suboption code="master.menu.administrator.list-user-accounts" action="/administrator/user-account/list"/>
@@ -66,6 +66,10 @@
         <acme:menu-option code="master.menu.fundraiser" access="hasRealm('Fundraiser')">
             <acme:menu-suboption code="master.menu.fundraiser.list-my-strategies" action="/fundraiser/strategy/list" />        
         </acme:menu-option>
+
+		    <acme:menu-option code="master.menu.inventor" access="hasRealm('Inventor')">
+			      <acme:menu-suboption code="master.menu.inventor.list-my-inventions" action="/inventor/invention/list"/>			
+		    </acme:menu-option>
     </acme:menu-left>
 
     <acme:menu-right>       
@@ -82,6 +86,8 @@
             <acme:menu-suboption code="master.menu.user-account.fundraiser-profile" action="/authenticated/fundraiser/update" access="hasRealm('Fundraiser')" />
           	<acme:menu-suboption code="master.menu.user-account.become-spokesperson" action="/authenticated/spokesperson/create" access="!hasRealm('Spokesperson')"/>
 			      <acme:menu-suboption code="master.menu.user-account.spokesperson-profile" action="/authenticated/spokesperson/update" access="hasRealm('Spokesperson')"/>
+          	<acme:menu-suboption code="master.menu.user-account.become-inventor" action="/authenticated/inventor/create" access="!hasRealm('Inventor')" />
+			      <acme:menu-suboption code="master.menu.user-account.inventor-profile" action="/authenticated/inventor/update" access="hasRealm('Inventor')" />
         </acme:menu-option>
     </acme:menu-right>
 </acme:menu-bar>

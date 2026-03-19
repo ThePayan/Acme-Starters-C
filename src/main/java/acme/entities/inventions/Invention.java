@@ -19,6 +19,7 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidHeader;
@@ -73,6 +74,7 @@ public class Invention extends AbstractEntity {
 	private String					moreInfo;
 
 
+	@Mandatory
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
@@ -83,6 +85,8 @@ public class Invention extends AbstractEntity {
 		return res;
 	}
 
+	@Mandatory
+	@ValidMoney
 	@Transient
 	public Money getCosts() {
 		Double totalAmount = this.inventionRep.getSumOfCosts(this.getId());

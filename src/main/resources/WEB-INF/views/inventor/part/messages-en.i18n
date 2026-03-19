@@ -1,0 +1,26 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+inventor.part.form.title = Part form
+inventor.part.list.title = Listing of parts
+
+inventor.part.form.label.name = Name:
+inventor.part.form.label.description = Description:
+inventor.part.form.label.cost = Cost:
+inventor.part.form.label.kind = Kind:
+
+inventor.part.form.button.create = Create		
+inventor.part.form.button.update = Update
+inventor.part.form.button.delete = Delete
+
+inventor.part.list.label.name = Name
+inventor.part.list.label.description = Description
+
+inventor.part.list.button.create = Create
