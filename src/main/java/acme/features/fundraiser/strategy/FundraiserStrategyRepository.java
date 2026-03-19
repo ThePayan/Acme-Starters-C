@@ -32,4 +32,7 @@ public interface FundraiserStrategyRepository extends AbstractRepository {
 	@Query("select s from Strategy s where s.ticker = :ticker")
 	Strategy findByTicker(@Param("ticker") String ticker);
 
+	@Query("SELECT COUNT(s) > 0 FROM Strategy s WHERE s.ticker = :ticker AND s.id != :id ")
+	boolean tickerExists(String ticker, int id);
+
 }

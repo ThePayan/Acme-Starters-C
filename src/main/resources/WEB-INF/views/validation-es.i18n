@@ -11,4 +11,5 @@ acme.validation.numberOfAuditSections.message = Los informes de auditoría no se
 acme.validation.numberOfParts.message         = Las invenciones no se pueden publicar si no tienen al menos una parte
 acme.validation.numberOfDonations.message     = Los patrocinios no se pueden publicar si no tienen al menos una donación
 acme.validation.currency.message              = La moneda debe ser en euros
+acme.validation.future-interval.message 	= Las fechas deben estar en futuro
 

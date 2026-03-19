@@ -15,6 +15,7 @@ package acme.features.fundraiser.strategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.strategies.Strategy;
 import acme.realms.Fundraiser;
@@ -64,6 +65,19 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 			boolean isBefore;
 			isBefore = this.strategy.getStartMoment().before(this.strategy.getEndMoment());
 			super.state(isBefore, "*", "acme.validation.correctDates.message");
+		}
+		{
+			boolean startFuture;
+			startFuture = MomentHelper.isFuture(this.strategy.getStartMoment());
+
+			super.state(startFuture, "startMoment", "acme.validation.future-interval.message");
+		}
+		{
+			boolean duplicated;
+
+			duplicated = this.repository.tickerExists(this.strategy.getTicker(), this.strategy.getId());
+
+			super.state(!duplicated, "ticker", "acme.validation.duplicated-ticker.message");
 		}
 	}
 
