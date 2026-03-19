@@ -18,6 +18,13 @@ master.menu.anonymous.invention-list = Lista de invenciones
 master.menu.anonymous.sponsorship-list = Lista de patrocinios
 master.menu.anonymous.list-campaigns = Lista de campañas
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.favourite-link = Enlace favorito
+master.menu.authenticated.audit-report-list = Lista de reportes de auditoría
+master.menu.authenticated.strategy-list = Lista de estrategias
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -26,11 +33,10 @@ master.menu.administrator.populate-db-initial = Poblar BD (inicial)
 master.menu.administrator.populate-db-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-system-down = Parar el sistema
 
-# master.menu.authenticated ###################################################
+# master.menu.auditor ########################################################
 
-master.menu.authenticated = Authenticated
-master.menu.authenticated.favourite-link = Favourite link
-master.menu.authenticated.strategy-list = Lista de estrategias
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audits-reports = Mis reportes de auditoría
 
 # master.menu.provider ########################################################
 
@@ -51,6 +57,8 @@ master.menu.fundraiser.list-my-strategies = Lista de mis estrategias
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-profile = Perfil general
+master.menu.user-account.become-auditor = Hacerse auditor
+master.menu.user-account.auditor-profile = Perfil de auditor
 master.menu.user-account.become-provider = Hacerse proveedor
 master.menu.user-account.provider-profile = Perfil de proveedor
 master.menu.user-account.become-consumer = Hazte consumidor

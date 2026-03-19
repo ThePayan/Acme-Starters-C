@@ -47,7 +47,7 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 					existingAuditReport = this.auditRepository.findAuditReportByTicker(auditReport.getTicker());
 				uniqueAuditReport = existingAuditReport == null || existingAuditReport.equals(auditReport);
 
-				super.state(context, uniqueAuditReport, "ticker", "acme.validation.duplicated-ticker-message");
+				super.state(context, uniqueAuditReport, "ticker", "acme.validation.duplicated-ticker.message");
 			}
 			{
 				boolean correctNumberOfAuditSections = true;

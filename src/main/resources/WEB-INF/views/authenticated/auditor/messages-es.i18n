@@ -8,9 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.auditor.form.title = Detalles del auditor
+authenticated.auditor.form.title = Datos de empleado
 
-any.auditor.form.label.firm = Firma:
-any.auditor.form.label.highlights = Destacados:
-any.auditor.form.label.solicitor = Abogado
-any.auditor.form.label.userName = Nombre de usuario:
+authenticated.auditor.form.label.firm = Firma: 
+authenticated.auditor.form.label.highlights = Destacados:
+authenticated.auditor.form.label.solicitor = Abogado:
+
+authenticated.auditor.form.button.create = Registrar
+authenticated.auditor.form.button.update = Actualizar
