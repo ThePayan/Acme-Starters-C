@@ -19,7 +19,7 @@ auditor.audit-report.form.label.endMoment = Momento final:
 auditor.audit-report.form.label.draftMode = Borrador:
 auditor.audit-report.form.label.moreInfo = Más información: (Opcional)
 auditor.audit-report.form.label.monthsActive = Meses Activo:
-auditor.audit-report.form.label.hours = Horas totales:
+auditor.audit-report.form.label.allHours = Horas totales:
 		
 auditor.audit-report.form.button.audit-sections = Secciones de la auditoría
 auditor.audit-report.form.button.update = Actualizar
