@@ -21,7 +21,7 @@ master.menu.anonymous.invention-list = List Invention
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.favourite-link = Favourite link
-master.menu.authenticated.list-inventions = List Invention
+master.menu.authenticated.invention-list = List Invention
 
 # master.menu.administrator ###################################################
 

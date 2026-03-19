@@ -27,7 +27,7 @@ master.menu.administrator.shut-system-down = Parar el sistema
 
 # master.menu.administrator ###################################################
 master.menu.authenticated = Autenticado
-master.menu.authenticated.list-inventions = Lista de invenciones
+master.menu.authenticated.invention-list = Lista de invenciones
 
 # master.menu.provider ########################################################
 
