@@ -36,43 +36,43 @@ import lombok.Setter;
 public class Strategy extends AbstractEntity {
 
 	// Serialisation version
-	private static final long	serialVersionUID	= 1L;
+	private static final long		serialVersionUID	= 1L;
 
 	// Attributes
 	@Mandatory
 	@Column(unique = true)
 	@ValidTicker
-	private String				ticker;
+	private String					ticker;
 
 	@Mandatory
 	@Column
 	@ValidHeader
-	private String				name;
+	private String					name;
 
 	@Mandatory
 	@Column
 	@ValidText
-	private String				description;
+	private String					description;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startMoment;
+	private Date					startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				endMoment;
+	private Date					endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String				moreInfo;
+	private String					moreInfo;
 
 	@Mandatory
 	@Column
 	@Valid
-	private Boolean				draftMode;
+	private Boolean					draftMode;
 
 	// Derived attributes
 
@@ -93,7 +93,10 @@ public class Strategy extends AbstractEntity {
 
 	@Transient
 	public Double getExpectedPercentage() {
-		return this.repository.getSumPercentages(this.getId());
+		Double percentages = this.repository.getSumPercentages(this.getId());
+		if (percentages == null)
+			return 0.0;
+		return percentages;
 	}
 
 

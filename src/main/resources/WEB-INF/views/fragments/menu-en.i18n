@@ -15,13 +15,18 @@ master.menu.anonymous.favourite-link = Favourite link
 master.menu.anonymous.strategy-list = List of strategies
 master.menu.anonymous.audit-report-list = List Audit Report
 master.menu.anonymous.invention-list = List Invention
+master.menu.anonymous.sponsorship-list = Sponsorships list
 master.menu.anonymous.list-campaigns = Campaign List
 
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Authenticated
 master.menu.authenticated.favourite-link = Favourite link
-master.menu.authenticated.list-campaigns = Campaign List
+master.menu.authenticated.audit-report-list = List Audit Report
+master.menu.authenticated.strategy-list = List of strategies
+master.menu.authenticated.invention-list = List of inventions
+master.menu.authenticated.sponsorship-list = List of sponsorships
+master.menu.authenticated.list-campaigns = List of campaigns
 
 # master.menu.administrator ###################################################
 
@@ -30,6 +35,11 @@ master.menu.administrator.list-user-accounts = List user accounts
 master.menu.administrator.populate-db-initial = Populate DB (initial)
 master.menu.administrator.populate-db-sample = Populate DB (samples)
 master.menu.administrator.shut-system-down = Shut system down
+
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audits-reports = My Audit Reports
 
 # master.menu.provider ########################################################
 
@@ -47,11 +57,17 @@ master.menu.consumer.favourite-link = Favourite link
 master.menu.spokesperson = Spokesperson
 master.menu.consumer.favourite-link = Favourite link
 master.menu.spokesperson.list-campaigns = My campaigns
+# master.menu.fundraiser ##########################################################
+
+master.menu.fundraiser = Fundraiser
+master.menu.fundraiser.list-my-strategies = My strategies
 
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
 master.menu.user-account.general-profile = General profile
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor-profile = Auditor profile
 master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
@@ -59,3 +75,5 @@ master.menu.user-account.consumer-profile = Consumer profile
 master.menu.user-account.become-spokesperson = Become a spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
 
+master.menu.user-account.become-fundraiser = Become an fundraiser
+master.menu.user-account.fundraiser-profile = fundraiser profile

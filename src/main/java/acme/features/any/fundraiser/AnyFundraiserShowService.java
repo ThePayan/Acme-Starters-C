@@ -23,13 +23,15 @@ public class AnyFundraiserShowService extends AbstractService<Any, Fundraiser> {
 	public void load() {
 		int id;
 
-		id = super.getRequest().getData("strategyId", int.class);
-		this.fundraiser = this.repository.findFundraiserByStrategy(id);
+		id = super.getRequest().getData("fundraiserId", int.class);
+		this.fundraiser = this.repository.findFundraiserById(id);
 	}
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.fundraiser != null;
+		super.setAuthorised(status);
 	}
 
 	@Override

@@ -1,0 +1,29 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+fundraiser.tactic.form.title = Detalles de la táctica
+fundraiser.tactic.list.title = Lista de tácticas
+
+fundraiser.tactic.form.label.name = Nombre:
+fundraiser.tactic.form.label.notes = Notas:
+fundraiser.tactic.form.label.expectedPercentage = Porcentaje esperado:
+fundraiser.tactic.form.label.kind = Tipo:
+
+fundraiser.tactic.form.button.create = Crear	
+fundraiser.tactic.form.button.update = Actualizar
+fundraiser.tactic.form.button.delete = Borrar
+
+
+fundraiser.tactic.list.label.name = Nombre
+fundraiser.tactic.list.label.notes = Notas
+fundraiser.tactic.list.label.expectedPercentage = Porcentaje esperado
+fundraiser.tactic.list.label.kind = Tipo
+
+fundraiser.tactic.list.button.create = Crear

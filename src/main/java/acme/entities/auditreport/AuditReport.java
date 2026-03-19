@@ -36,7 +36,7 @@ import lombok.Setter;
 public class AuditReport extends AbstractEntity {
 
 	// Serialisation identifier -----------------------------------------------
-	private static final long					serialVersionUID	= 1L;
+	private static final long			serialVersionUID	= 1L;
 
 	@Transient
 	@Autowired
@@ -45,34 +45,35 @@ public class AuditReport extends AbstractEntity {
 	@ValidTicker
 	@Mandatory
 	@Column(unique = true)
-	private String								ticker;
+	private String						ticker;
 
 	@Mandatory
 	@Column
 	@ValidHeader
-	private String								name;
+	private String						name;
 
 	@ValidText
 	@Mandatory
 	@Column
-	private String								description;
+	private String						description;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date								startMoment;
+	private Date						startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date								endMoment;
+	private Date						endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String								moreInfo;
+	private String						moreInfo;
 
 
+	@Mandatory
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
@@ -83,9 +84,13 @@ public class AuditReport extends AbstractEntity {
 		return result;
 	}
 
+	@Mandatory
 	@Transient
 	public Integer getAllHours() {
-		return this.auditReport.getAllHours(this.getId());
+		Integer horas = this.auditReport.getAllHours(this.getId());
+		if (horas == null)
+			return 0;
+		return horas;
 	}
 
 
