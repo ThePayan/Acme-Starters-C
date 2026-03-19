@@ -65,7 +65,7 @@ public class SponsorshipDonationUpdateService extends AbstractService<Sponsor, D
 
 		choices = SelectChoices.from(DonationKind.class, this.donation.getKind());
 
-		tuple = super.unbindObject(this.donation, "name", "notes", "hours");
+		tuple = super.unbindObject(this.donation, "name", "notes", "money");
 		tuple.put("kind", choices);
 		tuple.put("sponsorshipId", this.donation.getSponsorship().getId());
 		tuple.put("draftMode", this.donation.getSponsorship().getDraftMode());
