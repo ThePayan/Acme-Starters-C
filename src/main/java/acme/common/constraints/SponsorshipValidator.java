@@ -47,7 +47,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 					existingSponsorship = this.repository.findSponsorshipByTicker(sponsorship.getTicker());
 				uniqueSponsorship = existingSponsorship == null || existingSponsorship.equals(sponsorship);
 
-				super.state(context, uniqueSponsorship, "ticker", "acme.validation.duplicated-ticker-message");
+				super.state(context, uniqueSponsorship, "ticker", "acme.validation.duplicated-ticker.message");
 			}
 			{
 				boolean correctNumberOfDonations = true;
@@ -55,7 +55,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 					Integer existingDonations = this.repository.getNumOfDonations(sponsorship.getId());
 					correctNumberOfDonations = existingDonations != null && existingDonations >= 1;
 				}
-				super.state(context, correctNumberOfDonations, "*", "acme.validation.numberOfDonations");
+				super.state(context, correctNumberOfDonations, "*", "acme.validation.numberOfDonations.message");
 			}
 			{
 				boolean correctDates = true;
@@ -64,6 +64,7 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				if (!isDraft && startMoment != null && endMoment != null)
 					correctDates = MomentHelper.isBefore(startMoment, endMoment);
 				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
+				super.state(context, correctDates, "startMoment", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
 		}

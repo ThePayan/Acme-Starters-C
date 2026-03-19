@@ -1,0 +1,8 @@
+authenticated.sponsor.form.title = Sponsor data
+
+authenticated.sponsor.form.label.address = Address: 
+authenticated.sponsor.form.label.im = Im:
+authenticated.sponsor.form.label.gold = Has gold category?:
+
+authenticated.sponsor.form.button.create = Register
+authenticated.sponsor.form.button.update = Update
