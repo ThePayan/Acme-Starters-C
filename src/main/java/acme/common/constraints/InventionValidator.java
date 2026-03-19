@@ -11,13 +11,13 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.inventions.Invention;
-import acme.features.authenticated.inventions.AuthenticatedInventionRepository;
+import acme.features.any.invention.AnyInventionRepository;
 
 @Validator
 public class InventionValidator extends AbstractValidator<ValidInvention, Invention> {
 
 	@Autowired
-	private AuthenticatedInventionRepository inventionRepository;
+	private AnyInventionRepository inventionRepository;
 
 
 	@Override
