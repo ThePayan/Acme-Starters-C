@@ -36,4 +36,6 @@ public interface AuditorAuditReportRepository extends AbstractRepository {
 	@Query("SELECT COUNT(s) FROM AuditSection s WHERE s.auditReport.id = :id")
 	Integer getNumberOfAuditSectionsByAuditReportId(int id);
 
+	@Query("SELECT COUNT(ar) > 0 FROM AuditReport ar WHERE ar.ticker = :ticker AND ar.id != :id ")
+	boolean tickerExists(String ticker, int id);
 }

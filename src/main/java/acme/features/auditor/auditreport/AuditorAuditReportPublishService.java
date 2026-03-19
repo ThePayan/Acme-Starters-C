@@ -15,6 +15,7 @@ package acme.features.auditor.auditreport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.auditreport.AuditReport;
 import acme.realms.Auditor;
@@ -65,6 +66,19 @@ public class AuditorAuditReportPublishService extends AbstractService<Auditor, A
 			boolean isBefore;
 			isBefore = this.auditReport.getStartMoment().before(this.auditReport.getEndMoment());
 			super.state(isBefore, "*", "acme.validation.correctDates.message");
+		}
+		{
+			boolean startFuture;
+			startFuture = MomentHelper.isFuture(this.auditReport.getStartMoment());
+
+			super.state(startFuture, "startMoment", "acme.validation.invention.future-interval.message");
+		}
+		{
+			boolean duplicated;
+
+			duplicated = this.repository.tickerExists(this.auditReport.getTicker(), this.auditReport.getId());
+
+			super.state(!duplicated, "ticker", "acme.validation.duplicated-ticker.message");
 		}
 	}
 
