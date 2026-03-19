@@ -24,6 +24,9 @@ master.menu.authenticated = Authenticated
 master.menu.authenticated.favourite-link = Favourite link
 master.menu.authenticated.audit-report-list = List Audit Report
 master.menu.authenticated.strategy-list = List of strategies
+master.menu.authenticated.invention-list = List of inventions
+master.menu.authenticated.sponsorship-list = List of sponsorships
+master.menu.authenticated.list-campaigns = List of campaigns
 
 # master.menu.administrator ###################################################
 
