@@ -87,7 +87,6 @@ public class Sponsorship extends AbstractEntity {
 	}
 
 	@Mandatory
-	@ValidMoney(min = 0.0)
 	@Transient
 	public Money getTotalMoney() {
 		Double totalAmount = this.sponsorRep.getTotalMoney(this.getId());
