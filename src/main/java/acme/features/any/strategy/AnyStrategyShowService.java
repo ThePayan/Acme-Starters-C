@@ -38,9 +38,11 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 		Tuple tuple;
 		double months = this.strategy.getMonthsActive();
 		double percentages = this.strategy.getExpectedPercentage();
+		int fundraiserId = this.strategy.getFundraiser().getId();
 		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 		tuple.put("monthsActive", months);
 		tuple.put("expectedPercentages", percentages);
+		tuple.put("fundraiserId", fundraiserId);
 	}
 
 }

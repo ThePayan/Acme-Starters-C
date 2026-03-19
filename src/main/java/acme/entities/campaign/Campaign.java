@@ -24,7 +24,7 @@ import acme.common.constraints.ValidCampaign;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.features.authenticated.spokesperson.CampaignRepository;
+import acme.features.any.campaign.AnyCampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -35,46 +35,46 @@ import lombok.Setter;
 @ValidCampaign
 public class Campaign extends AbstractEntity {
 
-	private static final long	serialVersionUID	= 1L;
+	private static final long		serialVersionUID	= 1L;
 
 	@Mandatory
 	@ValidTicker
 	@Column(unique = true)
-	private String				ticker;
+	private String					ticker;
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	private String				name;
+	private String					name;
 
 	@Mandatory
 	@ValidText
 	@Column
-	private String				description;
+	private String					description;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				startMoment;
+	private Date					startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date				endMoment;
+	private Date					endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String				moreInfo;
+	private String					moreInfo;
 
 	@Mandatory
 	@Valid
 	@ManyToOne
-	private Spokesperson		spokesperson;
+	private Spokesperson			spokesperson;
 
 	@Transient
 	@Autowired
-	private CampaignRepository	campaignRepository;
+	private AnyCampaignRepository	campaignRepository;
 
 
 	@Valid

@@ -15,7 +15,18 @@ master.menu.anonymous.favourite-link = Enlace favorito
 master.menu.anonymous.strategy-list = Lista de estrategias
 master.menu.anonymous.audit-report-list = Lista de reportes de auditoría
 master.menu.anonymous.invention-list = Lista de invenciones
+master.menu.anonymous.sponsorship-list = Lista de patrocinios
+master.menu.anonymous.list-campaigns = Lista de campañas
 
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.favourite-link = Enlace favorito
+master.menu.authenticated.audit-report-list = Lista de reportes de auditoría
+master.menu.authenticated.strategy-list = Lista de estrategias
+master.menu.authenticated.invention-list = Lista de invenciones
+master.menu.authenticated.sponsorship-list = Lista de patrocinios
+master.menu.authenticated.list-campaigns = Lista de campañas
 
 # master.menu.administrator ###################################################
 
@@ -28,6 +39,10 @@ master.menu.administrator.shut-system-down = Parar el sistema
 # master.menu.administrator ###################################################
 master.menu.authenticated = Autenticado
 master.menu.authenticated.invention-list = Lista de invenciones
+# master.menu.auditor ########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audits-reports = Mis reportes de auditoría
 
 # master.menu.provider ########################################################
 
@@ -44,15 +59,30 @@ master.menu.inventor.list-my-inventions = Listas de invenciones
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
 
+# master.menu.spokesperson ##########################################################
+
+master.menu.spokesperson = Portavoz
+master.menu.consumer.favourite-link = Enlace favorito
+master.menu.spokesperson.list-campaigns = Mis campañas
+# master.menu.fundraiser ##########################################################
+
+master.menu.fundraiser = Recaudador
+master.menu.fundraiser.list-my-strategies = Lista de mis estrategias
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta
 master.menu.user-account.general-profile = Perfil general
+master.menu.user-account.become-auditor = Hacerse auditor
+master.menu.user-account.auditor-profile = Perfil de auditor
 master.menu.user-account.become-provider = Hacerse proveedor
 master.menu.user-account.provider-profile = Perfil de proveedor
 master.menu.user-account.become-consumer = Hazte consumidor
 master.menu.user-account.consumer-profile = Perfil de consumidor
 master.menu.user-account.inventor-profile = Perfil de inventor
 master.menu.user-account.become-inventor = Hazte inventor
+master.menu.user-account.become-spokesperson = Hazte portavoz
+master.menu.user-account.spokesperson-profile = Perfil de portavoz
 
-master.menu.anonymous.list-campaigns = Lista de campañas
+master.menu.user-account.become-fundraiser = Hazte recaudador
+master.menu.user-account.fundraiser-profile = Perfil de recaudador

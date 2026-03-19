@@ -57,9 +57,10 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 		double effort = this.campaign.getEffort();
 		tuple = super.unbindObject(this.campaign, //
 			"ticker", "name", "description", "startMoment", //
-			"endMoment", "moreInfo", "spokesperson");
+			"endMoment", "moreInfo");
 		tuple.put("monthsActive", months);
 		tuple.put("efforts", effort);
+		tuple.put("spokespersonId", this.campaign.getSpokesperson().getId());
 
 	}
 

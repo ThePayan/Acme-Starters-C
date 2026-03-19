@@ -11,13 +11,13 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.campaign.Campaign;
-import acme.features.authenticated.spokesperson.CampaignRepository;
+import acme.features.any.campaign.AnyCampaignRepository;
 
 @Validator
 public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign> {
 
 	@Autowired
-	private CampaignRepository campaignRepository;
+	private AnyCampaignRepository campaignRepository;
 
 
 	@Override
@@ -46,7 +46,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 				uniqueCampaign = existingCampaign == null || existingCampaign.getId() == campaign.getId();
 
-				super.state(context, uniqueCampaign, "ticker", "acme.validation.ticker.message");
+				super.state(context, uniqueCampaign, "ticker", "acme.validation.duplicated-ticker.message");
 			}
 
 			{
@@ -65,14 +65,13 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 			{
 				Date startMoment = campaign.getStartMoment();
 				Date endMoment = campaign.getEndMoment();
+				boolean isAfter = false;
 
-				if (startMoment != null && endMoment != null) {
+				if (startMoment != null && endMoment != null)
+					isAfter = MomentHelper.isAfter(startMoment, endMoment);
 
-					boolean isAfter = MomentHelper.isAfter(startMoment, endMoment);
-
-					if (isAfter && Boolean.FALSE.equals(draftMode))
-						super.state(context, false, "isAfter", "acme.validation.correctDates.message");
-				}
+				if (isAfter && Boolean.FALSE.equals(draftMode))
+					super.state(context, false, "isAfter", "acme.validation.correctDates.message");
 			}
 
 			result = !super.hasErrors(context);
