@@ -36,7 +36,7 @@ public class SpokespersonMilestoneUpdateService extends AbstractService<Spokespe
 	public void authorise() {
 		boolean status;
 
-		status = this.milestone != null && this.milestone.getCampaign().getSpokesperson().isPrincipal();
+		status = this.milestone != null && this.milestone.getCampaign().getSpokesperson().isPrincipal() && this.milestone.getCampaign().getDraftMode();
 
 		super.setAuthorised(status);
 	}
