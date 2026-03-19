@@ -40,11 +40,13 @@ public class AnyAuditReportShowService extends AbstractService<Any, AuditReport>
 	public void unbind() {
 		Tuple tuple;
 		double months = this.auditReport.getMonthsActive();
+		int auditorId = this.auditReport.getAuditor().getId();
 		int hours = this.auditReport.getAllHours();
 		tuple = super.unbindObject(this.auditReport, //
 			"ticker", "startMoment", "endMoment", "name", //
 			"description", "moreInfo");
 		tuple.put("monthsActive", months);
 		tuple.put("allHours", hours);
+		tuple.put("auditorId", auditorId);
 	}
 }

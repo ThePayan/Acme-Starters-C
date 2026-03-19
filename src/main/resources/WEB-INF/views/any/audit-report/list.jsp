@@ -21,6 +21,6 @@
 	<acme:list-column code="any.audit-report.list.label.startMoment" path="startMoment" width="20%"/>
 	<acme:list-column code="any.audit-report.list.label.endMoment" path="endMoment" width="20%"/>
 	<acme:list-column code="any.audit-report.list.label.name" path="name" width="60%"/>
-	<acme:list-column code="any.audit-report.list.label.description" path="name" width="20%"/>
+	<acme:list-column code="any.audit-report.list.label.description" path="description" width="20%"/>
 	<acme:list-column code="any.audit-report.list.label.moreInfo" path="moreInfo" width="20%"/>
 </acme:list>
