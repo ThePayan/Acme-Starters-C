@@ -17,8 +17,8 @@
 
 <acme:form>
 	<acme:form-textbox code="inventor.part.form.label.name" path="name"/>
-	<acme:form-textarea code="inventor.part.form.label.notes" path="description"/>
-	<acme:form-money code="inventor.part.form.label.hours" path="cost"/>
+	<acme:form-textarea code="inventor.part.form.label.description" path="description"/>
+	<acme:form-money code="inventor.part.form.label.cost" path="cost"/>
 	<acme:form-select code="inventor.part.form.label.kind" path="kind" choices="${kind}"/>
 	
 	<jstl:choose>

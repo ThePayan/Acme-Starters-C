@@ -53,7 +53,8 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 		{
 			boolean isBefore;
 			isBefore = this.invention.getStartMoment().before(this.invention.getEndMoment());
-			super.state(isBefore, "*", "acme.validation.correctDates.message");
+			super.state(isBefore, "startMoment", "acme.validation.correctDates.message");
+			super.state(isBefore, "endMoment", "acme.validation.correctDates.message");
 		}
 	}
 
