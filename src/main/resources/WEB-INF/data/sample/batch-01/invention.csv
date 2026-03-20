@@ -56,5 +56,7 @@ invention-45,ES30-00043,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor 
 invention-46,ES30-00044,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/00,false,inventor-1
 #inventor - standard variations
 invention-47,ES30-00045,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/00,false,inventor-2
-invention-48,ES30-00046,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/00,false,inventor-3
+invention-48,ES30-00046,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/00,false,inventor-4
 invention-49,ES30-00047,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/00,false,inventor-4
+#testing requirements
+invention-51,ES30-00048,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/00,true,inventor-2
