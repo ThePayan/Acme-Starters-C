@@ -21,5 +21,5 @@
 </acme:list>
 
 <jstl:if test="${showCreate}">
-	<acme:button code="auditor.audit-section.list.button.create" action="/auditor/audit-section/create?auditReportId=${auditReportId}"/>
+	<acme:button code="auditor.audit-section.list.button.create" action="/auditor/audit-section/create?audit-reportId=${auditReportId}"/>
 </jstl:if>
