@@ -19,6 +19,7 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidHeader;
@@ -74,8 +75,9 @@ public class Sponsorship extends AbstractEntity {
 	private String						moreInfo;
 
 
-	@Transient
+	@Mandatory
 	@Valid
+	@Transient
 	public Double getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0.0;
@@ -84,6 +86,7 @@ public class Sponsorship extends AbstractEntity {
 		return result;
 	}
 
+	@Mandatory
 	@Transient
 	public Money getTotalMoney() {
 		Double totalAmount = this.sponsorRep.getTotalMoney(this.getId());
