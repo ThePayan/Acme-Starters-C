@@ -8,8 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-inventor.invention.form.title = Detalles de reportes de auditoría 
-inventor.invention.list.title = Lista de reportes de auditoría
+inventor.invention.form.title = Detalles de invenciones
+inventor.invention.list.title = Lista de invenciones
 
 inventor.invention.form.label.ticker = Referencia:
 inventor.invention.form.label.name = Nombre: 

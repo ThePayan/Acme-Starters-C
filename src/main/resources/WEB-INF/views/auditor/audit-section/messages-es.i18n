@@ -8,9 +8,8 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-auditor.audit-section.form.title = Detalles de responsabilidad
-auditor.audit-section.list.title = Lista de responsabilidades
-
+auditor.audit-section.form.title = Detalles de secciones de auditoría
+auditor.audit-section.list.title = Lista de secciones de auditoría
 auditor.audit-section.form.label.name = Nombre:
 auditor.audit-section.form.label.notes = Notas:
 auditor.audit-section.form.label.hours = Horas:

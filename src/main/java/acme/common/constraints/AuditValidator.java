@@ -63,6 +63,7 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 				Date endMoment = auditReport.getEndMoment();
 				if (!isDraft && startMoment != null && endMoment != null)
 					correctDates = MomentHelper.isBefore(startMoment, endMoment);
+				super.state(context, correctDates, "startMoment", "acme.validation.correctDates.message");
 				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
