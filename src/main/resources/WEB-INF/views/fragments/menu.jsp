@@ -17,18 +17,25 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:menu-bar>
-	<acme:menu-left>
-		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
-			<acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
-			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
-		</acme:menu-option>
+		<acme:menu-left>
+		  <acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			  <acme:menu-suboption code="master.menu.anonymous.favourite-link" action="https://www.youtube.com/watch?v=EqIMF0cua0M"/>
+        <acme:menu-separator />
+			  <acme:menu-suboption code="master.menu.anonymous.sponsorship-list" action="/any/sponsorship/list"/>
+			  <acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
+			  <acme:menu-suboption code="master.menu.anonymous.invention-list" action="/any/invention/list"/>
+        <acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list"/>
+			  <acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
+		  </acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.authenticated.favourite-link" action="https://youtu.be/dQw4w9WgXcQ?si=34wXcKpX7ZPYo1XP"/>
 			<acme:menu-separator />
-			<acme:menu-suboption code="master.menu.authenticated.audit-report-list" action="/any/audit-report/list"/>
+				<acme:menu-suboption code="master.menu.anonymous.sponsorship-list" action="/any/sponsorship/list"/>
+			  <acme:menu-suboption code="master.menu.anonymous.audit-report-list" action="/any/audit-report/list"/>
+			  <acme:menu-suboption code="master.menu.anonymous.invention-list" action="/any/invention/list"/>
+        <acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list"/>
+			  <acme:menu-suboption code="master.menu.anonymous.strategy-list" action="/any/strategy/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
