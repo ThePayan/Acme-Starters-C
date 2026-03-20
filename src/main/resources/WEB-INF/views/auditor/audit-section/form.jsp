@@ -27,7 +27,7 @@
 			<acme:submit code="auditor.audit-section.form.button.delete" action="/auditor/audit-section/delete"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
-			<acme:submit code="auditor.audit-section.form.button.create" action="/auditor/audit-section/create?auditReportId=${auditReportId}"/>
+			<acme:submit code="auditor.audit-section.form.button.create" action="/auditor/audit-section/create?audit-reportId=${auditReportId}"/>
 		</jstl:when>		
 	</jstl:choose>		
 </acme:form>
