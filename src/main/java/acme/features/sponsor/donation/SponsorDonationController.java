@@ -19,11 +19,11 @@ public class SponsorDonationController extends AbstractController<Sponsor, Donat
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("list", SponsorshipDonationListService.class);
-		super.addBasicCommand("show", SponsorshipDonationShowService.class);
-		super.addBasicCommand("create", SponsorshipDonationCreateService.class);
-		super.addBasicCommand("update", SponsorshipDonationUpdateService.class);
-		super.addBasicCommand("delete", SponsorshipDonationDeleteService.class);
+		super.addBasicCommand("list", SponsorDonationListService.class);
+		super.addBasicCommand("show", SponsorDonationShowService.class);
+		super.addBasicCommand("create", SponsorDonationCreateService.class);
+		super.addBasicCommand("update", SponsorDonationUpdateService.class);
+		super.addBasicCommand("delete", SponsorDonationDeleteService.class);
 	}
 
 }
