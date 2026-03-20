@@ -9,9 +9,9 @@
 
 <acme:list>
 	<acme:list-column code="sponsor.sponsorship.list.label.ticker" path="ticker" width="20%"/>
-	<acme:list-column code="sponsor.sponsorship.list.label.name" path="name" width="20%"/>
-	<acme:list-column code="sponsor.sponsorship.list.label.startMoment" path="startMoment" width="10%"/>
-	<acme:list-column code="sponsor.sponsorship.list.label.endMoment" path="endMoment" width="10%"/>
+	<acme:list-column code="sponsor.sponsorship.list.label.name" path="name" width="10%"/>
+	<acme:list-column code="sponsor.sponsorship.list.label.startMoment" path="startMoment" width="15%"/>
+	<acme:list-column code="sponsor.sponsorship.list.label.endMoment" path="endMoment" width="15%"/>
 	<acme:list-column code="sponsor.sponsorship.list.label.description" path="description" width="20%"/>
 	<acme:list-column code="sponsor.sponsorship.list.label.moreInfo" path="moreInfo" width="20%"/>
 </acme:list>
