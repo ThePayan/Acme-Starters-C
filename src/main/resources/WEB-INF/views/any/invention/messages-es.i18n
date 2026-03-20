@@ -12,7 +12,7 @@ any.invention.form.title = Detalles del reporte de invenciones
 any.invention.list.title = Lista de reportes de invenciones
 
 any.invention.form.label.ticker = Referencia:
-any.invention.form.label.part = Sección de la parte:
+any.invention.form.label.part = Partes:
 any.invention.form.label.name = Nombre:
 any.invention.form.label.startMoment = Fecha Inicio:
 any.invention.form.label.endMoment = Fecha Final:
@@ -21,7 +21,7 @@ any.invention.form.label.description = Descripción:
 any.invention.form.label.monthsActive = Meses Activo:
 any.invention.form.label.Costs = Costes:
 
-any.invention.form.button.parts = Seccion de partes
+any.invention.form.button.parts = Partes
 any.invention.form.button.inventor = Inventor
 
 any.invention.list.label.ticker = Referencia  
