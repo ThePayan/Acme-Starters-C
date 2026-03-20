@@ -8,22 +8,26 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+import javax.validation.ReportAsSingleViolation;
 import javax.validation.constraints.NotBlank;
 
 import org.hibernate.validator.constraints.Length;
 
-@Target({
-	ElementType.FIELD
-})
+@Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
 @Constraint(validatedBy = {})
+@ReportAsSingleViolation
+
 @NotBlank
 @Length(min = 1, max = 255)
+
 public @interface ValidText {
+
+	// Standard validation properties -----------------------------------------
 
 	String message() default "{acme.validation.text.message}";
 
 	Class<?>[] groups() default {};
-
 	Class<? extends Payload>[] payload() default {};
+
 }
