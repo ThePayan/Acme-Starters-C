@@ -9,11 +9,10 @@ import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.sponsorship.Donation;
 import acme.entities.sponsorship.DonationKind;
-import acme.entities.sponsorship.Sponsorship;
 import acme.realms.Sponsor;
 
 @Service
-public class SponsorshipDonationCreateService extends AbstractService<Sponsor, Donation> {
+public class SponsorDonationShowService extends AbstractService<Sponsor, Donation> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -27,43 +26,20 @@ public class SponsorshipDonationCreateService extends AbstractService<Sponsor, D
 
 	@Override
 	public void load() {
-		int sponsorshipId;
-		Sponsorship sponsorship;
+		int id;
 
-		sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
-		sponsorship = this.repository.findSponsorshipById(sponsorshipId);
-
-		this.donation = super.newObject(Donation.class);
-		this.donation.setSponsorship(sponsorship);
+		id = super.getRequest().getData("id", int.class);
+		this.donation = this.repository.findDonationById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
-		int sponsorshipId;
-		Sponsorship sponsorship;
 
-		sponsorshipId = super.getRequest().getData("sponsorshipId", int.class);
-		sponsorship = this.repository.findSponsorshipById(sponsorshipId);
-		status = sponsorship != null && //
-			this.donation.getSponsorship().getDraftMode() && this.donation.getSponsorship().getSponsor().isPrincipal();
+		status = this.donation != null && //
+			(this.donation.getSponsorship().getSponsor().isPrincipal() || !this.donation.getSponsorship().getDraftMode());
 
 		super.setAuthorised(status);
-	}
-
-	@Override
-	public void bind() {
-		super.bindObject(this.donation, "name", "notes", "money", "kind");
-	}
-
-	@Override
-	public void validate() {
-		super.validateObject(this.donation);
-	}
-
-	@Override
-	public void execute() {
-		this.repository.save(this.donation);
 	}
 
 	@Override
@@ -75,7 +51,7 @@ public class SponsorshipDonationCreateService extends AbstractService<Sponsor, D
 
 		tuple = super.unbindObject(this.donation, "name", "notes", "money");
 		tuple.put("kind", choices);
-		tuple.put("sponsorshipId", super.getRequest().getData("sponsorshipId", int.class));
+		tuple.put("sponsorshipId", this.donation.getSponsorship().getId());
 		tuple.put("draftMode", this.donation.getSponsorship().getDraftMode());
 	}
 

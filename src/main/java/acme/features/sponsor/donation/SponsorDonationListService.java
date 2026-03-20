@@ -12,7 +12,7 @@ import acme.entities.sponsorship.Sponsorship;
 import acme.realms.Sponsor;
 
 @Service
-public class SponsorshipDonationListService extends AbstractService<Sponsor, Donation> {
+public class SponsorDonationListService extends AbstractService<Sponsor, Donation> {
 
 	// Internal state ---------------------------------------------------------
 

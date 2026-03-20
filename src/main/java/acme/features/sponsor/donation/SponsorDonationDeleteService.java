@@ -10,7 +10,7 @@ import acme.entities.sponsorship.Donation;
 import acme.realms.Sponsor;
 
 @Service
-public class SponsorshipDonationDeleteService extends AbstractService<Sponsor, Donation> {
+public class SponsorDonationDeleteService extends AbstractService<Sponsor, Donation> {
 
 	// Internal state ---------------------------------------------------------
 
@@ -47,7 +47,7 @@ public class SponsorshipDonationDeleteService extends AbstractService<Sponsor, D
 
 	@Override
 	public void validate() {
-		super.validateObject(this.donation);
+		;
 	}
 
 	@Override

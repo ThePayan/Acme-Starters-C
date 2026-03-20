@@ -61,3 +61,7 @@ sponsorship-50,"NN55-0000043","Lorem ipsum dolor sit amet, consectetu","Lorem ip
 sponsorship-51,"NN55-0000044","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,"http://lorem.com/ipsum",FALSE,sponsor-00
 # key:sponsor - standard variations,,,,,,,,
 sponsorship-52,"NN55-0000045","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,"http://lorem.com/ipsum",TRUE,sponsor-01
+# testing requirements,,,,,,,,
+sponsorship-53,"NN55-0000046","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,"http://lorem.com/ipsum",FALSE,sponsor-01
+sponsorship-54,"NN55-0000047","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,"http://lorem.com/ipsum",TRUE,sponsor-02
+sponsorship-55,"NN55-0000048","Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,"http://lorem.com/ipsum",FALSE,sponsor-02
