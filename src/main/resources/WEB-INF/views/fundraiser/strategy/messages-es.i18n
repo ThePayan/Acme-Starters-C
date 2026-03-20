@@ -18,7 +18,7 @@ fundraiser.strategy.form.label.endMoment = Fecha final:
 fundraiser.strategy.form.label.moreInfo = Más información: (Opcional)
 fundraiser.strategy.form.label.description = Descripción:
 fundraiser.strategy.form.label.monthsActive = Meses activo:
-fundraiser.strategy.form.label.expected Percentages = Porcentajes esperados:
+fundraiser.strategy.form.label.expectedPercentage = Porcentajes esperados:
 		
 fundraiser.strategy.form.button.tactic = Tácticas
 fundraiser.strategy.form.button.update = Actualizar

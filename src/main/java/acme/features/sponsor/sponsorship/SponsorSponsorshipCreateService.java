@@ -45,16 +45,6 @@ public class SponsorSponsorshipCreateService extends AbstractService<Sponsor, Sp
 	@Override
 	public void validate() {
 		super.validateObject(this.sponsorship);
-		{
-			boolean correctNumberOfDonations;
-			correctNumberOfDonations = this.repository.getNumberOfDonationsBySponsorshipId(this.sponsorship.getId()) >= 1;
-			super.state(correctNumberOfDonations, "*", "acme.validation.correctNumberOfDonations.message");
-		}
-		{
-			boolean isBefore;
-			isBefore = this.sponsorship.getStartMoment().before(this.sponsorship.getEndMoment());
-			super.state(isBefore, "*", "acme.validation.correctDates.message");
-		}
 	}
 
 	@Override
