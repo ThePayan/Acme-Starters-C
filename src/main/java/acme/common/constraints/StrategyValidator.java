@@ -63,7 +63,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 
 				if (!isDraft && strategy.getStartMoment() != null && strategy.getEndMoment() != null)
 					correctDates = MomentHelper.isBefore(strategy.getStartMoment(), strategy.getEndMoment());
-
+				super.state(context, correctDates, "startMoment", "acme.validation.correctDates.message");
 				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
 			}
 			result = !super.hasErrors(context);
