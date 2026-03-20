@@ -1,0 +1,36 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+inventor.invention.form.title = Invention form 
+inventor.invention.list.title = Listing of Inventions
+
+inventor.invention.form.label.ticker = Ticker:
+inventor.invention.form.label.name = Name: 
+inventor.invention.form.label.description = Description:
+inventor.invention.form.label.startMoment = Start Moment:
+inventor.invention.form.label.endMoment = End Moment:
+inventor.invention.form.label.moreInfo = More info: (Optional)
+inventor.invention.form.label.monthsActive = Months Active:
+inventor.invention.form.label.Costs = Costs:
+		
+inventor.invention.form.button.parts = Parts
+inventor.invention.form.button.update = Update
+inventor.invention.form.button.delete = Delete
+inventor.invention.form.button.publish = Publish
+inventor.invention.form.button.create = Create
+
+inventor.invention.list.label.ticker = Ticker
+inventor.invention.list.label.startMoment = Start Moment
+inventor.invention.list.label.endMoment = End Moment
+inventor.invention.list.label.name = Name
+inventor.invention.list.label.description = Description
+inventor.invention.list.label.moreInfo = More Info
+
+inventor.invention.list.button.create = Create

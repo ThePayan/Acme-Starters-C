@@ -1,0 +1,37 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+inventor.invention.form.title = Detalles de reportes de auditoría 
+inventor.invention.list.title = Lista de reportes de auditoría
+
+inventor.invention.form.label.ticker = Referencia:
+inventor.invention.form.label.name = Nombre: 
+inventor.invention.form.label.description = Descripción:
+inventor.invention.form.label.startMoment = Momento de Inicio:
+inventor.invention.form.label.endMoment = Momento final:
+inventor.invention.form.label.draftMode = Borrador:
+inventor.invention.form.label.moreInfo = Más información: (Opcional)
+inventor.invention.form.label.monthsActive = Meses Activo:
+inventor.invention.form.label.Costs = Costes:
+		
+inventor.invention.form.button.parts = Secciones de la invención
+inventor.invention.form.button.update = Actualizar
+inventor.invention.form.button.delete = Borrar
+inventor.invention.form.button.publish = Publicar
+inventor.invention.form.button.create = Crear
+
+inventor.invention.list.label.ticker = Referencia
+inventor.invention.list.label.startMoment = Momento de inicio
+inventor.invention.list.label.endMoment = Momento final
+inventor.invention.list.label.name = Nombre
+inventor.invention.list.label.description = Descripción
+inventor.invention.list.label.moreInfo = Más información
+
+inventor.invention.list.button.create = Crear

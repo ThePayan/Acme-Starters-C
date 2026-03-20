@@ -13,7 +13,6 @@ any.strategy.form.title = Detalles de la estratégia
 any.strategy.list.title = Lista de estrategias
 
 any.strategy.form.label.ticker = Referencia:
-any.strategy.list.label.fundraiser.bank = Banco
 any.strategy.form.label.tactic = Sección de la fundraisería:
 any.strategy.form.label.name = Nombre:
 any.strategy.form.label.startMoment = Fecha Inicio:
@@ -27,6 +26,7 @@ any.strategy.form.button.tactic = Tácticas
 any.strategy.form.button.fundraiser = Recaudador
 
 any.strategy.list.label.ticker = Referencia  
+any.strategy.list.label.fundraiser.bank = Banco
 any.strategy.list.label.startMoment = Fecha Inicio
 any.strategy.list.label.endMoment = Fecha Final
 any.strategy.list.label.name = Nombre

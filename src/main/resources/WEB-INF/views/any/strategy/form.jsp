@@ -26,6 +26,6 @@
 	<acme:form-integer code="any.strategy.form.label.expectedPercentages" path="expectedPercentages"/>
 
 	<acme:button code="any.strategy.form.button.tactic" action="/any/tactic/list?strategyId=${id}"/>
-	<acme:button code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?strategyId=${id}"/>			
+	<acme:button code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?fundraiserId=${fundraiserId}"/>			
 </acme:form>
 

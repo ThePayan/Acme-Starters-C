@@ -73,6 +73,7 @@ public class Invention extends AbstractEntity {
 	private String					moreInfo;
 
 
+	@Mandatory
 	@Valid
 	@Transient
 	public Double getMonthsActive() {
@@ -83,6 +84,7 @@ public class Invention extends AbstractEntity {
 		return res;
 	}
 
+	@Mandatory
 	@Transient
 	public Money getCosts() {
 		Double totalAmount = this.inventionRep.getSumOfCosts(this.getId());
