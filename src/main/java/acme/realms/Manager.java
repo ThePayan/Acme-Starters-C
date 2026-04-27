@@ -31,6 +31,6 @@ public class Manager extends AbstractRole {
 	@Mandatory
 	@Valid
 	@Column
-	private Boolean				flag;
+	private Boolean				executive;
 
 }

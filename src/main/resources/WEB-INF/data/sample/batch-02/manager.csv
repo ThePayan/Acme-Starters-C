@@ -1,4 +1,4 @@
-key,position,skills,flag,key:userAccount
+key,position,skills,executive,key:userAccount
 #base entity,,,,
 manager-1,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-01
 #position - standard variations,,,,
@@ -23,5 +23,5 @@ manager-18,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiu
 manager-19,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","<marquee>Hacked</marquee>",true,user-account-manager-19
 manager-20,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","<script>alert(‘Hacked!’);</script>",true,user-account-manager-20
 manager-21,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","' or 'A' = 'A",true,user-account-manager-21
-#flag - standard variations
+#executive - standard variations
 manager-22,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","Lorem ipsum dolor sit amet, consectetu",false,user-account-manager-22
