@@ -1,0 +1,27 @@
+key,position,skills,executive,key:userAccount
+#base entity,,,,
+manager-1,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-01
+#position - standard variations,,,,
+manager-2,"L","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-02
+manager-3,"Lo","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-03
+manager-4,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-04
+manager-5,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-05
+manager-6,"洛伦·伊普森","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-06
+manager-7,"لوريم إيبسوم","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-07
+manager-8,"โลเร็ม อิปซัม","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-08
+manager-9,"<script>alert(‘Hacked!’);</script>","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-09
+manager-10,'" or 'A' = 'A","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-10
+manager-11,"<marquee>Hacked</marquee>","Lorem ipsum dolor sit amet, consectetu",true,user-account-manager-11
+#skills - standard variations,,,,
+manager-12,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","L",true,user-account-manager-12
+manager-13,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","Lo",true,user-account-manager-13
+manager-14,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t",true,user-account-manager-14
+manager-15,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te",true,user-account-manager-15
+manager-16,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","洛伦·伊普森",true,user-account-manager-16
+manager-17,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","لوريم إيبسوم",true,user-account-manager-17
+manager-18,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","โลเร็ม อิปซัม",true,user-account-manager-18
+manager-19,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","<marquee>Hacked</marquee>",true,user-account-manager-19
+manager-20,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","<script>alert(‘Hacked!’);</script>",true,user-account-manager-20
+manager-21,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","' or 'A' = 'A",true,user-account-manager-21
+#executive - standard variations
+manager-22,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*","Lorem ipsum dolor sit amet, consectetu",false,user-account-manager-22
