@@ -19,13 +19,13 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidMoney;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidSponsorship;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
+import acme.entities.project.Project;
 import acme.features.any.sponsorship.AnySponsorshipRepository;
 import acme.realms.Sponsor;
 import lombok.Getter;
@@ -106,4 +106,9 @@ public class Sponsorship extends AbstractEntity {
 	@Valid
 	@ManyToOne
 	private Sponsor	sponsor;
+
+	@Optional
+	@ManyToOne
+	@Valid
+	private Project	project;
 }

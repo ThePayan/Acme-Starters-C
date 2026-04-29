@@ -24,6 +24,7 @@ import acme.common.constraints.ValidAudit;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
+import acme.entities.project.Project;
 import acme.features.any.auditreport.AnyAuditReportRepository;
 import acme.realms.Auditor;
 import lombok.Getter;
@@ -103,5 +104,10 @@ public class AuditReport extends AbstractEntity {
 	@Valid
 	@ManyToOne
 	private Auditor	auditor;
+
+	@Optional
+	@ManyToOne
+	@Valid
+	private Project	project;
 
 }
