@@ -22,7 +22,11 @@ public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 	// AbstractService interface -------------------------------------------
 	@Override
 	public void load() {
-		this.strategy = this.repository.findAllPublishedStrategies();
+		if (super.getRequest().hasData("projectId", int.class)) {
+			int projectId = super.getRequest().getData("projectId", int.class);
+			this.strategy = this.repository.findPublishedStrategiesByProjectId(projectId);
+		} else
+			this.strategy = this.repository.findAllPublishedStrategies();
 	}
 	@Override
 	public void authorise() {

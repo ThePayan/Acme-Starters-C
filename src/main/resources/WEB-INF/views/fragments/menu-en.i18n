@@ -17,6 +17,7 @@ master.menu.anonymous.strategy-list = List of strategies
 master.menu.anonymous.invention-list = List of inventions
 master.menu.anonymous.sponsorship-list = List of sponsorships
 master.menu.anonymous.list-campaigns = List of campaigns
+master.menu.anonymous.list-projects = List of projects
 
 # master.menu.authenticated ###################################################
 
@@ -27,6 +28,7 @@ master.menu.authenticated.strategy-list = List of strategies
 master.menu.authenticated.invention-list = List of inventions
 master.menu.authenticated.sponsorship-list = List of sponsorships
 master.menu.authenticated.list-campaigns = List of campaigns
+master.menu.authenticated.list-projects = List of projects
 
 # master.menu.administrator ###################################################
 
