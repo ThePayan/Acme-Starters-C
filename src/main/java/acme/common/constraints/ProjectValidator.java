@@ -48,30 +48,6 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 				super.state(context, correctNumberOfInventions, "*", "acme.validation.numberOfInventions.message");
 			}
 			{
-				boolean correctNumberOfCampaigns = true;
-				if (!project.getDraftMode()) {
-					Integer existingCampaigns;
-					existingCampaigns = this.repository.getNumOfCampaigns(project.getId());
-					if (existingCampaigns == null)
-						existingCampaigns = 0;
-
-					correctNumberOfCampaigns = existingCampaigns >= 1;
-				}
-				super.state(context, correctNumberOfCampaigns, "*", "acme.validation.numberOfCampaigns.message");
-			}
-			{
-				boolean correctNumberOfStrategies = true;
-				if (!project.getDraftMode()) {
-					Integer existingStrategies;
-					existingStrategies = this.repository.getNumOfCampaigns(project.getId());
-					if (existingStrategies == null)
-						existingStrategies = 0;
-
-					correctNumberOfStrategies = existingStrategies >= 1;
-				}
-				super.state(context, correctNumberOfStrategies, "*", "acme.validation.numberOfStrategies.message");
-			}
-			{
 				boolean correctDates = true;
 
 				if (!isDraft && project.getKickOff() != null && project.getCloseOut() != null)

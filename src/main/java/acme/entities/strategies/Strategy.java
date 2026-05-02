@@ -107,7 +107,7 @@ public class Strategy extends AbstractEntity {
 	@Valid
 	private Fundraiser	fundraiser;
 
-	@Mandatory
+	@Optional
 	@ManyToOne
 	@Valid
 	private Project		project;

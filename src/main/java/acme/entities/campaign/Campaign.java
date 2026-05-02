@@ -105,7 +105,7 @@ public class Campaign extends AbstractEntity {
 	@Column
 	private Boolean	draftMode;
 
-	@Mandatory
+	@Optional
 	@ManyToOne
 	@Valid
 	private Project	project;
