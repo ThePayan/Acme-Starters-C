@@ -16,11 +16,13 @@ any.project.form.label.title = Título:
 any.project.form.label.kickOff = Comienzo:
 any.project.form.label.closeOut = Final:
 any.project.form.label.description = Descripción:
-any.project.form.label.description = Palabras clave:
+any.project.form.label.keyWords = Palabras clave:
 
 any.project.form.button.strategy = Estrategias
-any.project.form.button.Campaign = Campañas
-any.project.form.button.Invention = Invenciones
+any.project.form.button.campaign = Campañas
+any.project.form.button.invention = Invenciones
+any.project.form.button.sponsorship = Patrocinios
+any.project.form.button.auditReport = Reportes de Auditoría
 
 any.project.list.label.kickOff = Comienzo
 any.project.list.label.closeOut = Final
