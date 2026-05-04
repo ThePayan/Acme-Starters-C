@@ -14,5 +14,3 @@ acme.validation.currency.message              		= The currency must be in Euros
 acme.validation.invention.future-interval.message 	= The dates should be in the future
 acme.validation.future-interval.message 	= The dates should be in the future
 acme.validation.numberOfInventions.message    		= Projects cannot be published unless they have at least one invention
-acme.validation.numberOfCampaigns.message    		= Projects cannot be published unless they have at least one campaign
-acme.validation.numberOfStrategies.message    		= Projects cannot be published unless they have at least one strategy
