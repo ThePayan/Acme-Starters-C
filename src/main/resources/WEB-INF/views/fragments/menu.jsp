@@ -26,6 +26,7 @@
 			<acme:menu-suboption code="master.menu.anonymous.invention-list" action="/any/invention/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.sponsorship-list" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-campaigns" action="/any/campaign/list"/>
+			<acme:menu-suboption code="master.menu.anonymous.list-projects" action="/any/project/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
@@ -36,6 +37,7 @@
 			<acme:menu-suboption code="master.menu.authenticated.invention-list" action="/any/invention/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.sponsorship-list" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.list-campaigns" action="/any/campaign/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.list-projects" action="/any/project/list"/>
 		</acme:menu-option>
 
         <acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">

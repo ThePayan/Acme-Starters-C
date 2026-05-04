@@ -13,6 +13,7 @@
 package acme.features.any.campaign;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -38,5 +39,8 @@ public interface AnyCampaignRepository extends AbstractRepository {
 
 	@Query("select c from Campaign c where c.ticker = :ticker")
 	Campaign findCampaignByTicker(String ticker);
+
+	@Query("SELECT c FROM Campaign c WHERE c.project.id = :projectId AND c.draftMode = false")
+	List<Campaign> findPublishedCampaignsByProjectId(int projectId);
 
 }

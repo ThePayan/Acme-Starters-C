@@ -13,3 +13,4 @@ acme.validation.numberOfDonations.message     		= Sponsorships cannot be publish
 acme.validation.currency.message              		= The currency must be in Euros
 acme.validation.invention.future-interval.message 	= The dates should be in the future
 acme.validation.future-interval.message 	= The dates should be in the future
+acme.validation.numberOfInventions.message    		= Projects cannot be published unless they have at least one invention

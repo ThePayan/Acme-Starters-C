@@ -24,6 +24,7 @@ import acme.common.constraints.ValidCampaign;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
+import acme.entities.project.Project;
 import acme.features.any.campaign.AnyCampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
@@ -102,6 +103,11 @@ public class Campaign extends AbstractEntity {
 	@Mandatory
 	@Valid
 	@Column
-	private Boolean draftMode;
+	private Boolean	draftMode;
+
+	@Optional
+	@ManyToOne
+	@Valid
+	private Project	project;
 
 }
