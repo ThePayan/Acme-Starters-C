@@ -4,3 +4,4 @@ user-account-auditor-02,true,"UserIdentity{name: 'Jadou', surname: ' ', email: '
 user-account-auditor-03,true,"UserIdentity{name: 'Miguelillo', surname: ' ', email: 'dedbaideilait@acme.com'}",auditor3,auditor3
 user-account-auditor-04,true,"UserIdentity{name: 'Faustino', surname: ' ', email: 'fisicalol@acme.com'}",auditor4,auditor4
 user-account-auditor-05,true,"UserIdentity{name: 'Natalia', surname: ' ', email: 'fandevegeta@acme.com'}",auditor5,auditor5
+user-account-versatile-01,true,"UserIdentity{name: 'Ben', surname: ' ', email: 'benten10@omnitrix.com'}",versatile01,versatile01

@@ -138,3 +138,4 @@ user-account-manager-19,true,"UserIdentity{name: 'Felipe', surname: 'Rozas', ema
 user-account-manager-20,true,"UserIdentity{name: 'Victoria', surname: 'Meneses', email: 'vicky.meneses@estudio.com'}",manager20,manager20
 user-account-manager-21,true,"UserIdentity{name: 'Leonardo', surname: 'Basurto', email: 'leo_basurto@horizonte.es'}",manager21,manager21
 user-account-manager-22,true,"UserIdentity{name: 'Carmen', surname: 'Marin', email: 'elcorreodecarmen8@gmail.com'}",manager22,manager22
+user-account-versatile-01,true,"UserIdentity{name: 'Ben', surname: 'Ten', email: 'benten10@omnitrix.com'}",versatile01,versatile01
