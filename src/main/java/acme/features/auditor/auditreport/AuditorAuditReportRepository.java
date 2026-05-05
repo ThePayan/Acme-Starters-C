@@ -20,6 +20,7 @@ import org.springframework.stereotype.Repository;
 import acme.client.repositories.AbstractRepository;
 import acme.entities.auditreport.AuditReport;
 import acme.entities.auditreport.AuditSection;
+import acme.entities.project.Project;
 
 @Repository
 public interface AuditorAuditReportRepository extends AbstractRepository {
@@ -38,4 +39,7 @@ public interface AuditorAuditReportRepository extends AbstractRepository {
 
 	@Query("SELECT COUNT(ar) > 0 FROM AuditReport ar WHERE ar.ticker = :ticker AND ar.id != :id ")
 	boolean tickerExists(String ticker, int id);
+
+	@Query("select p from Project p where p.draftMode = false")
+	Collection<Project> findPublishedProjects();
 }
