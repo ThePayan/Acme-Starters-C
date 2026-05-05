@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.auditreport.AuditReport;
 import acme.entities.project.Project;
@@ -55,17 +54,6 @@ public class AuditorAuditReportLinkProjectService extends AbstractService<Audito
 			boolean correctNumberOfAuditSections;
 			correctNumberOfAuditSections = this.repository.getNumberOfAuditSectionsByAuditReportId(this.auditReport.getId()) >= 1;
 			super.state(correctNumberOfAuditSections, "*", "acme.validation.numberOfAuditSections.message");
-		}
-		{
-			boolean isBefore;
-			isBefore = this.auditReport.getStartMoment().before(this.auditReport.getEndMoment());
-			super.state(isBefore, "*", "acme.validation.correctDates.message");
-		}
-		{
-			boolean startFuture;
-			startFuture = MomentHelper.isFuture(this.auditReport.getStartMoment());
-
-			super.state(startFuture, "startMoment", "acme.validation.invention.future-interval.message");
 		}
 		{
 			boolean duplicated;
