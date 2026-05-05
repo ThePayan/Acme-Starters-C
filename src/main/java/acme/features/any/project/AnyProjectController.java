@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Any;
 import acme.client.controllers.AbstractController;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 
 @Controller
 public class AnyProjectController extends AbstractController<Any, Project> {

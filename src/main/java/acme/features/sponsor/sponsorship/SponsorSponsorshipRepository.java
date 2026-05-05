@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 import acme.entities.sponsorship.Donation;
 import acme.entities.sponsorship.Sponsorship;
 

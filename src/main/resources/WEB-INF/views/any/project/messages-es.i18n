@@ -17,6 +17,7 @@ any.project.form.label.kickOff = Comienzo:
 any.project.form.label.closeOut = Final:
 any.project.form.label.description = Descripción:
 any.project.form.label.keyWords = Palabras clave:
+any.project.form.label.personMonths = Personas al mes:
 
 any.project.form.button.strategy = Estrategias
 any.project.form.button.campaign = Campañas

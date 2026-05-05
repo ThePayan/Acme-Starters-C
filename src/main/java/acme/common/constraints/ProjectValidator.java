@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.helpers.MomentHelper;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 import acme.features.any.project.AnyProjectRepository;
 
 public class ProjectValidator extends AbstractValidator<ValidProject, Project> {

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 import acme.entities.sponsorship.Sponsorship;
 import acme.realms.Sponsor;
 

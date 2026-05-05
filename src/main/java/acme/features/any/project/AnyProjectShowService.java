@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 
 @Service
 public class AnyProjectShowService extends AbstractService<Any, Project> {
@@ -36,7 +36,9 @@ public class AnyProjectShowService extends AbstractService<Any, Project> {
 	@Override
 	public void unbind() {
 		Tuple tuple;
+		double personMonths = this.project.getPersonMonths();
 		tuple = super.unbindObject(this.project, "title", "description", "keyWords", "kickOff", "closeOut");
+		tuple.put("personMonths", personMonths);
 	}
 
 }
