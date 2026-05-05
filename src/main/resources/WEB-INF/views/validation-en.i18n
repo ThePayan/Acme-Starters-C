@@ -12,5 +12,6 @@ acme.validation.numberOfParts.message         		= Inventions cannot be published
 acme.validation.numberOfDonations.message     		= Sponsorships cannot be published unless they have at least one donation
 acme.validation.currency.message              		= The currency must be in Euros
 acme.validation.invention.future-interval.message 	= The dates should be in the future
-acme.validation.future-interval.message 	= The dates should be in the future
+acme.validation.future-interval.message 			= The dates should be in the future
 acme.validation.numberOfInventions.message    		= Projects cannot be published unless they have at least one invention
+acme.validation.duplicated-member 					= A project member cannot participate more than once with the same role in the same project

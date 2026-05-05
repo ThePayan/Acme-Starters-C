@@ -1,0 +1,17 @@
+
+package acme.features.any.projectMember;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import acme.client.repositories.AbstractRepository;
+import acme.entities.projectMember.ProjectMember;
+import acme.entities.projectMember.Role;
+
+@Repository
+public interface AnyProjectMemberRepository extends AbstractRepository {
+
+	@Query("SELECT pm FROM ProjectMember pm WHERE pm.role = :role AND pm.member.id = :memberId AND pm.project.id = :projectId")
+	ProjectMember findByRoleAndMemberIdAndProjectId(Role role, int memberId, int projectId);
+
+}

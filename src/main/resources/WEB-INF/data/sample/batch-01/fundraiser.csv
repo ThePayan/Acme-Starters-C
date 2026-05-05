@@ -25,3 +25,5 @@ fundraiser-20,"Lorem ipsum dolor sit amet, consectetu",<script>alert(â€˜Hacked!â
 fundraiser-21,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,true,user-account-fundraiser-21
 #agent - standard variations
 fundraiser-22,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",false,user-account-fundraiser-22
+# key:user-account - project member variations
+fundraiser-23,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",true,user-account-versatile-01

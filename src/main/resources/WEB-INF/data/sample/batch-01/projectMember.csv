@@ -1,0 +1,10 @@
+key,role,key:member,key:project
+project-member-01,"FUNDRAISER",member-01,project-1
+# role - standard variations,,,
+project-member-02,"SPOKESPERSON",member-01,project-1
+project-member-03,"INVENTOR",member-01,project-1
+# key:member - standard variations,,,
+project-member-04,"FUNDRAISER",member-02,project-1
+project-member-05,"FUNDRAISER",member-03,project-1
+# key:project - standard variations,,,
+project-member-06,"FUNDRAISER",member-01,project-2

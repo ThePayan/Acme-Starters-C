@@ -1,0 +1,7 @@
+key,role,key:member,key:project
+# role - standard variations
+project-member-01,"",member-01,
+# key:member - standard variations,,,
+project-member-02,"FUNDRAISER",,
+# key:project - standard variations,,,
+project-member-03,"FUNDRAISER",member-01,
