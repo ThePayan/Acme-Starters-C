@@ -1,0 +1,25 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+administrator.advertisement.form.title = Detalles de anuncios
+administrator.advertisement.list.title = Lista de anuncios
+
+administrator.advertisement.form.label.slogan = Slogan:
+administrator.advertisement.form.label.picture = Imagen:
+administrator.advertisement.form.label.target = Sitio Web:
+administrator.advertisement.form.label.confirmation = Confirme que el anuncio es correcto.
+
+administrator.advertisement.form.button.create = Crear
+ 
+administrator.advertisement.list.label.slogan = Slogan
+administrator.advertisement.list.label.picture = Imagen
+administrator.advertisement.list.label.target = Sitio Web
+
+administrator.advertisement.list.button.create = Crear

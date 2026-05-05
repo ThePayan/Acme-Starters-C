@@ -29,11 +29,14 @@ master.menu.authenticated.invention-list = Lista de invenciones
 master.menu.authenticated.sponsorship-list = Lista de patrocinios
 master.menu.authenticated.list-campaigns = Lista de campañas
 master.menu.authenticated.list-projects = Lista de proyectos
+master.menu.authenticated.list-advertisement = Ver anuncios
+
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.list-user-accounts = Ver cuentas de usuario
+master.menu.administrator.list-advertisement = Ver anuncios
 master.menu.administrator.populate-db-initial = Poblar BD (inicial)
 master.menu.administrator.populate-db-sample = Poblar BD (ejemplos)
 master.menu.administrator.shut-system-down = Parar el sistema
