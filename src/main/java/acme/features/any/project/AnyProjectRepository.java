@@ -24,16 +24,25 @@ public interface AnyProjectRepository extends AbstractRepository {
 	@Query("select count(i) from Invention i where i.project.id = :projectId")
 	Integer getNumOfInventions(int projectId);
 
-	@Query("SELECT s FROM Strategy s WHERE s.project.id = :projectId")
+	@Query("SELECT s FROM Strategy s WHERE s.project.id = :projectId and s.draftMode = false")
 	List<Strategy> findStrategiesByProjectId(int projectId);
 
-	@Query("SELECT c FROM Campaign c WHERE c.project.id = :projectId")
+	@Query("SELECT c FROM Campaign c WHERE c.project.id = :projectId and c.draftMode = false")
 	List<Campaign> findCampaignsByProjectId(int projectId);
 
-	@Query("SELECT i FROM Invention i WHERE i.project.id = :projectId")
+	@Query("SELECT i FROM Invention i WHERE i.project.id = :projectId and i.draftMode = false")
 	List<Invention> findInventionsByProjectId(int projectId);
 
 	@Query("SELECT COUNT(pm) FROM ProjectMember pm WHERE pm.project.id = :projectId")
 	Integer getNumberOfMembersByProjectId(int projectId);
+
+	@Query("SELECT COUNT(i) FROM Invention i WHERE i.project.id = :projectId AND i.draftMode = true")
+	Integer countDraftInventions(int projectId);
+
+	@Query("SELECT COUNT(s) FROM Strategy s WHERE s.project.id = :projectId AND s.draftMode = true")
+	Integer countDraftStrategies(int projectId);
+
+	@Query("SELECT COUNT(c) FROM Campaign c WHERE c.project.id = :projectId AND c.draftMode = true")
+	Integer countDraftCampaigns(int projectId);
 
 }

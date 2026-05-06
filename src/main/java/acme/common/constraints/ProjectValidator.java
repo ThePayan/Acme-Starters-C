@@ -48,6 +48,30 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 				super.state(context, correctNumberOfInventions, "*", "acme.validation.numberOfInventions.message");
 			}
 			{
+				boolean allInventionsPublished = true;
+				if (!isDraft) {
+					Integer draftInventions = this.repository.countDraftInventions(project.getId());
+					allInventionsPublished = draftInventions == null || draftInventions == 0;
+				}
+				super.state(context, allInventionsPublished, "*", "acme.validation.unpublished-inventions.message");
+			}
+			{
+				boolean allStrategiesPublished = true;
+				if (!isDraft) {
+					Integer draftStrategies = this.repository.countDraftStrategies(project.getId());
+					allStrategiesPublished = draftStrategies == null || draftStrategies == 0;
+				}
+				super.state(context, allStrategiesPublished, "*", "acme.validation.unpublished-strategies.message");
+			}
+			{
+				boolean allCampaignsPublished = true;
+				if (!isDraft) {
+					Integer draftCampaigns = this.repository.countDraftCampaigns(project.getId());
+					allCampaignsPublished = draftCampaigns == null || draftCampaigns == 0;
+				}
+				super.state(context, allCampaignsPublished, "*", "acme.validation.unpublished-campaigns.message");
+			}
+			{
 				boolean correctDates = true;
 
 				if (!isDraft && project.getKickOff() != null && project.getCloseOut() != null)
