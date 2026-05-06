@@ -45,4 +45,10 @@ public interface AnyProjectRepository extends AbstractRepository {
 	@Query("SELECT COUNT(c) FROM Campaign c WHERE c.project.id = :projectId AND c.draftMode = true")
 	Integer countDraftCampaigns(int projectId);
 
+	@Query("SELECT COUNT(ss) FROM Sponsorship ss WHERE ss.project.id = :projectId AND ss.draftMode = true")
+	Integer countDraftSponsorships(int projectId);
+
+	@Query("SELECT COUNT(ar) FROM AuditReport ar WHERE ar.project.id = :projectId AND ar.draftMode = true")
+	Integer countDraftAuditReports(int projectId);
+
 }

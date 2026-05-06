@@ -55,7 +55,7 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 					Integer existingAuditSections = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
 					correctNumberOfAuditSections = existingAuditSections != null && existingAuditSections >= 1;
 				}
-				super.state(context, correctNumberOfAuditSections, "*", "acme.validation.numberOfDonations");
+				super.state(context, correctNumberOfAuditSections, "*", "acme.validation.numberOfAuditSections.message");
 			}
 			{
 				boolean correctDates = true;

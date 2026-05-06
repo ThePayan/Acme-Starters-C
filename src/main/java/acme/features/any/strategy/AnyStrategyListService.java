@@ -24,7 +24,7 @@ public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 	public void load() {
 		if (super.getRequest().hasData("projectId", int.class)) {
 			int projectId = super.getRequest().getData("projectId", int.class);
-			this.strategy = this.repository.findPublishedStrategiesByProjectId(projectId);
+			this.strategy = this.repository.findStrategiesByProjectId(projectId);
 		} else
 			this.strategy = this.repository.findAllPublishedStrategies();
 	}
