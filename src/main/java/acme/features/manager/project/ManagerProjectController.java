@@ -25,6 +25,8 @@ public class ManagerProjectController extends AbstractController<Manager, Projec
 		super.addBasicCommand("list", ManagerProjectListService.class);
 		super.addBasicCommand("show", ManagerProjectShowService.class);
 
+		super.addCustomCommand("publish", "update", ManagerProjectPublishService.class);
+
 	}
 
 }

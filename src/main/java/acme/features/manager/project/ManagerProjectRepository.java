@@ -43,4 +43,22 @@ public interface ManagerProjectRepository extends AbstractRepository {
 	@Query("SELECT au FROM AuditReport au WHERE au.project.id = :projectId")
 	List<AuditReport> findAuditReportsByProjectId(int projectId);
 
+	@Query("select count(i) from Invention i where i.project.id = :projectId")
+	Integer getNumOfInventions(int projectId);
+
+	@Query("SELECT COUNT(i) FROM Invention i WHERE i.project.id = :projectId AND i.draftMode = true")
+	Integer countDraftInventions(int projectId);
+
+	@Query("SELECT COUNT(s) FROM Strategy s WHERE s.project.id = :projectId AND s.draftMode = true")
+	Integer countDraftStrategies(int projectId);
+
+	@Query("SELECT COUNT(c) FROM Campaign c WHERE c.project.id = :projectId AND c.draftMode = true")
+	Integer countDraftCampaigns(int projectId);
+
+	@Query("SELECT COUNT(ss) FROM Sponsorship ss WHERE ss.project.id = :projectId AND ss.draftMode = true")
+	Integer countDraftSponsorships(int projectId);
+
+	@Query("SELECT COUNT(ar) FROM AuditReport ar WHERE ar.project.id = :projectId AND ar.draftMode = true")
+	Integer countDraftAuditReports(int projectId);
+
 }
