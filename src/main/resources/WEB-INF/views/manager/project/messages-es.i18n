@@ -26,6 +26,7 @@ manager.project.form.button.auditReports = Informe de auditoría
 
 manager.project.form.button.create = Crear
 manager.project.form.button.update = Actualizar
+manager.project.form.button.delete = Borrar
 		
 manager.project.list.label.title = Título 
 manager.project.list.label.kickOff = Comienzo
