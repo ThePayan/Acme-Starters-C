@@ -23,9 +23,13 @@ manager.project.form.button.campaigns = Campañas
 manager.project.form.button.inventions = Invenciones
 manager.project.form.button.sponsorships = Patrocinios
 manager.project.form.button.auditReports = Informe de auditoría
+
+manager.project.form.button.create = Crear
 		
 manager.project.list.label.title = Título 
 manager.project.list.label.kickOff = Comienzo
 manager.project.list.label.closeOut = Final
 manager.project.list.label.description = Descripción
 manager.project.list.label.keyWords = Palabras clave
+
+manager.project.list.button.create = Crear

@@ -22,3 +22,6 @@
 	<acme:list-column code="manager.project.list.label.kickOff" path="kickOff" width="20%"/>
 	<acme:list-column code="manager.project.list.label.closeOut" path="closeOut" width="20%"/>
 </acme:list>
+
+<acme:button code="manager.project.list.button.create" action="/manager/project/create"/>
+
