@@ -9,7 +9,7 @@ import acme.client.components.principals.UserAccount;
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.entities.projectMember.ProjectMember;
-import acme.features.any.projectMember.AnyProjectMemberRepository;
+import acme.features.any.projectmember.AnyProjectMemberRepository;
 
 @Validator
 public class ProjectMemberValidator extends AbstractValidator<ValidProjectMember, ProjectMember> {

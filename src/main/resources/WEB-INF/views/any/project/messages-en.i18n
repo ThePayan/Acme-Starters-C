@@ -23,6 +23,7 @@ any.project.form.button.campaign = Campaigns
 any.project.form.button.invention = Inventions
 any.project.form.button.sponsorship = SponsorShip
 any.project.form.button.auditReport = Audit-Report
+any.project.form.button.members = Members
 
 any.project.list.label.kickOff = Kick-Off
 any.project.list.label.closeOut = Close-out
