@@ -24,7 +24,8 @@ manager.project.form.button.inventions = Inventions
 manager.project.form.button.sponsorships = Sponsorships
 manager.project.form.button.auditReports = Audit-reports
 
-manager.project.form.button.create = Crear
+manager.project.form.button.create = Create
+manager.project.form.button.update = Update
 	
 manager.project.list.label.title = Title 
 manager.project.list.label.kickOff = Kick-off

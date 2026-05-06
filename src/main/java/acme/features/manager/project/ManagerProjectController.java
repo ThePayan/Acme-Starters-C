@@ -20,6 +20,7 @@ public class ManagerProjectController extends AbstractController<Manager, Projec
 		super.setMediaType(MediaType.TEXT_HTML);
 
 		super.addBasicCommand("create", ManagerProjectCreateService.class);
+		super.addBasicCommand("update", ManagerProjectUpdateService.class);
 		super.addBasicCommand("list", ManagerProjectListService.class);
 		super.addBasicCommand("show", ManagerProjectShowService.class);
 

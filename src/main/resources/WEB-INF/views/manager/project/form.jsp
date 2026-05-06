@@ -37,6 +37,7 @@
 			<acme:button code="manager.project.form.button.inventions" action="/any/invention/list?projectId=${id}"/>			
 			<acme:button code="manager.project.form.button.auditReports" action="/any/audit-report/list?projectId=${id}"/>			
 			<acme:button code="manager.project.form.button.sponsorships" action="/any/sponsorship/list?projectId=${id}"/>
+			<acme:submit code="manager.project.form.button.update" action="/manager/project/update"/>
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:submit code="manager.project.form.button.create" action="/manager/project/create"/>
