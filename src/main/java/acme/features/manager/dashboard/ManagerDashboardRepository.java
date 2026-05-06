@@ -18,7 +18,10 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
+import acme.entities.campaign.Campaign;
+import acme.entities.inventions.Invention;
 import acme.entities.projects.Project;
+import acme.entities.strategies.Strategy;
 import acme.realms.Manager;
 
 @Repository
@@ -35,5 +38,17 @@ public interface ManagerDashboardRepository extends AbstractRepository {
 
 	@Query("SELECT m from Manager m where m.userAccount.id = :id")
 	Manager findManagerByUserId(int id);
+
+	@Query("select s from Strategy s where s.project.id = :projectId")
+	Collection<Strategy> findStrategiesByProjectId(int projectId);
+
+	@Query("select c from Campaign c where c.project.id = :projectId")
+	Collection<Campaign> findCampaignsByProjectId(int projectId);
+
+	@Query("select i from Invention i where i.project.id = :projectId")
+	Collection<Invention> findInventionsByProjectId(int projectId);
+
+	@Query("select count(pm) from ProjectMember pm where pm.project.id = :projectId")
+	Integer countMembersByProject(int projectId);
 
 }
