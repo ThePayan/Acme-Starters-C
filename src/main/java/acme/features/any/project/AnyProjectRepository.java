@@ -24,13 +24,13 @@ public interface AnyProjectRepository extends AbstractRepository {
 	@Query("select count(i) from Invention i where i.project.id = :projectId")
 	Integer getNumOfInventions(int projectId);
 
-	@Query("SELECT s FROM Strategy s WHERE s.project.id = :projectId and s.draftMode = false")
+	@Query("SELECT s FROM Strategy s WHERE s.project.id = :projectId")
 	List<Strategy> findStrategiesByProjectId(int projectId);
 
-	@Query("SELECT c FROM Campaign c WHERE c.project.id = :projectId and c.draftMode = false")
+	@Query("SELECT c FROM Campaign c WHERE c.project.id = :projectId")
 	List<Campaign> findCampaignsByProjectId(int projectId);
 
-	@Query("SELECT i FROM Invention i WHERE i.project.id = :projectId and i.draftMode = false")
+	@Query("SELECT i FROM Invention i WHERE i.project.id = :projectId")
 	List<Invention> findInventionsByProjectId(int projectId);
 
 	@Query("SELECT COUNT(pm) FROM ProjectMember pm WHERE pm.project.id = :projectId")
