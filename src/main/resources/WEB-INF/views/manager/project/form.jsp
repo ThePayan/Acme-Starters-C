@@ -23,4 +23,21 @@
 	<acme:form-moment code="manager.project.form.label.closeOut" path="closeOut"/>
 	<acme:form-double code="manager.project.form.label.personMonths" path="personMonths" readonly="true"/>
 
+	<jstl:choose>	 
+		<jstl:when test="${_command == 'show' && draftMode == false}">
+			<acme:button code="manager.project.form.button.strategies" action="/any/strategy/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.campaigns" action="/any/campaign/list?projectId=${id}"/>			
+			<acme:button code="manager.project.form.button.inventions" action="/any/invention/list?projectId=${id}"/>			
+			<acme:button code="manager.project.form.button.auditReports" action="/any/audit-report/list?projectId=${id}"/>			
+			<acme:button code="manager.project.form.button.sponsorships" action="/any/sponsorship/list?projectId=${id}"/>			
+		</jstl:when>
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+			<acme:button code="manager.project.form.button.strategies" action="/any/strategy/list?projectId=${id}"/>
+			<acme:button code="manager.project.form.button.campaigns" action="/any/campaign/list?projectId=${id}"/>			
+			<acme:button code="manager.project.form.button.inventions" action="/any/invention/list?projectId=${id}"/>			
+			<acme:button code="manager.project.form.button.auditReports" action="/any/audit-report/list?projectId=${id}"/>			
+			<acme:button code="manager.project.form.button.sponsorships" action="/any/sponsorship/list?projectId=${id}"/>
+		</jstl:when>
+		
+	</jstl:choose>
 </acme:form>

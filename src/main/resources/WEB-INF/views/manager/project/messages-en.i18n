@@ -18,6 +18,12 @@ manager.project.form.label.description = Description:
 manager.project.form.label.keyWords = Key words:
 manager.project.form.label.personMonths = Persons per month:
 		
+manager.project.form.button.strategies = Strategies
+manager.project.form.button.campaigns = Campaigns
+manager.project.form.button.inventions = Inventions
+manager.project.form.button.sponsorships = Sponsorships
+manager.project.form.button.auditReports = Audit-reports
+	
 manager.project.list.label.title = Title 
 manager.project.list.label.kickOff = Kick-off
 manager.project.list.label.closeOut = Close-out
