@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.common.constraints.ValidProjectMember;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 import acme.realms.Member;
 import lombok.Getter;
 import lombok.Setter;

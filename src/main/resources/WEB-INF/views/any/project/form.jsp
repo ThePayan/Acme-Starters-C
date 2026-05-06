@@ -21,6 +21,8 @@
 	<acme:form-textarea code="any.project.form.label.keyWords" path="keyWords"/>
 	<acme:form-moment code="any.project.form.label.kickOff" path="kickOff"/>
 	<acme:form-moment code="any.project.form.label.closeOut" path="closeOut"/>
+	<acme:form-integer code="any.project.form.label.personMonths" path="personMonths"/>
+	
 
 	<acme:button code="any.project.form.button.strategy" action="/any/strategy/list?projectId=${id}"/>		
 	<acme:button code="any.project.form.button.campaign" action="/any/campaign/list?projectId=${id}"/>	

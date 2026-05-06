@@ -24,7 +24,7 @@ import acme.common.constraints.ValidCampaign;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 import acme.features.any.campaign.AnyCampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;

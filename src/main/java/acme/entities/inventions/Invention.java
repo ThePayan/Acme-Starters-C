@@ -25,7 +25,7 @@ import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidInvention;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 import acme.features.any.invention.AnyInventionRepository;
 import acme.realms.Inventor;
 import lombok.Getter;

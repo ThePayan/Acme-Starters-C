@@ -15,7 +15,8 @@ any.project.form.label.title = Title:
 any.project.form.label.kickOff = Kick-Off:
 any.project.form.label.closeOut = Close-Out:
 any.project.form.label.description = Description:
-any.project.form.label.keyWords = keyWords:
+any.project.form.label.keyWords = KeyWords:
+any.project.form.label.personMonths = Persons per month:
 
 any.project.form.button.strategy = Strategies
 any.project.form.button.campaign = Campaigns
@@ -27,5 +28,5 @@ any.project.list.label.kickOff = Kick-Off
 any.project.list.label.closeOut = Close-out
 any.project.list.label.title = Title 
 any.project.list.label.description = Description
-any.project.list.label.keyWords = keyWords
+any.project.list.label.keyWords = KeyWords
 

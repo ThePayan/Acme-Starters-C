@@ -24,7 +24,7 @@ import acme.common.constraints.ValidAudit;
 import acme.common.constraints.ValidHeader;
 import acme.common.constraints.ValidText;
 import acme.common.constraints.ValidTicker;
-import acme.entities.project.Project;
+import acme.entities.projects.Project;
 import acme.features.any.auditreport.AnyAuditReportRepository;
 import acme.realms.Auditor;
 import lombok.Getter;
