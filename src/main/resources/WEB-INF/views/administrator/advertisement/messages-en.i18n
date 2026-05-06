@@ -16,6 +16,8 @@ administrator.advertisement.form.label.picture = Picture:
 administrator.advertisement.form.label.target = Target:
 administrator.advertisement.form.label.confirmation = Confirm that the advertisement is correct.
 
+administrator.advertisement.form.button.update = Update
+administrator.advertisement.form.button.delete = Delete
 administrator.advertisement.form.button.create = Create
 
 administrator.advertisement.list.label.slogan = Slogan

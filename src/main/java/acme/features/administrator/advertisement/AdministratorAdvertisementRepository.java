@@ -23,7 +23,7 @@ import acme.entities.advertisement.Advertisement;
 @Repository
 public interface AdministratorAdvertisementRepository extends AbstractRepository {
 
-	@Query("select a from Advertisement a where a.id = :id")
+	@Query("select a from Advertisement a WHERE a.id = :id")
 	Advertisement findAdvertisementById(int id);
 
 	@Query("select a from Advertisement a")

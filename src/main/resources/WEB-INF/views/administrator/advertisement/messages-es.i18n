@@ -13,13 +13,15 @@ administrator.advertisement.list.title = Lista de anuncios
 
 administrator.advertisement.form.label.slogan = Slogan:
 administrator.advertisement.form.label.picture = Imagen:
-administrator.advertisement.form.label.target = Sitio Web:
+administrator.advertisement.form.label.target = Destino:
 administrator.advertisement.form.label.confirmation = Confirme que el anuncio es correcto.
 
+administrator.advertisement.form.button.update = Actualizar
+administrator.advertisement.form.button.delete = Borrar
 administrator.advertisement.form.button.create = Crear
  
 administrator.advertisement.list.label.slogan = Slogan
 administrator.advertisement.list.label.picture = Imagen
-administrator.advertisement.list.label.target = Sitio Web
+administrator.advertisement.list.label.target = Destino
 
 administrator.advertisement.list.button.create = Crear

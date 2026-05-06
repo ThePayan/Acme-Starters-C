@@ -22,6 +22,8 @@ public class AdministratorAdvertisementController extends AbstractController<Adm
 		super.addBasicCommand("list", AdministratorAdvertisementListService.class);
 		super.addBasicCommand("show", AdministratorAdvertisementShowService.class);
 		super.addBasicCommand("create", AdministratorAdvertisementCreateService.class);
+		super.addBasicCommand("update", AdministratorAdvertisementUpdateService.class);
+		super.addBasicCommand("delete", AdministratorAdvertisementDeleteService.class);
 	}
 
 }

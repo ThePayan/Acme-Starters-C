@@ -15,7 +15,6 @@ package acme.features.administrator.advertisement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.models.Tuple;
 import acme.client.components.principals.Administrator;
 import acme.client.services.AbstractService;
 import acme.entities.advertisement.Advertisement;
@@ -52,11 +51,8 @@ public class AdministratorAdvertisementShowService extends AbstractService<Admin
 
 	@Override
 	public void unbind() {
-		Tuple tuple;
+		super.unbindObject(this.advertisement, "slogan", "picture", "target");
 
-		tuple = super.unbindObject(this.advertisement, "slogan", "picture", "target");
-		tuple.put("confirmation", false);
-		tuple.put("readonly", true);
 	}
 
 }

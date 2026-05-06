@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidUrl;
-import acme.common.constraints.ValidShortText;
+import acme.common.constraints.ValidHeader;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -23,7 +23,7 @@ public class Advertisement extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidShortText
+	@ValidHeader
 	@Column
 	private String				slogan;
 
