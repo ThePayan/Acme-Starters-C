@@ -12,7 +12,9 @@
 
 package acme.features.manager.dashboard;
 
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -59,10 +61,9 @@ public class ManagerDashboardShowService extends AbstractService<Manager, Dashbo
 			minEffort = Double.MAX_VALUE;
 			double acum = 0.0;
 
-			// LISTA SEGURA para almacenar los cálculos y no depender del @Transient de la entidad
-			java.util.List<Double> projectEfforts = new java.util.ArrayList<>();
-
-			// 1. Recorrer los proyectos de este mánager
+			List<Double> projectEfforts = new ArrayList<>();
+			// 1. Recorrer los proyectos de este mánager (hayo aquí el months/person) 
+			//porque si lo obtengo directamente de project devuelve 0 :/
 			for (Project p : projects) {
 				double totalActiveMonths = 0.0;
 
