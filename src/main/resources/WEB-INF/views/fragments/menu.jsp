@@ -38,10 +38,12 @@
 			<acme:menu-suboption code="master.menu.authenticated.sponsorship-list" action="/any/sponsorship/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.list-campaigns" action="/any/campaign/list"/>
 			<acme:menu-suboption code="master.menu.authenticated.list-projects" action="/any/project/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.list-advertisement" action="/authenticated/advertisement/list" />
 		</acme:menu-option>
 
         <acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
             <acme:menu-suboption code="master.menu.administrator.list-user-accounts" action="/administrator/user-account/list"/>
+            <acme:menu-suboption code="master.menu.administrator.list-advertisement" action="/administrator/advertisement/list" />
             <acme:menu-separator/>
             <acme:menu-suboption code="master.menu.administrator.populate-db-initial" action="/administrator/system/populate-initial"/>
             <acme:menu-suboption code="master.menu.administrator.populate-db-sample" action="/administrator/system/populate-sample"/>          
