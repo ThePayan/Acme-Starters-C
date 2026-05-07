@@ -43,9 +43,15 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = this.campaign != null && !this.campaign.getDraftMode();
 
-		status = this.campaign != null && !this.campaign.getDraftMode();
+		// Si está en borrador pero el usuario ha iniciado sesión, comprobamos si es el Manager del proyecto
+		if (!status && this.campaign != null && super.getRequest().getPrincipal() != null)
+			if (this.campaign.getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.campaign.getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
 
 		super.setAuthorised(status);
 	}
