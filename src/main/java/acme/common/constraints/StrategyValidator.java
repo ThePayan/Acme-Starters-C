@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
+import acme.entities.projectMember.Role;
 import acme.entities.strategies.Strategy;
 import acme.features.any.strategy.AnyStrategyRepository;
 
@@ -65,6 +66,17 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 					correctDates = MomentHelper.isBefore(strategy.getStartMoment(), strategy.getEndMoment());
 				super.state(context, correctDates, "startMoment", "acme.validation.correctDates.message");
 				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
+			}
+			{
+				boolean isProjectMember = true;
+
+				if (strategy.getProject() != null) {
+					int projectId = strategy.getProject().getId();
+					int meId = strategy.getFundraiser().getUserAccount().getId();
+					int memberId = this.repository.findMemberIdByUserAccountId(meId);
+					isProjectMember = this.repository.findProjectMemberByRoleAndMemberIdAndProjectId(Role.FUNDRAISER, memberId, projectId) != null;
+				}
+				super.state(context, isProjectMember, "project", "acme.validation.projectMember.message");
 			}
 			result = !super.hasErrors(context);
 		}
