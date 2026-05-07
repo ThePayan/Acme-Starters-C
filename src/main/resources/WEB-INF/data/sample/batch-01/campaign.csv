@@ -3,7 +3,7 @@ key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesp
 campaign-00,ES26-00000,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/00,TRUE,spokesperson-02,
 # ticker - standard variations
 campaign-01,ES26-00001,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/01,FALSE,spokesperson-01,
-campaign-02,ES26-00002,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/02,FALSE,spokesperson-02,project-2
+campaign-02,ES26-00002,Lorem ipsum dolor sit amet consectetu,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/02,FALSE,spokesperson-02,project-1
 # name - standard variations
 campaign-03,ES26-00003,L,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/05,TRUE,spokesperson-05,
 campaign-04,ES26-00004,Lo,Lorem ipsum dolor sit amet consectetur adipiscing elit Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua Ut,2027/01/01 10:00,2027/02/01 10:00,http://lorem.com/06,TRUE,spokesperson-06,
