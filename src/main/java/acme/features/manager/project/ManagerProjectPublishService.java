@@ -12,12 +12,20 @@
 
 package acme.features.manager.project;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
+import acme.entities.campaign.Campaign;
+import acme.entities.inventions.Invention;
 import acme.entities.projects.Project;
+import acme.entities.strategies.Strategy;
+import acme.features.fundraiser.strategy.FundraiserStrategyRepository;
+import acme.features.inventor.invention.InventorInventionRepository;
+import acme.features.spokesperson.campaign.SpokespersonCampaignRepository;
 import acme.realms.Manager;
 
 @Service
@@ -26,9 +34,15 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private ManagerProjectRepository	repository;
+	private ManagerProjectRepository		repository;
+	@Autowired
+	private FundraiserStrategyRepository	fundraiserRepository;
+	@Autowired
+	private InventorInventionRepository		inventorRepository;
+	@Autowired
+	private SpokespersonCampaignRepository	spokespersonRepository;
 
-	private Project						project;
+	private Project							project;
 
 	// AbstractService interface -------------------------------------------
 
@@ -72,31 +86,23 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 
 			super.state(startFuture, "startMoment", "acme.validation.future-interval.message");
 		}
-		{
-			Integer draftInventions = this.repository.countDraftInventions(this.project.getId());
-			boolean allInventionsPublished = draftInventions == null || draftInventions == 0;
-			super.state(allInventionsPublished, "*", "acme.validation.unpublished-inventions.message");
+		List<Strategy> strategies = this.repository.findStrategiesByProjectId(this.project.getId());
+		for (Strategy s : strategies) {
+			boolean correctNumberOfTactics;
+			correctNumberOfTactics = this.fundraiserRepository.getNumOfTacticsByStrategyId(s.getId()) >= 1;
+			super.state(correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 		}
-		{
-
-			Integer draftStrategies = this.repository.countDraftStrategies(this.project.getId());
-			boolean allStrategiesPublished = draftStrategies == null || draftStrategies == 0;
-			super.state(allStrategiesPublished, "*", "acme.validation.unpublished-strategies.message");
+		List<Campaign> campaigns = this.repository.findCampaignsByProjectId(this.project.getId());
+		for (Campaign c : campaigns) {
+			boolean correctNumberOfMilestones;
+			correctNumberOfMilestones = this.spokespersonRepository.getNumberOfMilestonesByACampaignId(c.getId()) >= 1;
+			super.state(correctNumberOfMilestones, "*", "acme.validation.numberOfMilestones.message");
 		}
-		{
-			Integer draftCampaigns = this.repository.countDraftCampaigns(this.project.getId());
-			boolean allCampaignsPublished = draftCampaigns == null || draftCampaigns == 0;
-			super.state(allCampaignsPublished, "*", "acme.validation.unpublished-campaigns.message");
-		}
-		{
-			Integer draftSponsorships = this.repository.countDraftSponsorships(this.project.getId());
-			boolean allSponsorshipsPublished = draftSponsorships == null || draftSponsorships == 0;
-			super.state(allSponsorshipsPublished, "*", "acme.validation.unpublished-sponsorships.message");
-		}
-		{
-			Integer draftAuditReports = this.repository.countDraftAuditReports(this.project.getId());
-			boolean allAuditReportsPublished = draftAuditReports == null || draftAuditReports == 0;
-			super.state(allAuditReportsPublished, "*", "acme.validation.unpublished-auditReports.message");
+		List<Invention> inventions = this.repository.findInventionsByProjectId(this.project.getId());
+		for (Invention i : inventions) {
+			boolean correctNumberOfParts;
+			correctNumberOfParts = this.inventorRepository.getNumberOfPartsByInventionId(i.getId()) >= 1;
+			super.state(correctNumberOfParts, "*", "acme.validation.numberOfParts.message");
 		}
 	}
 
@@ -104,6 +110,21 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 	public void execute() {
 		this.project.setDraftMode(false);
 		this.repository.save(this.project);
+		List<Invention> inventions = this.repository.findInventionsByProjectId(this.project.getId());
+		for (Invention i : inventions) {
+			i.setDraftMode(false);
+			this.inventorRepository.save(i);
+		}
+		List<Strategy> strategies = this.repository.findStrategiesByProjectId(this.project.getId());
+		for (Strategy s : strategies) {
+			s.setDraftMode(false);
+			this.fundraiserRepository.save(s);
+		}
+		List<Campaign> campaigns = this.repository.findCampaignsByProjectId(this.project.getId());
+		for (Campaign c : campaigns) {
+			c.setDraftMode(false);
+			this.spokespersonRepository.save(c);
+		}
 	}
 
 	@Override

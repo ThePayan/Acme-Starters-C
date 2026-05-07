@@ -35,8 +35,6 @@
 			<acme:button code="manager.project.form.button.strategies" action="/any/strategy/list?projectId=${id}"/>
 			<acme:button code="manager.project.form.button.campaigns" action="/any/campaign/list?projectId=${id}"/>			
 			<acme:button code="manager.project.form.button.inventions" action="/any/invention/list?projectId=${id}"/>			
-			<acme:button code="manager.project.form.button.auditReports" action="/any/audit-report/list?projectId=${id}"/>			
-			<acme:button code="manager.project.form.button.sponsorships" action="/any/sponsorship/list?projectId=${id}"/>
 			<acme:submit code="manager.project.form.button.update" action="/manager/project/update"/>
 			<acme:submit code="manager.project.form.button.delete" action="/manager/project/delete"/>
 			<acme:submit code="manager.project.form.button.publish" action="/manager/project/publish"/>
