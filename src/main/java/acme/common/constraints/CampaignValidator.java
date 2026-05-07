@@ -81,7 +81,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 					int projectId = campaign.getProject().getId();
 					int meId = campaign.getSpokesperson().getUserAccount().getId();
 					int memberId = this.campaignRepository.findMemberIdByUserAccountId(meId);
-					isProjectMember = this.campaignRepository.findProjectMemberByRoleAndMemberIdAndProjectId(Role.INVENTOR, memberId, projectId) != null;
+					isProjectMember = this.campaignRepository.findProjectMemberByRoleAndMemberIdAndProjectId(Role.SPOKESPERSON, memberId, projectId) != null;
 				}
 				super.state(context, isProjectMember, "project", "acme.validation.projectMember.message");
 			}
