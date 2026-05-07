@@ -66,6 +66,14 @@ public class SponsorshipValidator extends AbstractValidator<ValidSponsorship, Sp
 				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
 				super.state(context, correctDates, "startMoment", "acme.validation.correctDates.message");
 			}
+			{
+				{
+					boolean correctProjectAssociation = true;
+					if (sponsorship.getProject() != null)
+						correctProjectAssociation = !isDraft && !sponsorship.getProject().getDraftMode();
+					super.state(context, correctProjectAssociation, "project", "acme.validation.project-association.message");
+				}
+			}
 			result = !super.hasErrors(context);
 		}
 		return result;

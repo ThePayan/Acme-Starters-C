@@ -27,7 +27,7 @@ public class AnyAuditReportListService extends AbstractService<Any, AuditReport>
 	public void load() {
 		if (super.getRequest().hasData("projectId", int.class)) {
 			int projectId = super.getRequest().getData("projectId", int.class);
-			this.auditReports = this.repository.findPublishedAuditReportsByProjectId(projectId);
+			this.auditReports = this.repository.findAuditReportsByProjectId(projectId);
 		} else
 			this.auditReports = this.repository.findAllPublishedAuditReports();
 	}

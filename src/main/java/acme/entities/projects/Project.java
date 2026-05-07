@@ -94,12 +94,9 @@ public class Project extends AbstractEntity {
 		List<Invention> inventions = this.repository.findInventionsByProjectId(this.getId());
 		for (Invention i : inventions)
 			totalActiveMonths += i.getMonthsActive();
-
 		Integer membersCount = this.repository.getNumberOfMembersByProjectId(this.getId());
-
 		if (membersCount == null || membersCount == 0)
 			return 0.0;
-
 		return totalActiveMonths / membersCount;
 	}
 

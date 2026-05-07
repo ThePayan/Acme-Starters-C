@@ -27,7 +27,7 @@ public class AnySponsorshipListService extends AbstractService<Any, Sponsorship>
 	public void load() {
 		if (super.getRequest().hasData("projectId", int.class)) {
 			int projectId = super.getRequest().getData("projectId", int.class);
-			this.sponsorships = this.repository.findPublishedSponsorshipsByProjectId(projectId);
+			this.sponsorships = this.repository.findSponsorshipsByProjectId(projectId);
 		} else
 			this.sponsorships = this.repository.findAllPublishedSponsorships();
 	}

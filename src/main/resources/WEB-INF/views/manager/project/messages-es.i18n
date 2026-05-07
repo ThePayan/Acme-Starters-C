@@ -1,0 +1,38 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for fundraiser particular
+# purposes.  The copyright owner does not offer fundraiser warranties or representations, nor do
+# they accept fundraiser liabilities with respect to them.
+
+manager.project.form.title = Formulario de proyectos
+manager.project.list.title = Lista de proyectos
+
+manager.project.form.label.title = Título:
+manager.project.form.label.kickOff = Comienzo:
+manager.project.form.label.closeOut = Final:
+manager.project.form.label.description = Descripción:
+manager.project.form.label.keyWords = Palabras clave:
+manager.project.form.label.personMonths = Personas al mes:
+
+manager.project.form.button.strategies = Estrategias
+manager.project.form.button.campaigns = Campañas
+manager.project.form.button.inventions = Invenciones
+manager.project.form.button.sponsorships = Patrocinios
+manager.project.form.button.auditReports = Informe de auditoría
+
+manager.project.form.button.create = Crear
+manager.project.form.button.update = Actualizar
+manager.project.form.button.delete = Borrar
+manager.project.form.button.publish = Publicar
+		
+manager.project.list.label.title = Título 
+manager.project.list.label.kickOff = Comienzo
+manager.project.list.label.closeOut = Final
+manager.project.list.label.description = Descripción
+manager.project.list.label.keyWords = Palabras clave
+
+manager.project.list.button.create = Crear

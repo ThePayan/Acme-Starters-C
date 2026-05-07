@@ -42,9 +42,15 @@ public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = this.milestone != null && !this.milestone.getCampaign().getDraftMode();
 
-		status = this.milestone != null && !this.milestone.getCampaign().getDraftMode();
+		// Si el padre está en borrador pero el usuario ha iniciado sesión, comprobamos si es el Manager del proyecto
+		if (!status && this.milestone != null && super.getRequest().getPrincipal() != null)
+			if (this.milestone.getCampaign().getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.milestone.getCampaign().getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
 
 		super.setAuthorised(status);
 	}

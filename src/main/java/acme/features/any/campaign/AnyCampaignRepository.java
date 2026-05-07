@@ -40,7 +40,7 @@ public interface AnyCampaignRepository extends AbstractRepository {
 	@Query("select c from Campaign c where c.ticker = :ticker")
 	Campaign findCampaignByTicker(String ticker);
 
-	@Query("SELECT c FROM Campaign c WHERE c.project.id = :projectId AND c.draftMode = false")
-	List<Campaign> findPublishedCampaignsByProjectId(int projectId);
+	@Query("SELECT c FROM Campaign c WHERE c.project.id = :projectId")
+	List<Campaign> findCampaignsByProjectId(int projectId);
 
 }

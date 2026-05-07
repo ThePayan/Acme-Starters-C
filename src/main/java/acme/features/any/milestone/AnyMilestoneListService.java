@@ -47,9 +47,13 @@ public class AnyMilestoneListService extends AbstractService<Any, Milestone> {
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		status = this.campaign != null && !this.campaign.getDraftMode();
+		boolean status = this.campaign != null && !this.campaign.getDraftMode();
+		if (!status && this.campaign != null && super.getRequest().getPrincipal() != null)
+			if (this.campaign.getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.campaign.getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
 
 		super.setAuthorised(status);
 	}
