@@ -1,0 +1,18 @@
+# messages-en.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+manager.dashboard.form.title = Panel de proyectos
+
+manager.dashboard.form.label.numberOfMyProjects = Número de proyectos
+manager.dashboard.form.label.desviationNumberOfProjectsByManager = Desviación del número de proyectos por manager
+manager.dashboard.form.label.minEffort = Esfuerzo mínimo
+manager.dashboard.form.label.maxEffort = Esfuerzo máximo
+manager.dashboard.form.label.averageOfEffortOfProjectsByManager = Media del esfuerzo de proyectos por manager
+manager.dashboard.form.label.desviationOfTheEffortByProjectsByManager = Desviación del esfuerzo de proyectos por manager
