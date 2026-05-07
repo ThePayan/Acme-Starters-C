@@ -33,8 +33,14 @@ public class AnyTacticListService extends AbstractService<Any, Tactic> {
 
 	@Override
 	public void authorise() {
-		boolean status;
-		status = this.strategy != null && !this.strategy.getDraftMode();
+		boolean status = this.strategy != null && !this.strategy.getDraftMode();
+		if (!status && this.strategy != null && super.getRequest().getPrincipal() != null)
+			if (this.strategy.getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.strategy.getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
+
 		super.setAuthorised(status);
 	}
 

@@ -18,3 +18,4 @@ acme.validation.duplicated-member 					= Un miembro de un proyecto no puede part
 acme.validation.unpublished-inventions.message = Los proyectos no se pueden publicar si sus invenciones no están publicadas. 
 acme.validation.unpublished-strategies.message = Los proyectos no se pueden publicar si sus estrategias no están publicadas. 
 acme.validation.unpublished-campaigns.message = Los proyectos no se pueden publicar si sus campañas no están publicadas. 
+acme.validation.project-association.message = El proyecto y este elemento deben estar publicados para poder asociarse.

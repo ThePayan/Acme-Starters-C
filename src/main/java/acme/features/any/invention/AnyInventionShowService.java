@@ -30,9 +30,15 @@ public class AnyInventionShowService extends AbstractService<Any, Invention> {
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = this.invention != null && !this.invention.getDraftMode();
 
-		status = this.invention != null && !this.invention.getDraftMode();
+		// Si está en borrador pero el usuario ha iniciado sesión, comprobamos si es el Manager del proyecto
+		if (!status && this.invention != null && super.getRequest().getPrincipal() != null)
+			if (this.invention.getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.invention.getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
 
 		super.setAuthorised(status);
 	}

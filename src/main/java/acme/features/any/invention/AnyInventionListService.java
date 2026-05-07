@@ -27,7 +27,7 @@ public class AnyInventionListService extends AbstractService<Any, Invention> {
 	public void load() {
 		if (super.getRequest().hasData("projectId", int.class)) {
 			int projectId = super.getRequest().getData("projectId", int.class);
-			this.inventions = this.repository.findPublishedInventionsByProjectId(projectId);
+			this.inventions = this.repository.findInventionsByProjectId(projectId);
 		} else
 			this.inventions = this.repository.findAllPublishedInventions();
 	}

@@ -36,9 +36,13 @@ public class AnyPartListService extends AbstractService<Any, Part> {
 
 	@Override
 	public void authorise() {
-		boolean status;
-
-		status = this.invention != null && !this.invention.getDraftMode();
+		boolean status = this.invention != null && !this.invention.getDraftMode();
+		if (!status && this.invention != null && super.getRequest().getPrincipal() != null)
+			if (this.invention.getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.invention.getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
 
 		super.setAuthorised(status);
 	}

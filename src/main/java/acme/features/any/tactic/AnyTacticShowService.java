@@ -27,8 +27,16 @@ public class AnyTacticShowService extends AbstractService<Any, Tactic> {
 
 	@Override
 	public void authorise() {
-		boolean status;
-		status = this.tactic != null && !this.tactic.getStrategy().getDraftMode();
+		boolean status = this.tactic != null && !this.tactic.getStrategy().getDraftMode();
+
+		// Si el padre está en borrador pero el usuario ha iniciado sesión, comprobamos si es el Manager del proyecto
+		if (!status && this.tactic != null && super.getRequest().getPrincipal() != null)
+			if (this.tactic.getStrategy().getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.tactic.getStrategy().getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
+
 		super.setAuthorised(status);
 	}
 

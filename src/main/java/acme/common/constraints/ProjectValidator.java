@@ -72,6 +72,22 @@ public class ProjectValidator extends AbstractValidator<ValidProject, Project> {
 				super.state(context, allCampaignsPublished, "*", "acme.validation.unpublished-campaigns.message");
 			}
 			{
+				boolean allSponsorshipsPublished = true;
+				if (!isDraft) {
+					Integer draftSponsorships = this.repository.countDraftSponsorships(project.getId());
+					allSponsorshipsPublished = draftSponsorships == null || draftSponsorships == 0;
+				}
+				super.state(context, allSponsorshipsPublished, "*", "acme.validation.unpublished-sponsorships.message");
+			}
+			{
+				boolean allAuditReportsPublished = true;
+				if (!isDraft) {
+					Integer draftAuditReports = this.repository.countDraftAuditReports(project.getId());
+					allAuditReportsPublished = draftAuditReports == null || draftAuditReports == 0;
+				}
+				super.state(context, allAuditReportsPublished, "*", "acme.validation.unpublished-auditReports.message");
+			}
+			{
 				boolean correctDates = true;
 
 				if (!isDraft && project.getKickOff() != null && project.getCloseOut() != null)

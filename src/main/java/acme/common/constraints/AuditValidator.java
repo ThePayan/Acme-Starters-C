@@ -55,7 +55,7 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 					Integer existingAuditSections = this.auditRepository.getNumberOfAuditSections(auditReport.getId());
 					correctNumberOfAuditSections = existingAuditSections != null && existingAuditSections >= 1;
 				}
-				super.state(context, correctNumberOfAuditSections, "*", "acme.validation.numberOfDonations");
+				super.state(context, correctNumberOfAuditSections, "*", "acme.validation.numberOfAuditSections.message");
 			}
 			{
 				boolean correctDates = true;
@@ -65,6 +65,12 @@ public class AuditValidator extends AbstractValidator<ValidAudit, AuditReport> {
 					correctDates = MomentHelper.isBefore(startMoment, endMoment);
 				super.state(context, correctDates, "startMoment", "acme.validation.correctDates.message");
 				super.state(context, correctDates, "endMoment", "acme.validation.correctDates.message");
+			}
+			{
+				boolean correctProjectAssociation = true;
+				if (auditReport.getProject() != null)
+					correctProjectAssociation = !isDraft && !auditReport.getProject().getDraftMode();
+				super.state(context, correctProjectAssociation, "project", "acme.validation.project-association.message");
 			}
 			result = !super.hasErrors(context);
 		}

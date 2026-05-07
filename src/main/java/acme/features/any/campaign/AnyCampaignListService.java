@@ -38,7 +38,7 @@ public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 	public void load() {
 		if (super.getRequest().hasData("projectId", int.class)) {
 			int projectId = super.getRequest().getData("projectId", int.class);
-			this.campaigns = this.repository.findPublishedCampaignsByProjectId(projectId);
+			this.campaigns = this.repository.findCampaignsByProjectId(projectId);
 		} else
 			this.campaigns = this.repository.findCampaignByAvailability();
 	}
