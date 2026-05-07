@@ -33,9 +33,15 @@ public class AnyPartShowService extends AbstractService<Any, Part> {
 
 	@Override
 	public void authorise() {
-		boolean status;
+		boolean status = this.part != null && !this.part.getInvention().getDraftMode();
 
-		status = this.part != null && !this.part.getInvention().getDraftMode();
+		// Si el padre está en borrador pero el usuario ha iniciado sesión, comprobamos si es el Manager del proyecto
+		if (!status && this.part != null && super.getRequest().getPrincipal() != null)
+			if (this.part.getInvention().getProject() != null) {
+				int principalId = super.getRequest().getPrincipal().getAccountId();
+				int managerId = this.part.getInvention().getProject().getManager().getUserAccount().getId();
+				status = principalId == managerId;
+			}
 
 		super.setAuthorised(status);
 	}
