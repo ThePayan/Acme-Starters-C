@@ -82,6 +82,11 @@ master.menu.manager = Gerente
 master.menu.manager.show-dashboard = Enseñar panel
 master.menu.manager.list-projects = Mis proyectos
 
+# master.menu.member ##########################################################
+
+master.menu.member = Miembro
+master.menu.member.list-projects = Mis proyectos
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Cuenta

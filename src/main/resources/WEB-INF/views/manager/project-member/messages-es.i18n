@@ -1,0 +1,15 @@
+manager.project-member.list.title = Lista de miembros
+manager.project-member.list.label.username = Miembro
+manager.project-member.list.label.role = Rol
+
+manager.project-member.list.button.create = Añadir nuevo miembro
+
+manager.project-member.form.title = Añadir nuevo miembro
+manager.project-member.form.label.member = Miembro
+manager.project-member.form.label.username = Nombre de usuario
+manager.project-member.form.label.fullName = Nombre completo
+manager.project-member.form.label.email = Dirección email
+manager.project-member.form.label.role = Rol
+
+manager.project-member.form.button.create = Confirmar
+manager.project-member.form.button.delete = Eliminar miembro

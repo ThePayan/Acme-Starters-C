@@ -23,6 +23,7 @@ manager.project.form.button.campaigns = Campañas
 manager.project.form.button.inventions = Invenciones
 manager.project.form.button.sponsorships = Patrocinios
 manager.project.form.button.auditReports = Informe de auditoría
+manager.project.form.button.members = Miembros
 
 manager.project.form.button.create = Crear
 manager.project.form.button.update = Actualizar

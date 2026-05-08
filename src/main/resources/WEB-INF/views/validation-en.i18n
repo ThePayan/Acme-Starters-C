@@ -15,6 +15,7 @@ acme.validation.invention.future-interval.message 	= The dates should be in the 
 acme.validation.future-interval.message 			= The dates should be in the future
 acme.validation.numberOfInventions.message    		= Projects cannot be published unless they have at least one invention
 acme.validation.duplicated-member 					= A project member cannot participate more than once with the same role in the same project
+acme.validation.member-lacks-role					= The member does not have the selected role
 acme.validation.unpublished-inventions.message = Projects cannot be published if their inventions aren't published
 acme.validation.unpublished-strategies.message = Projects cannot be published if their strategies aren't published
 acme.validation.unpublished-campaigns.message = Projects cannot be published if their campaigns aren't published
