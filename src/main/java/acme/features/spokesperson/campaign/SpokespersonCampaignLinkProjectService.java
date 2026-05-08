@@ -14,7 +14,8 @@ import acme.entities.projects.Project;
 import acme.realms.Spokesperson;
 
 @Service
-public class SpokespersonCampaignShowService extends AbstractService<Spokesperson, Campaign> {
+public class SpokespersonCampaignLinkProjectService extends AbstractService<Spokesperson, Campaign> {
+	// Internal state ---------------------------------------------------------
 
 	@Autowired
 	private SpokespersonCampaignRepository	repository;
@@ -37,25 +38,34 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 		boolean status;
 
 		status = this.campaign != null && this.campaign.getSpokesperson().isPrincipal();
-
 		super.setAuthorised(status);
+	}
+
+	@Override
+	public void bind() {
+		super.bindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "project");
+	}
+
+	@Override
+	public void validate() {
+		super.validateObject(this.campaign);
+
+	}
+
+	@Override
+	public void execute() {
+		this.repository.save(this.campaign);
 	}
 
 	@Override
 	public void unbind() {
 		SelectChoices choices;
+		Tuple tuple;
 
-		Collection<Project> projects = this.repository.findProjectsBySpokespersonId(this.campaign.getSpokesperson().getId());
+		Collection<Project> projects = this.repository.findProjectsByUserAccountId(this.campaign.getSpokesperson().getUserAccount().getId());
 		choices = SelectChoices.from(projects, "title", this.campaign.getProject());
 
-		Tuple tuple;
-		double months = this.campaign.getMonthsActive();
-		Double effort = this.campaign.getEffort();
-		tuple = super.unbindObject(this.campaign, //
-			"ticker", "startMoment", "endMoment", "name", //
-			"description", "moreInfo", "draftMode");
-		tuple.put("monthsActive", months);
-		tuple.put("efforts", effort);
+		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
 		tuple.put("project", choices);
 	}
 }

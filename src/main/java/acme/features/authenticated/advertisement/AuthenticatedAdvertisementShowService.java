@@ -42,8 +42,10 @@ public class AuthenticatedAdvertisementShowService extends AbstractService<Authe
 
 	@Override
 	public void authorise() {
+		boolean status;
 
-		super.setAuthorised(true);
+		status = this.advertisement != null;
+		super.setAuthorised(status);
 	}
 
 	@Override

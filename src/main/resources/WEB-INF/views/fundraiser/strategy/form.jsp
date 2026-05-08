@@ -24,16 +24,19 @@
 	<acme:form-url code="fundraiser.strategy.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-double code="fundraiser.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-double code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>
+	<acme:form-select code="fundraiser.strategy.form.label.project" path="project" choices="${project}"/>
 
 	<jstl:choose>	 
-		<jstl:when test="${_command == 'show' && draftMode == false}">
-			<acme:button code="fundraiser.strategy.form.button.tactic" action="/fundraiser/tactic/list?strategyId=${id}"/>			
+		<jstl:when test="${acme:anyOf(_command, 'show|link') && draftMode == false}">
+			<acme:button code="fundraiser.strategy.form.button.tactic" action="/fundraiser/tactic/list?strategyId=${id}"/>	
+			<acme:submit code="fundraiser.strategy.form.button.link" action="/fundraiser/strategy/link"/>				
 		</jstl:when>
-		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish') && draftMode == true}">
+		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish|link') && draftMode == true}">
 			<acme:button code="fundraiser.strategy.form.button.tactic" action="/fundraiser/tactic/list?strategyId=${id}"/>
 			<acme:submit code="fundraiser.strategy.form.button.update" action="/fundraiser/strategy/update"/>
 			<acme:submit code="fundraiser.strategy.form.button.delete" action="/fundraiser/strategy/delete"/>
 			<acme:submit code="fundraiser.strategy.form.button.publish" action="/fundraiser/strategy/publish"/>
+			<acme:submit code="fundraiser.strategy.form.button.link" action="/fundraiser/strategy/link"/>		
 		</jstl:when>
 		<jstl:when test="${_command == 'create'}">
 			<acme:submit code="fundraiser.strategy.form.button.create" action="/fundraiser/strategy/create"/>

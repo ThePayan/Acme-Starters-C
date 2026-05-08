@@ -72,6 +72,7 @@ public class AuditorAuditReportDeleteService extends AbstractService<Auditor, Au
 		this.repository.delete(this.auditReport);
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public void unbind() {
 		int auditorId;

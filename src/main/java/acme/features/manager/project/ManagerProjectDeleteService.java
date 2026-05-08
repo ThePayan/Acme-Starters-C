@@ -101,6 +101,7 @@ public class ManagerProjectDeleteService extends AbstractService<Manager, Projec
 		this.repository.delete(this.project);
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public void unbind() {
 		int ManagerId;
