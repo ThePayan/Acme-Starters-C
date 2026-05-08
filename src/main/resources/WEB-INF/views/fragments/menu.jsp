@@ -81,8 +81,12 @@
         
         <acme:menu-option code="master.menu.manager" access="hasRealm('Manager')">
             <acme:menu-suboption code="master.menu.manager.show-dashboard" action="/manager/dashboard/show"/>
-        	  <acme:menu-suboption code="master.menu.manager.list-projects" action="/manager/project/list"/>
-		    </acme:menu-option>
+        	<acme:menu-suboption code="master.menu.manager.list-projects" action="/manager/project/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.member" access="hasRealm('Member')">
+        	<acme:menu-suboption code="master.menu.member.list-projects" action="/member/project/list"/>
+		</acme:menu-option>
             
     </acme:menu-left>
 
