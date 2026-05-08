@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>440</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;role&gt;&gt;
+Manager
+--
++ position: String { Mandatory, ValidText, Column }
++ skills: String { Mandatory, ValidText, Column }
++ flag: Boolean { Mandatory, Valid, Column }
+
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>420</x>
+      <y>440</y>
+      <w>190</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Squad&gt;&gt;
+Member
+--
++ Inventor
++ Spokesperson
++ Fundraiser
+
+bg=#00FF00</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>250</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;role&gt;&gt;
+Spokesperson
+--
++ cv: String { Mandatory, ValidText, Column }
++ achievements: String { Mandatory, ValidText, Column }
++ licensed: Boolean { Mandatory, Valid, Column }
+
+bg=#0000FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>140</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;role&gt;&gt;
+Fundraiser
+--
++ bank: String { Mandatory, ValidHeader, Column }
++ statement: String { Mandatory, ValidText, Column }
++ agent: Boolean { Mandatory, Valid, Column }
+
+bg=#0000FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>30</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;role&gt;&gt;
+Inventor
+--
++ bio: String { Mandatory, ValidText, Column }
++ keyWords: String { Mandatory, ValidText, Column }
++ licensed: Boolean { Mandatory, Valid, Column }
+
+bg=#0000FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>30</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;role&gt;&gt;
+Sponsor
+--
++ address: String { Mandatory, ValidText, Column }
++ im: String { Mandatory, ValidHeader, Column }
++ gold: Boolean { Mandatory, Valid, Column }
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>440</x>
+      <y>140</y>
+      <w>370</w>
+      <h>100</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;role&gt;&gt;
+Auditor
+--
++ firm: String { Mandatory, ValidHeader, Column }
++ highlights: String { Mandatory, ValidHeader, Column }
++ solicitor: Boolean { Mandatory, Valid, Column }
+
+bg=orange</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

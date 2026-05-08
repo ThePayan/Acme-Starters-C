@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>10</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>20</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Constraint&gt;&gt;
+ValidHeader
+--
++ NotBlank
++ Length(min=1, max=75)
+
+bg=RED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>130</y>
+      <w>190</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Constraint&gt;&gt;
+ValidText
+--
++ NotBlank
++ Length(min=1, max=255)
+
+bg=RED</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>30</x>
+      <y>240</y>
+      <w>320</w>
+      <h>90</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Constraint&gt;&gt;
+ValidTicker
+--
++ NotBlank
++ Pattern(regexp="^[A-Z]{2}[0-9]{2}-\\w{5,10}$")
+
+bg=RED</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>

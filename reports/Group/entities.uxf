@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>396</x>
+      <y>168</y>
+      <w>324</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Project
+--
++ title: String { Mandatory, ValidHeader, Column }
++ description: String { Mandatory, ValidText, Column }
++ keyWords: String { Mandatory, ValidText, Column }
++ kickOff: Moment { Mandatory, ValidMoment(future), Temporal(TIMESTAMP) }
++ closeOut: Moment { Mandatory, ValidMoment(future), Temporal(TIMESTAMP) }
+--
++ / personMonths: Double { Mandatory, Valid, Transient }
+--
++ draftMode: Boolean { Mandatory, Valid, Column }
+
+bg=#800080</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>450</x>
+      <y>60</y>
+      <w>222</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;role&gt;&gt;
+Manager
+--
++ position: String { Mandatory, ValidText, Column }
++ skills: String { Mandatory, ValidText, Column }
++ flag: Boolean { Mandatory, Valid, Column }
+
+bg=ORANGE</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>552</x>
+      <y>114</y>
+      <w>72</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=*
+Managed by ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>168</y>
+      <w>90</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Invention
+
+bg=#0000FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>204</y>
+      <w>90</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Campaign
+
+bg=#0000FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>876</x>
+      <y>240</y>
+      <w>90</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Strategy
+
+
+bg=#0000FF</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>618</x>
+      <y>318</y>
+      <w>90</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Sponsorship
+
+bg=Yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>402</x>
+      <y>312</y>
+      <w>90</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+AuditReport
+
+bg=Yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>42</x>
+      <y>204</y>
+      <w>72</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Squad&gt;&gt;
+Member
+--
++ Inventor
++ Spokesperson
++ Fundraiser
+
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>168</y>
+      <w>174</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=*
+Composed of v</panel_attributes>
+    <additional_attributes>10.0;80.0;70.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>210</y>
+      <w>174</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=*
+Composed of v</panel_attributes>
+    <additional_attributes>10.0;10.0;70.0;70.0;270.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>204</y>
+      <w>174</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=1
+m2=*
+Composed of v</panel_attributes>
+    <additional_attributes>10.0;20.0;270.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>558</x>
+      <y>270</y>
+      <w>114</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=0..1
+m2=*
+Sponsored by v</panel_attributes>
+    <additional_attributes>10.0;10.0;170.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>438</x>
+      <y>270</y>
+      <w>138</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-x
+m1=0..1
+m2=*
+Audited by v</panel_attributes>
+    <additional_attributes>210.0;10.0;10.0;70.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>192</x>
+      <y>228</y>
+      <w>102</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+WorkIn
+--
+
+bg=#008080</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>288</x>
+      <y>234</y>
+      <w>120</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>&lt; Implemented  by
+lt=&lt;-x
+m1=1
+m2=*
+
+</panel_attributes>
+    <additional_attributes>180.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>108</x>
+      <y>228</y>
+      <w>96</w>
+      <h>30</h>
+    </coordinates>
+    <panel_attributes>&lt; Work in
+lt=&lt;-x
+m1=1
+m2=*
+</panel_attributes>
+    <additional_attributes>10.0;20.0;140.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>84</x>
+      <y>60</y>
+      <w>228</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;Entity&gt;&gt;
+Advertisement
+--
++ slogan: String {Mandatory, ValidShortText, Column}
++ picture: String {Mandatory, ValidUrl, Column}
++ target: String {Mandatory, ValidUrl, Column}
+
+bg=green</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>162</x>
+      <y>312</y>
+      <w>174</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>Additional constraints
+--
+
+- Projects cannot be published 
+unless they have at least one invention.
+Note that publishing a project implies 
+that its components must be 
+published auto-matically. 
+
+- startMoment/endMoment must be a 
+valid time interval in future 
+wrt. the moment when a
+invention is published.
+
+- personMonths as the sum of active months 
+of its components divided by the number 
+of people in-volved.
+
+
+
+bg=RED
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
