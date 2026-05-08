@@ -11,6 +11,7 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.inventions.Invention;
+import acme.entities.projectMember.Role;
 import acme.features.any.invention.AnyInventionRepository;
 
 @Validator
@@ -69,7 +70,17 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 						super.state(context, false, "*", "acme.validation.correctDates.message");
 				}
 			}
+			{
+				boolean isProjectMember = true;
 
+				if (invention.getProject() != null) {
+					int projectId = invention.getProject().getId();
+					int meId = invention.getInventor().getUserAccount().getId();
+					int memberId = this.inventionRepository.findMemberIdByUserAccountId(meId);
+					isProjectMember = this.inventionRepository.findProjectMemberByRoleAndMemberIdAndProjectId(Role.INVENTOR, memberId, projectId) != null;
+				}
+				super.state(context, isProjectMember, "project", "acme.validation.projectMember.message");
+			}
 			result = !super.hasErrors(context);
 		}
 

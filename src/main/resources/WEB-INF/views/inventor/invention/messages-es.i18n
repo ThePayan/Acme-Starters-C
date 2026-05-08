@@ -20,12 +20,14 @@ inventor.invention.form.label.draftMode = Borrador:
 inventor.invention.form.label.moreInfo = Más información: (Opcional)
 inventor.invention.form.label.monthsActive = Meses Activo:
 inventor.invention.form.label.Costs = Costes:
+inventor.invention.form.label.project = Proyecto:
 		
 inventor.invention.form.button.parts = Partes
 inventor.invention.form.button.update = Actualizar
 inventor.invention.form.button.delete = Borrar
 inventor.invention.form.button.publish = Publicar
 inventor.invention.form.button.create = Crear
+inventor.invention.form.button.link = Asociar proyecto
 
 inventor.invention.list.label.ticker = Referencia
 inventor.invention.list.label.startMoment = Momento de inicio

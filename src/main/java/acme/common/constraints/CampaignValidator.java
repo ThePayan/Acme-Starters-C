@@ -11,6 +11,7 @@ import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
 import acme.client.helpers.MomentHelper;
 import acme.entities.campaign.Campaign;
+import acme.entities.projectMember.Role;
 import acme.features.any.campaign.AnyCampaignRepository;
 
 @Validator
@@ -72,6 +73,17 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 
 				if (isAfter && Boolean.FALSE.equals(draftMode))
 					super.state(context, false, "isAfter", "acme.validation.correctDates.message");
+			}
+			{
+				boolean isProjectMember = true;
+
+				if (campaign.getProject() != null) {
+					int projectId = campaign.getProject().getId();
+					int meId = campaign.getSpokesperson().getUserAccount().getId();
+					int memberId = this.campaignRepository.findMemberIdByUserAccountId(meId);
+					isProjectMember = this.campaignRepository.findProjectMemberByRoleAndMemberIdAndProjectId(Role.SPOKESPERSON, memberId, projectId) != null;
+				}
+				super.state(context, isProjectMember, "project", "acme.validation.projectMember.message");
 			}
 
 			result = !super.hasErrors(context);
