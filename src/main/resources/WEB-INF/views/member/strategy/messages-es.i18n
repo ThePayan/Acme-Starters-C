@@ -1,0 +1,20 @@
+
+member.strategy.form.title = Detalles de la estrategia
+member.strategy.list.title = Lista de estrategias
+
+member.strategy.form.label.ticker = Referencia:
+member.strategy.form.label.name = Nombre:
+member.strategy.form.label.startMoment = Fecha Inicio:
+member.strategy.form.label.endMoment = Fecha Final:
+member.strategy.form.label.moreInfo = Más información: (Opcional)
+member.strategy.form.label.description = Descripción:
+member.strategy.form.label.monthsActive = Meses Activo:
+member.strategy.form.label.expectedPercentages = Porcentajes esperados:
+
+member.strategy.list.label.ticker = Referencia  
+member.strategy.list.label.fundraiser.bank = Banco
+member.strategy.list.label.startMoment = Fecha Inicio
+member.strategy.list.label.endMoment = Fecha Final
+member.strategy.list.label.name = Nombre
+member.strategy.list.label.description = Descripción
+member.strategy.list.label.moreInfo = Más Información

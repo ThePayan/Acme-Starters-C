@@ -1,0 +1,5 @@
+member.project-member.list.title = List of members
+member.project-member.list.label.member = Member
+member.project-member.list.label.role = Role
+member.project-member.list.label.username = Username
+member.project-member.list.label.email = Email

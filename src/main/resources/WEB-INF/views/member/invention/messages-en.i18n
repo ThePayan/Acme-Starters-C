@@ -1,0 +1,20 @@
+
+member.invention.form.title = Invention form
+member.invention.list.title = Listing of Inventions
+
+member.invention.form.label.ticker = Ticker:
+member.invention.form.label.name = Name:
+member.invention.form.label.startMoment = Start Moment:
+member.invention.form.label.endMoment = End Moment:
+member.invention.form.label.moreInfo = More info: (Optional)
+member.invention.form.label.description = Description:
+member.invention.form.label.monthsActive = Months Active:
+member.invention.form.label.Costs = Costs:
+
+member.invention.list.label.ticker = Ticker 
+member.invention.list.label.inventor.bio = Bio
+member.invention.list.label.startMoment = Start Moment
+member.invention.list.label.endMoment = End Moment
+member.invention.list.label.name = Name 
+member.invention.list.label.description = Description
+member.invention.list.label.moreInfo = More Info

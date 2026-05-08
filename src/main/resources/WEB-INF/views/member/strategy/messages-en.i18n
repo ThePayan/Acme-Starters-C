@@ -1,0 +1,20 @@
+
+member.strategy.form.title = Strategy form
+member.strategy.list.title = Listing of strategies
+
+member.strategy.form.label.ticker = Ticker:
+member.strategy.form.label.name = Name:
+member.strategy.form.label.startMoment = Start Moment:
+member.strategy.form.label.endMoment = End Moment:
+member.strategy.form.label.moreInfo = More info: (Optional)
+member.strategy.form.label.description = Description:
+member.strategy.form.label.monthsActive = Months Active:
+member.strategy.form.label.expectedPercentages = expectedPercentages:
+
+member.strategy.list.label.ticker = Ticker 
+member.strategy.list.label.fundraiser.bank = Bank
+member.strategy.list.label.startMoment = Start Moment
+member.strategy.list.label.endMoment = End Moment
+member.strategy.list.label.name = Name 
+member.strategy.list.label.description = Description
+member.strategy.list.label.moreInfo = More Info
