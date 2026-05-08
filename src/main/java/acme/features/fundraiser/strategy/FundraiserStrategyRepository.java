@@ -8,6 +8,7 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
+import acme.entities.projects.Project;
 import acme.entities.strategies.Strategy;
 import acme.entities.strategies.Tactic;
 
@@ -34,5 +35,14 @@ public interface FundraiserStrategyRepository extends AbstractRepository {
 
 	@Query("SELECT COUNT(s) > 0 FROM Strategy s WHERE s.ticker = :ticker AND s.id != :id ")
 	boolean tickerExists(String ticker, int id);
+
+	@Query("SELECT pm.project FROM ProjectMember pm WHERE pm.member.userAccount = (SELECT f.userAccount FROM Fundraiser f WHERE f.id = :fundraiserId) AND pm.project.draftMode = true")
+	Collection<Project> findProjectsByFundraiserId(int fundraiserId);
+
+	@Query("SELECT pm.project  FROM ProjectMember pm  WHERE pm.member.userAccount.id = :userAccountId AND pm.project.draftMode = true")
+	Collection<Project> findProjectsByUserAccountId(int userAccountId);
+
+	@Query("SELECT f.id  FROM Fundraiser f  WHERE f.userAccount.id = :userAccountId")
+	Integer findFundraiserByAccountId(int userAccountId);
 
 }

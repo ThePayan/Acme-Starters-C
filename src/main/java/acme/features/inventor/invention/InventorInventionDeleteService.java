@@ -61,6 +61,7 @@ public class InventorInventionDeleteService extends AbstractService<Inventor, In
 		this.repository.delete(this.invention);
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public void unbind() {
 		int inventorId;

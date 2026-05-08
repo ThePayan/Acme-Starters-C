@@ -19,12 +19,14 @@ spokesperson.campaign.form.label.endMoment = Momento de fin
 spokesperson.campaign.form.label.moreInfo = Más información
 spokesperson.campaign.form.label.monthsActive = Meses activos
 spokesperson.campaign.form.label.effort = Esfuerzo
+spokesperson.campaign.label.project = Proyecto
 
 spokesperson.campaign.form.button.milestone = Hitos
 spokesperson.campaign.form.button.update = Actualizar
 spokesperson.campaign.form.button.delete = Eliminar
 spokesperson.campaign.form.button.publish = Publicar
 spokesperson.campaign.form.button.create = Crear
+spokesperson.campaign.form.button.link = Asociar proyecto
 
 any.campaign.list.label.ticker = Ticker
 any.campaign.list.label.name = Nombre
