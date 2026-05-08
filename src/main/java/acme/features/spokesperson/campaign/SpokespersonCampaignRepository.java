@@ -32,4 +32,7 @@ public interface SpokespersonCampaignRepository extends AbstractRepository {
 	@Query("SELECT pm.project  FROM ProjectMember pm  WHERE pm.member.userAccount.id = :userAccountId AND pm.project.draftMode = true")
 	Collection<Project> findProjectsByUserAccountId(int userAccountId);
 
+	@Query("SELECT f.id  FROM Spokesperson f  WHERE f.userAccount.id = :userAccountId")
+	Integer findSpokespersonByAccountId(int userAccountId);
+
 }
