@@ -19,12 +19,14 @@ inventor.invention.form.label.endMoment = End Moment:
 inventor.invention.form.label.moreInfo = More info: (Optional)
 inventor.invention.form.label.monthsActive = Months Active:
 inventor.invention.form.label.Costs = Costs:
+inventor.invention.form.label.project = Project:
 		
 inventor.invention.form.button.parts = Parts
 inventor.invention.form.button.update = Update
 inventor.invention.form.button.delete = Delete
 inventor.invention.form.button.publish = Publish
 inventor.invention.form.button.create = Create
+inventor.invention.form.button.link = Link project
 
 inventor.invention.list.label.ticker = Ticker
 inventor.invention.list.label.startMoment = Start Moment

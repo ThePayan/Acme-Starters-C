@@ -11,6 +11,7 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.inventions.Invention;
 import acme.entities.projectMember.ProjectMember;
 import acme.entities.projectMember.Role;
+import acme.entities.projects.Project;
 
 @Repository
 public interface AnyInventionRepository extends AbstractRepository {
@@ -37,4 +38,8 @@ public interface AnyInventionRepository extends AbstractRepository {
 
 	@Query("SELECT pm FROM ProjectMember pm WHERE pm.role = :role AND pm.member.id = :memberId AND pm.project.id = :projectId")
 	ProjectMember findProjectMemberByRoleAndMemberIdAndProjectId(Role role, int memberId, int projectId);
+
+	@Query("SELECT p FROM Project p WHERE p.id = :id")
+	Project findProjectById(int id);
+
 }

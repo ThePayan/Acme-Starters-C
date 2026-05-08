@@ -57,6 +57,7 @@ public class SpokespersonCampaignDeleteService extends AbstractService<Spokesper
 		this.repository.delete(this.campaign);
 	}
 
+	@SuppressWarnings("unused")
 	@Override
 	public void unbind() {
 		int auditorId;
