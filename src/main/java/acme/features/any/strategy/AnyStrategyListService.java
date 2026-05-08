@@ -35,7 +35,7 @@ public class AnyStrategyListService extends AbstractService<Any, Strategy> {
 		if (super.getRequest().hasData("projectId", int.class)) {
 			int projectId = super.getRequest().getData("projectId", int.class);
 			Project project = this.repository.findProjectById(projectId);
-			if (project == null || this.repository.findProjectById(projectId).getDraftMode())
+			if (project == null || this.repository.findProjectById(projectId).getDraftMode() && !project.getManager().isPrincipal())
 				auth = false;
 		}
 		super.setAuthorised(auth);
