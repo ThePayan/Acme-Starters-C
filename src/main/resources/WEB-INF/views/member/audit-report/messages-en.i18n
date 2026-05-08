@@ -1,0 +1,20 @@
+
+member.audit-report.form.title = Audit Report form
+member.audit-report.list.title = Listing of Audit Reports
+
+member.audit-report.form.label.ticker = Ticker:
+member.audit-report.form.label.name = Name:
+member.audit-report.form.label.startMoment = Start Moment:
+member.audit-report.form.label.endMoment = End Moment:
+member.audit-report.form.label.moreInfo = More info: (Optional)
+member.audit-report.form.label.description = Description:
+member.audit-report.form.label.monthsActive = Months Active:
+member.audit-report.form.label.hours = Hours:
+
+member.audit-report.list.label.ticker = Ticker 
+member.audit-report.list.label.auditor.firm = Firm
+member.audit-report.list.label.startMoment = Start Moment
+member.audit-report.list.label.endMoment = End Moment
+member.audit-report.list.label.name = Name 
+member.audit-report.list.label.description = Description
+member.audit-report.list.label.moreInfo = More Info

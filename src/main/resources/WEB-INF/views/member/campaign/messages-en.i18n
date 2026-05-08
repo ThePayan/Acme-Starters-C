@@ -1,0 +1,21 @@
+
+member.campaign.form.title = Campaign form
+member.campaign.list.title = Listing of campaign
+
+member.campaign.form.label.ticker = Ticker
+member.campaign.form.label.name = Name
+member.campaign.form.label.description = Description
+member.campaign.form.label.startMoment = Start Moment
+member.campaign.form.label.endMoment = End Moment
+member.campaign.form.label.moreInfo = More Info
+member.campaign.form.label.spokesperson = Spokesperson
+member.campaign.form.label.monthsActive = Months Active
+member.campaign.form.label.effort = Effort
+
+member.campaign.list.label.ticker = Ticker
+member.campaign.list.label.name = Name
+member.campaign.list.label.description = Description
+member.campaign.list.label.startMoment = Start Moment
+member.campaign.list.label.endMoment = End Moment
+member.campaign.list.label.moreInfo = More Info
+member.campaign.list.label.spokesperson = Spokesperson

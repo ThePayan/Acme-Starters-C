@@ -1,0 +1,21 @@
+
+member.campaign.form.title = Formulario de campaña
+member.campaign.list.title = Listado de campañas
+
+member.campaign.form.label.ticker = Ticker
+member.campaign.form.label.name = Nombre
+member.campaign.form.label.description = Descripción
+member.campaign.form.label.startMoment = Momento de inicio
+member.campaign.form.label.endMoment = Momento de finalización
+member.campaign.form.label.moreInfo = Más información
+member.campaign.form.label.spokesperson = Portavoz
+member.campaign.form.label.monthsActive = Meses activo
+member.campaign.form.label.effort = Esfuerzo
+
+member.campaign.list.label.ticker = Ticker
+member.campaign.list.label.name = Nombre
+member.campaign.list.label.description = Descripción
+member.campaign.list.label.startMoment = Momento de inicio
+member.campaign.list.label.endMoment = Momento de finalización
+member.campaign.list.label.moreInfo = Más información
+member.campaign.list.label.spokesperson = Portavoz
