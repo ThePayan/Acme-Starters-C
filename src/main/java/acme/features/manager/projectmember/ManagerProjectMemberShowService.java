@@ -46,6 +46,7 @@ public class ManagerProjectMemberShowService extends AbstractService<Manager, Pr
 	@Override
 	public void unbind() {
 		super.unbindObject(this.projectMember, "member.userAccount.username", "member.identity.fullName", "member.identity.email", "role");
+		super.unbindGlobal("draftMode", this.projectMember.getProject().getDraftMode());
 	}
 
 }
