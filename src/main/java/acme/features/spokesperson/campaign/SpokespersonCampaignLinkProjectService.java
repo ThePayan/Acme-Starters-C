@@ -62,7 +62,7 @@ public class SpokespersonCampaignLinkProjectService extends AbstractService<Spok
 		SelectChoices choices;
 		Tuple tuple;
 
-		Collection<Project> projects = this.repository.findProjectsBySpokespersonId(this.campaign.getSpokesperson().getId());
+		Collection<Project> projects = this.repository.findProjectsByUserAccountId(this.campaign.getSpokesperson().getUserAccount().getId());
 		choices = SelectChoices.from(projects, "title", this.campaign.getProject());
 
 		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");

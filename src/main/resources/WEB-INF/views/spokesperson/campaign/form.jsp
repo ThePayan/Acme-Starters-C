@@ -24,12 +24,12 @@
 	<acme:form-url code="spokesperson.campaign.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-double code="spokesperson.campaign.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-integer code="spokesperson.campaign.form.label.effort" path="efforts" readonly="true"/>
-	<acme:form-select code=".spokesperson.campaign.label.project" path="project" choices="${project}"/>
+	<acme:form-select code="spokesperson.campaign.label.project" path="project" choices="${project}"/>
 	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
 			<acme:button code="spokesperson.campaign.form.button.milestone" action="/spokesperson/milestone/list?campaignId=${id}"/>
-			<acme:submit code="spokesperson.campaign.button.link" action="/spokesperson/campaign/link"/>		
+			<acme:submit code="spokesperson.campaign.form.button.link" action="/spokesperson/campaign/link"/>		
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish|link') && draftMode == true}">
 			<acme:button code="spokesperson.campaign.form.button.milestone" action="/spokesperson/milestone/list?campaignId=${id}"/>

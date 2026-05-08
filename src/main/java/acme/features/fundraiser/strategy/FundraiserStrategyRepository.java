@@ -39,4 +39,10 @@ public interface FundraiserStrategyRepository extends AbstractRepository {
 	@Query("SELECT pm.project FROM ProjectMember pm WHERE pm.member.userAccount = (SELECT f.userAccount FROM Fundraiser f WHERE f.id = :fundraiserId) AND pm.project.draftMode = true")
 	Collection<Project> findProjectsByFundraiserId(int fundraiserId);
 
+	@Query("SELECT pm.project  FROM ProjectMember pm  WHERE pm.member.userAccount.id = :userAccountId AND pm.project.draftMode = true")
+	Collection<Project> findProjectsByUserAccountId(int userAccountId);
+
+	@Query("SELECT f.id  FROM Fundraiser f  WHERE f.userAccount.id = :userAccountId")
+	Integer findFundraiserByAccountId(int userAccountId);
+
 }
