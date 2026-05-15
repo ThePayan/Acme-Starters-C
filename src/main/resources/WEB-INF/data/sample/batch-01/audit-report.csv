@@ -42,3 +42,6 @@ audit-report-37,LA40-LASTREPORT,Ultimo Reporte,El auditor ya se quedo sin ideas 
 audit-report-38,LA41-LASTREPORT,Ultimo Reporte,El auditor ya se quedo sin ideas para los nombres de los reportes,2027/05/10 16:00,2027/05/20 16:00,http://example.org/a/b,false,auditor-5,project-1
 audit-report-39,LA42-LASTREPORT,Ultimo Reporte,El auditor ya se quedo sin ideas para los nombres de los reportes,2027/05/10 16:00,2027/05/20 16:00,http://www.lorem-ipsum.org,false,auditor-5,
 audit-report-40,LA43-LASTREPORT,Ultimo Reporte,El auditor ya se quedo sin ideas para los nombres de los reportes,2027/05/10 16:00,2027/05/20 16:00,http://example.org?,false,auditor-5,project-4
+# assesment B data
+audit-report-41,LA44-LASTREPORT,PUB-AUDIT,Ultimoooooooooooooooooooooooooo,2025/01/01 00:01,2040/01/01 00:00,http://lorem.com/ipsum,true,auditor-1,
+audit-report-42,LA45-LASTREPORT,OTHER-AUDIT,Ultimoooooooooooooooooooooooooo,2027/06/10 16:00,2027/06/10 17:00,http://lorem.com/ipsum,false,auditor-2,

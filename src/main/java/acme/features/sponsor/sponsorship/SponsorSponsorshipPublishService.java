@@ -51,8 +51,9 @@ public class SponsorSponsorshipPublishService extends AbstractService<Sponsor, S
 			super.state(correctNumberOfDonations, "*", "acme.validation.numberOfDonations.message");
 		}
 		{
-			boolean isBefore;
-			isBefore = this.sponsorship.getStartMoment().before(this.sponsorship.getEndMoment());
+			boolean isBefore = false;
+			if (this.sponsorship.getStartMoment() != null && this.sponsorship.getEndMoment() != null)
+				isBefore = this.sponsorship.getStartMoment().before(this.sponsorship.getEndMoment());
 			super.state(isBefore, "startMoment", "acme.validation.correctDates.message");
 			super.state(isBefore, "endMoment", "acme.validation.correctDates.message");
 		}

@@ -62,3 +62,7 @@ strategy-50,AB13-hoLAS56,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum d
 strategy-51,AB13-hoLAS57,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1,
 strategy-52,AB13-hoLAS58,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/ipsum,true,fundraiser-1,
 strategy-53,AB13-hoLAS59,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2112/12/31 23:59,2113/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1,
+# assesment B data
+strategy-54,AB13-hoLAS60,PUB-STRATEGY,Otro strategy,2025/01/01 00:02,2039/12/31 23:59,http://lorem.com/ipsum,true,fundraiser-1,
+strategy-55,AB13-hoLAS61,UNP-STRATEGY,Otro strategy,2025/01/01 00:02,2039/12/31 23:59,http://lorem.com/ipsum,false,fundraiser-1,
+strategy-56,AB13-hoLAS62,OTHER-STRATEGY,Otro strategy,2025/01/01 00:01,2040/01/01 00:00,http://lorem.com/ipsum,false,fundraiser-2,
