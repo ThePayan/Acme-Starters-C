@@ -62,14 +62,15 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 			super.state(correctNumberOfTactics, "*", "acme.validation.numberOfTactics.message");
 		}
 		{
-			boolean isBefore;
-			isBefore = this.strategy.getStartMoment().before(this.strategy.getEndMoment());
+			boolean isBefore = false;
+			if (this.strategy.getStartMoment() != null && this.strategy.getEndMoment() != null)
+				isBefore = this.strategy.getStartMoment().before(this.strategy.getEndMoment());
 			super.state(isBefore, "*", "acme.validation.correctDates.message");
 		}
 		{
-			boolean startFuture;
-			startFuture = MomentHelper.isFuture(this.strategy.getStartMoment());
-
+			boolean startFuture = false;
+			if (this.strategy.getStartMoment() != null)
+				startFuture = MomentHelper.isFuture(this.strategy.getStartMoment());
 			super.state(startFuture, "startMoment", "acme.validation.future-interval.message");
 		}
 		{

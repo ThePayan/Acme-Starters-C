@@ -76,14 +76,15 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 			super.state(correctNumberOfInventions, "*", "acme.validation.numberOfInventions.message");
 		}
 		{
-			boolean isBefore;
-			isBefore = this.project.getKickOff().before(this.project.getCloseOut());
+			boolean isBefore = false;
+			if (this.project != null && this.project.getKickOff() != null && this.project.getCloseOut() != null)
+				isBefore = MomentHelper.isBefore(this.project.getKickOff(), this.project.getCloseOut());
 			super.state(isBefore, "*", "acme.validation.correctDates.message");
 		}
 		{
-			boolean startFuture;
-			startFuture = MomentHelper.isFuture(this.project.getKickOff());
-
+			boolean startFuture = false;
+			if (this.project != null && this.project.getKickOff() != null)
+				startFuture = MomentHelper.isFuture(this.project.getKickOff());
 			super.state(startFuture, "startMoment", "acme.validation.future-interval.message");
 		}
 		List<Strategy> strategies = this.repository.findStrategiesByProjectId(this.project.getId());

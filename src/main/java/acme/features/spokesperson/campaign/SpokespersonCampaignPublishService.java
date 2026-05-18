@@ -50,8 +50,9 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 			super.state(correctNumberOfAuditSections, "*", "acme.validation.numberOfMilestones.message");
 		}
 		{
-			boolean isBefore;
-			isBefore = this.campaign.getStartMoment().before(this.campaign.getEndMoment());
+			boolean isBefore = false;
+			if (this.campaign.getStartMoment() != null && this.campaign.getEndMoment() != null)
+				isBefore = this.campaign.getStartMoment().before(this.campaign.getEndMoment());
 			super.state(isBefore, "*", "acme.validation.correctDates.message");
 		}
 	}

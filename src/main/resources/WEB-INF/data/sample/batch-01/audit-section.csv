@@ -27,3 +27,5 @@ audit-section-22,Dictamen Final,<marquee>Hacked</marquee>,3,CONCLUSION,audit-rep
 audit-section-23,Dictamen Final,<script>alert(‘Hacked!’);</script>,3,CONCLUSION,audit-report-38
 audit-section-24,Dictamen Final,' or 'A' = 'A,3,CONCLUSION,audit-report-39
 audit-section-25,Dictamen Final,Lo,3,CONCLUSION,audit-report-40
+# assesment B data
+audit-section-26,Dictamen Final,Lo,3,CONCLUSION,audit-report-42

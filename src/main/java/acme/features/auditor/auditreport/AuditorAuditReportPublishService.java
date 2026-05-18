@@ -63,14 +63,15 @@ public class AuditorAuditReportPublishService extends AbstractService<Auditor, A
 			super.state(correctNumberOfAuditSections, "*", "acme.validation.numberOfAuditSections.message");
 		}
 		{
-			boolean isBefore;
-			isBefore = this.auditReport.getStartMoment().before(this.auditReport.getEndMoment());
+			boolean isBefore = false;
+			if (this.auditReport.getStartMoment() != null && this.auditReport.getEndMoment() != null)
+				isBefore = this.auditReport.getStartMoment().before(this.auditReport.getEndMoment());
 			super.state(isBefore, "*", "acme.validation.correctDates.message");
 		}
 		{
-			boolean startFuture;
-			startFuture = MomentHelper.isFuture(this.auditReport.getStartMoment());
-
+			boolean startFuture = false;
+			if (this.auditReport.getStartMoment() != null)
+				startFuture = MomentHelper.isFuture(this.auditReport.getStartMoment());
 			super.state(startFuture, "startMoment", "acme.validation.invention.future-interval.message");
 		}
 		{
