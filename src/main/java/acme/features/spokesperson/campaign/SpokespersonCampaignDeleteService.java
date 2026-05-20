@@ -6,7 +6,6 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.campaign.Campaign;
 import acme.entities.campaign.Milestone;
@@ -57,14 +56,8 @@ public class SpokespersonCampaignDeleteService extends AbstractService<Spokesper
 		this.repository.delete(this.campaign);
 	}
 
-	@SuppressWarnings("unused")
 	@Override
 	public void unbind() {
-		int auditorId;
-		Tuple tuple;
-
-		auditorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-
-		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 	}
 }

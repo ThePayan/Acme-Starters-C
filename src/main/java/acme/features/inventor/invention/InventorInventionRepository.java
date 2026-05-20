@@ -26,7 +26,7 @@ public interface InventorInventionRepository extends AbstractRepository {
 	@Query("SELECT COUNT(s) FROM Part s WHERE s.invention.id = :id")
 	Integer getNumberOfPartsByInventionId(int id);
 
-	@Query("SELECT pm.project  FROM ProjectMember pm  WHERE pm.member.userAccount = (SELECT i.userAccount FROM Inventor i WHERE i.id = :inventorId) AND pm.project.draftMode = true")
+	@Query("SELECT pm.project  FROM ProjectMember pm  WHERE pm.member.userAccount = (SELECT i.userAccount FROM Inventor i WHERE i.id = :inventorId)")
 	Collection<Project> findProjectsByInventorId(int inventorId);
 
 }

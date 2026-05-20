@@ -17,7 +17,6 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.auditreport.AuditReport;
 import acme.entities.auditreport.AuditSection;
@@ -72,15 +71,9 @@ public class AuditorAuditReportDeleteService extends AbstractService<Auditor, Au
 		this.repository.delete(this.auditReport);
 	}
 
-	@SuppressWarnings("unused")
 	@Override
 	public void unbind() {
-		int auditorId;
-		Tuple tuple;
-
-		auditorId = super.getRequest().getPrincipal().getActiveRealm().getId();
-
-		tuple = super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 	}
 
 }

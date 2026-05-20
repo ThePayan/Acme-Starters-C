@@ -38,7 +38,7 @@ public class SponsorDonationListService extends AbstractService<Sponsor, Donatio
 	public void authorise() {
 		boolean status;
 
-		status = this.sponsorship != null && (!this.sponsorship.getDraftMode() || this.sponsorship.getSponsor().isPrincipal());
+		status = this.sponsorship != null && this.sponsorship.getSponsor().isPrincipal();
 
 		super.setAuthorised(status);
 	}

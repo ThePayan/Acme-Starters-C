@@ -16,20 +16,22 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form> 
-	<acme:form-textbox code="fundraiser.strategy.form.label.ticker" path="ticker"/>
-	<acme:form-textbox code="fundraiser.strategy.form.label.name" path="name"/>
-	<acme:form-textarea code="fundraiser.strategy.form.label.description" path="description"/>
-	<acme:form-moment code="fundraiser.strategy.form.label.startMoment" path="startMoment"/>
-	<acme:form-moment code="fundraiser.strategy.form.label.endMoment" path="endMoment"/>
-	<acme:form-url code="fundraiser.strategy.form.label.moreInfo" path="moreInfo"/>
+	<acme:form-textbox code="fundraiser.strategy.form.label.ticker" path="ticker" readonly="${!draftMode}"/>
+	<acme:form-textbox code="fundraiser.strategy.form.label.name" path="name" readonly="${!draftMode}"/>
+	<acme:form-textarea code="fundraiser.strategy.form.label.description" path="description" readonly="${!draftMode}"/>
+	<acme:form-moment code="fundraiser.strategy.form.label.startMoment" path="startMoment" readonly="${!draftMode}"/>
+	<acme:form-moment code="fundraiser.strategy.form.label.endMoment" path="endMoment" readonly="${!draftMode}"/>
+	<acme:form-url code="fundraiser.strategy.form.label.moreInfo" path="moreInfo" readonly="${!draftMode}"/>
 	<acme:form-double code="fundraiser.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-double code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>
-	<acme:form-select code="fundraiser.strategy.form.label.project" path="project" choices="${project}"/>
+	<acme:form-select code="fundraiser.strategy.form.label.project" path="project" choices="${project}" readonly="${!projectDraftMode && !(_command == 'link' )}"/>
 
 	<jstl:choose>	 
 		<jstl:when test="${acme:anyOf(_command, 'show|link') && draftMode == false}">
-			<acme:button code="fundraiser.strategy.form.button.tactic" action="/fundraiser/tactic/list?strategyId=${id}"/>	
-			<acme:submit code="fundraiser.strategy.form.button.link" action="/fundraiser/strategy/link"/>				
+			<acme:button code="fundraiser.strategy.form.button.tactic" action="/fundraiser/tactic/list?strategyId=${id}"/>
+			<jstl:if test="${projectDraftMode}">
+				<acme:submit code="fundraiser.strategy.form.button.link" action="/fundraiser/strategy/link"/>				
+			</jstl:if>
 		</jstl:when>
 		<jstl:when test="${acme:anyOf(_command, 'show|update|delete|publish|link') && draftMode == true}">
 			<acme:button code="fundraiser.strategy.form.button.tactic" action="/fundraiser/tactic/list?strategyId=${id}"/>

@@ -39,9 +39,7 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 	public void authorise() {
 		boolean status;
 
-		status = this.invention != null && //
-			(this.invention.getInventor().isPrincipal() || !this.invention.getDraftMode());
-
+		status = this.invention != null && this.invention.getInventor().isPrincipal();
 		super.setAuthorised(status);
 	}
 
@@ -61,6 +59,7 @@ public class InventorInventionShowService extends AbstractService<Inventor, Inve
 		tuple.put("monthsActive", months);
 		tuple.put("Costs", costs);
 		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.invention.getProject() != null ? this.invention.getProject().getDraftMode() : true);
 	}
 
 }

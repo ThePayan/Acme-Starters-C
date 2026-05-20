@@ -1,11 +1,17 @@
 
 package acme.features.inventor.invention;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.datatypes.Money;
+import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.inventions.Invention;
+import acme.entities.projects.Project;
 import acme.realms.Inventor;
 
 @Service
@@ -67,7 +73,21 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		SelectChoices choices;
+
+		Collection<Project> projects = this.repository.findProjectsByInventorId(this.invention.getInventor().getId());
+		choices = SelectChoices.from(projects, "title", this.invention.getProject());
+
+		Tuple tuple;
+		double months = this.invention.getMonthsActive();
+		Money costs = this.invention.getCosts();
+		tuple = super.unbindObject(this.invention, //
+			"ticker", "startMoment", "endMoment", "name", //
+			"description", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("Costs", costs);
+		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.invention.getProject() != null ? this.invention.getProject().getDraftMode() : true);
 	}
 
 }

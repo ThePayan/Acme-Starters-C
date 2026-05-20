@@ -38,7 +38,7 @@ public class ManagerProjectMemberListService extends AbstractService<Manager, Pr
 	@Override
 	public void authorise() {
 		boolean status;
-		status = this.project != null && (this.project.getManager().isPrincipal() || !this.project.getDraftMode());
+		status = this.project != null && this.project.getManager().isPrincipal();
 		super.setAuthorised(status);
 	}
 

@@ -3,6 +3,7 @@ package acme.features.manager.project;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.projects.Project;
 import acme.realms.Manager;
@@ -52,6 +53,9 @@ public class ManagerProjectUpdateService extends AbstractService<Manager, Projec
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.project, "title", "description", "kickOff", "closeOut", "keyWords", "draftMode");
+		Tuple tuple;
+		tuple = super.unbindObject(this.project, "title", "description", "kickOff", "closeOut", "keyWords", "draftMode");
+		tuple.put("personMonths", this.project.getPersonMonths());
 	}
+
 }

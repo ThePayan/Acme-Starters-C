@@ -38,7 +38,7 @@ public class InventorPartListService extends AbstractService<Inventor, Part> {
 	public void authorise() {
 		boolean status;
 
-		status = this.invention != null && (!this.invention.getDraftMode() || this.invention.getInventor().isPrincipal());
+		status = this.invention != null && this.invention.getInventor().isPrincipal();
 
 		super.setAuthorised(status);
 	}
