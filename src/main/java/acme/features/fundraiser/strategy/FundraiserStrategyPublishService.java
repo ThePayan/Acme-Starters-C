@@ -12,11 +12,16 @@
 
 package acme.features.fundraiser.strategy;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
+import acme.entities.projects.Project;
 import acme.entities.strategies.Strategy;
 import acme.realms.Fundraiser;
 
@@ -90,7 +95,19 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		SelectChoices choices;
+
+		Collection<Project> projects = this.repository.findProjectsByFundraiserId(this.strategy.getFundraiser().getId());
+		choices = SelectChoices.from(projects, "title", this.strategy.getProject());
+
+		Tuple tuple;
+		double months = this.strategy.getMonthsActive();
+		double expectedPercentage = this.strategy.getExpectedPercentage();
+		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("expectedPercentage", expectedPercentage);
+		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.strategy.getProject() != null ? this.strategy.getProject().getDraftMode() : true);
 	}
 
 }

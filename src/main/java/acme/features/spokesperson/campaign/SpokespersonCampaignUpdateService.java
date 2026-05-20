@@ -1,11 +1,16 @@
 
 package acme.features.spokesperson.campaign;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.campaign.Campaign;
+import acme.entities.projects.Project;
 import acme.realms.Spokesperson;
 
 @Service
@@ -53,7 +58,20 @@ public class SpokespersonCampaignUpdateService extends AbstractService<Spokesper
 
 	@Override
 	public void unbind() {
+		SelectChoices choices;
 
-		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		Collection<Project> projects = this.repository.findProjectsBySpokespersonId(this.campaign.getSpokesperson().getId());
+		choices = SelectChoices.from(projects, "title", this.campaign.getProject());
+
+		Tuple tuple;
+		double months = this.campaign.getMonthsActive();
+		Double effort = this.campaign.getEffort();
+		tuple = super.unbindObject(this.campaign, //
+			"ticker", "startMoment", "endMoment", "name", //
+			"description", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("efforts", effort);
+		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.campaign.getProject() != null ? this.campaign.getProject().getDraftMode() : true);
 	}
 }

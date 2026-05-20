@@ -19,8 +19,6 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 	@Autowired
 	private SpokespersonCampaignRepository	repository;
 
-	private Collection<Project>				projects;
-
 	private Campaign						campaign;
 
 	// AbstractService interface -------------------------------------------
@@ -28,13 +26,10 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 
 	@Override
 	public void load() {
-		int inventionId;
+		int id;
 
-		inventionId = super.getRequest().getData("id", int.class);
-		this.campaign = this.repository.findCampaignById(inventionId);
-		this.projects = this.repository.findProjectsByUserAccountId(this.campaign.getSpokesperson().getUserAccount().getId());
-		if (this.campaign.getProject() != null)
-			this.projects.add(this.campaign.getProject());
+		id = super.getRequest().getData("id", int.class);
+		this.campaign = this.repository.findCampaignById(id);
 	}
 
 	@Override
@@ -50,7 +45,8 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 	public void unbind() {
 		SelectChoices choices;
 
-		choices = SelectChoices.from(this.projects, "title", this.campaign.getProject());
+		Collection<Project> projects = this.repository.findProjectsBySpokespersonId(this.campaign.getSpokesperson().getId());
+		choices = SelectChoices.from(projects, "title", this.campaign.getProject());
 
 		Tuple tuple;
 		double months = this.campaign.getMonthsActive();
@@ -61,5 +57,6 @@ public class SpokespersonCampaignShowService extends AbstractService<Spokesperso
 		tuple.put("monthsActive", months);
 		tuple.put("efforts", effort);
 		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.campaign.getProject() != null ? this.campaign.getProject().getDraftMode() : true);
 	}
 }

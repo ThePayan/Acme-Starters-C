@@ -49,7 +49,7 @@ public class AuditorAuditSectionListService extends AbstractService<Auditor, Aud
 	public void authorise() {
 		boolean status;
 
-		status = this.auditReport != null && (!this.auditReport.getDraftMode() || this.auditReport.getAuditor().isPrincipal());
+		status = this.auditReport != null && this.auditReport.getAuditor().isPrincipal();
 
 		super.setAuthorised(status);
 	}

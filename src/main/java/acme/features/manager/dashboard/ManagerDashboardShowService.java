@@ -125,7 +125,9 @@ public class ManagerDashboardShowService extends AbstractService<Manager, Dashbo
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.getRequest().getPrincipal().hasRealmOfType(Manager.class);
+		super.setAuthorised(status);
 	}
 
 	@Override

@@ -23,7 +23,9 @@ public class ManagerProjectListService extends AbstractService<Manager, Project>
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.getRequest().getPrincipal().hasRealmOfType(Manager.class);
+		super.setAuthorised(status);
 	}
 
 	@Override

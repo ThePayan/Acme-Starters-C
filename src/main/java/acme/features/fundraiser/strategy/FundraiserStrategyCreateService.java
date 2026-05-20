@@ -33,7 +33,9 @@ public class FundraiserStrategyCreateService extends AbstractService<Fundraiser,
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.getRequest().getPrincipal().hasRealmOfType(Fundraiser.class);
+		super.setAuthorised(status);
 	}
 
 	@Override

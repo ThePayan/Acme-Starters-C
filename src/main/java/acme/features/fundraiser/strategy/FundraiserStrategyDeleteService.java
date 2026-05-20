@@ -6,7 +6,6 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.models.Tuple;
 import acme.client.services.AbstractService;
 import acme.entities.strategies.Strategy;
 import acme.entities.strategies.Tactic;
@@ -57,13 +56,9 @@ public class FundraiserStrategyDeleteService extends AbstractService<Fundraiser,
 		this.repository.delete(this.strategy);
 	}
 
-	@SuppressWarnings("unused")
 	@Override
 	public void unbind() {
-		int fundraiserId;
-		Tuple tuple;
-		fundraiserId = super.getRequest().getPrincipal().getActiveRealm().getId();
-		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 	}
 
 }

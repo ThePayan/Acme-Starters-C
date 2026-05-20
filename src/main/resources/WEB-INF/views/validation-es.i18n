@@ -20,3 +20,5 @@ acme.validation.unpublished-inventions.message = Los proyectos no se pueden publ
 acme.validation.unpublished-strategies.message = Los proyectos no se pueden publicar si sus estrategias no están publicadas. 
 acme.validation.unpublished-campaigns.message = Los proyectos no se pueden publicar si sus campañas no están publicadas. 
 acme.validation.project-association.message = El proyecto y este elemento deben estar publicados para poder asociarse.
+acme.validation.invalid-data						= Los datos introducidos son inválidos
+acme.validation.link-pub-project					= No se puede asociar un componente sin publicar a un proyecto publicado

@@ -49,8 +49,7 @@ public class AuditorAuditReportShowService extends AbstractService<Auditor, Audi
 	public void authorise() {
 		boolean status;
 
-		status = this.auditReport != null && //
-			(this.auditReport.getAuditor().isPrincipal() || !this.auditReport.getDraftMode());
+		status = this.auditReport != null && this.auditReport.getAuditor().isPrincipal();
 
 		super.setAuthorised(status);
 	}
@@ -71,6 +70,7 @@ public class AuditorAuditReportShowService extends AbstractService<Auditor, Audi
 		tuple.put("monthsActive", months);
 		tuple.put("allHours", hours);
 		tuple.put("project", choices);
+		tuple.put("projectDraftMode", true);
 	}
 
 }

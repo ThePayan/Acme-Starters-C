@@ -21,8 +21,6 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 	@Autowired
 	private FundraiserStrategyRepository	repository;
 
-	private Collection<Project>				projects;
-
 	private Strategy						strategy;
 
 	// AbstractService interface -------------------------------------------
@@ -30,21 +28,16 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 
 	@Override
 	public void load() {
-		int inventionId;
+		int id;
 
-		inventionId = super.getRequest().getData("id", int.class);
-		this.strategy = this.repository.findStrategyById(inventionId);
-		this.projects = this.repository.findProjectsByUserAccountId(this.strategy.getFundraiser().getUserAccount().getId());
-		if (this.strategy.getProject() != null)
-			this.projects.add(this.strategy.getProject());
+		id = super.getRequest().getData("id", int.class);
+		this.strategy = this.repository.findStrategyById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
-
-		int fundraiserId = this.repository.findFundraiserByAccountId(super.getRequest().getPrincipal().getAccountId());
-		status = super.getRequest().getPrincipal().hasRealmOfType(Fundraiser.class) && this.strategy != null && this.strategy.getFundraiser().getId() == fundraiserId;
+		status = this.strategy != null && this.strategy.getFundraiser().isPrincipal();
 		super.setAuthorised(status);
 	}
 
@@ -52,7 +45,9 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 	public void unbind() {
 		SelectChoices choices;
 
-		choices = SelectChoices.from(this.projects, "title", this.strategy.getProject());
+		Collection<Project> projects = this.repository.findProjectsByFundraiserId(this.strategy.getFundraiser().getId());
+		choices = SelectChoices.from(projects, "title", this.strategy.getProject());
+
 		Tuple tuple;
 		double months = this.strategy.getMonthsActive();
 		double expectedPercentage = this.strategy.getExpectedPercentage();
@@ -60,6 +55,7 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 		tuple.put("monthsActive", months);
 		tuple.put("expectedPercentage", expectedPercentage);
 		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.strategy.getProject() != null ? this.strategy.getProject().getDraftMode() : true);
 	}
 
 }

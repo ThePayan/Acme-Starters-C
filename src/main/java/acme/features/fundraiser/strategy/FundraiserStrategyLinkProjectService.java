@@ -36,8 +36,10 @@ public class FundraiserStrategyLinkProjectService extends AbstractService<Fundra
 	@Override
 	public void authorise() {
 		boolean status;
-
-		status = this.strategy != null && this.strategy.getFundraiser().isPrincipal();
+		boolean projectDraftMode = true;
+		if (this.strategy != null && this.strategy.getProject() != null)
+			projectDraftMode = this.strategy.getProject().getDraftMode();
+		status = this.strategy != null && projectDraftMode && this.strategy.getFundraiser().isPrincipal();
 		super.setAuthorised(status);
 	}
 
@@ -49,6 +51,12 @@ public class FundraiserStrategyLinkProjectService extends AbstractService<Fundra
 	@Override
 	public void validate() {
 		super.validateObject(this.strategy);
+		{
+			boolean linkToPubProject = true;
+			if (this.strategy.getProject() != null)
+				linkToPubProject = this.strategy.getProject().getDraftMode() || !this.strategy.getDraftMode();
+			super.state(linkToPubProject, "*", "acme.validation.link-pub-project");
+		}
 	}
 
 	@Override
@@ -59,12 +67,17 @@ public class FundraiserStrategyLinkProjectService extends AbstractService<Fundra
 	@Override
 	public void unbind() {
 		SelectChoices choices;
-		Tuple tuple;
 
 		Collection<Project> projects = this.repository.findProjectsByFundraiserId(this.strategy.getFundraiser().getId());
 		choices = SelectChoices.from(projects, "title", this.strategy.getProject());
 
-		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		Tuple tuple;
+		double months = this.strategy.getMonthsActive();
+		double expectedPercentage = this.strategy.getExpectedPercentage();
+		tuple = super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("expectedPercentage", expectedPercentage);
 		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.strategy.getProject() != null ? this.strategy.getProject().getDraftMode() : true);
 	}
 }

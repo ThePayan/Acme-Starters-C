@@ -17,6 +17,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
 import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.campaign.Campaign;
@@ -130,7 +131,9 @@ public class ManagerProjectPublishService extends AbstractService<Manager, Proje
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.project, "title", "description", "kickOff", "closeOut", "keyWords", "draftMode");
+		Tuple tuple;
+		tuple = super.unbindObject(this.project, "title", "description", "kickOff", "closeOut", "keyWords", "draftMode");
+		tuple.put("personMonths", this.project.getPersonMonths());
 	}
 
 }

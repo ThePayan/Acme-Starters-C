@@ -61,19 +61,23 @@ public class ManagerProjectMemberCreateService extends AbstractService<Manager, 
 	@Override
 	public void validate() {
 		super.validateObject(this.projectMember);
-		boolean possessesRole = false;
-		{
-			UserAccount account = this.projectMember.getMember().getUserAccount();
-			if (account != null)
-				possessesRole = account.hasRealmOfType(this.projectMember.getRole().getRealmClass());
-			super.state(possessesRole, "role", "acme.validation.member-lacks-role");
-		}
-		{
-			boolean uniqueProjectMember = false;
-			ProjectMember existingProjectMember = null;
-			existingProjectMember = this.repository.findByRoleAndMemberIdAndProjectId(this.projectMember.getRole(), this.projectMember.getMember().getId(), this.projectMember.getProject().getId());
-			uniqueProjectMember = existingProjectMember == null || existingProjectMember.equals(this.projectMember);
-			super.state(uniqueProjectMember, "*", "acme.validation.duplicated-member");
+		if (this.projectMember.getMember() == null || this.projectMember.getRole() == null)
+			super.state(false, "*", "acme.validation.invalid-data");
+		else {
+			{
+				boolean possessesRole = false;
+				UserAccount account = this.projectMember.getMember().getUserAccount();
+				if (account != null)
+					possessesRole = account.hasRealmOfType(this.projectMember.getRole().getRealmClass());
+				super.state(possessesRole, "role", "acme.validation.member-lacks-role");
+			}
+			{
+				boolean uniqueProjectMember = false;
+				ProjectMember existingProjectMember = null;
+				existingProjectMember = this.repository.findByRoleAndMemberIdAndProjectId(this.projectMember.getRole(), this.projectMember.getMember().getId(), this.projectMember.getProject().getId());
+				uniqueProjectMember = existingProjectMember == null || existingProjectMember.equals(this.projectMember);
+				super.state(uniqueProjectMember, "*", "acme.validation.duplicated-member");
+			}
 		}
 	}
 

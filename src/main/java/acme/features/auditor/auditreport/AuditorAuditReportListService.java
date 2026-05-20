@@ -36,7 +36,9 @@ public class AuditorAuditReportListService extends AbstractService<Auditor, Audi
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.getRequest().getPrincipal().hasRealmOfType(Auditor.class);
+		super.setAuthorised(status);
 	}
 
 	@Override

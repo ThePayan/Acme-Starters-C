@@ -36,8 +36,10 @@ public class SpokespersonCampaignLinkProjectService extends AbstractService<Spok
 	@Override
 	public void authorise() {
 		boolean status;
-
-		status = this.campaign != null && this.campaign.getSpokesperson().isPrincipal();
+		boolean projectDraftMode = true;
+		if (this.campaign != null && this.campaign.getProject() != null)
+			projectDraftMode = this.campaign.getProject().getDraftMode();
+		status = this.campaign != null && projectDraftMode && this.campaign.getSpokesperson().isPrincipal();
 		super.setAuthorised(status);
 	}
 
@@ -49,6 +51,12 @@ public class SpokespersonCampaignLinkProjectService extends AbstractService<Spok
 	@Override
 	public void validate() {
 		super.validateObject(this.campaign);
+		{
+			boolean linkToPubProject = true;
+			if (this.campaign.getProject() != null)
+				linkToPubProject = this.campaign.getProject().getDraftMode() || !this.campaign.getDraftMode();
+			super.state(linkToPubProject, "*", "acme.validation.link-pub-project");
+		}
 
 	}
 
@@ -60,12 +68,19 @@ public class SpokespersonCampaignLinkProjectService extends AbstractService<Spok
 	@Override
 	public void unbind() {
 		SelectChoices choices;
-		Tuple tuple;
 
-		Collection<Project> projects = this.repository.findProjectsByUserAccountId(this.campaign.getSpokesperson().getUserAccount().getId());
+		Collection<Project> projects = this.repository.findProjectsBySpokespersonId(this.campaign.getSpokesperson().getId());
 		choices = SelectChoices.from(projects, "title", this.campaign.getProject());
 
-		tuple = super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		Tuple tuple;
+		double months = this.campaign.getMonthsActive();
+		Double effort = this.campaign.getEffort();
+		tuple = super.unbindObject(this.campaign, //
+			"ticker", "startMoment", "endMoment", "name", //
+			"description", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("efforts", effort);
 		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.campaign.getProject() != null ? this.campaign.getProject().getDraftMode() : true);
 	}
 }

@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.datatypes.Money;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
@@ -37,8 +38,10 @@ public class InventorInventionLinkProjectService extends AbstractService<Invento
 	@Override
 	public void authorise() {
 		boolean status;
-
-		status = this.invention != null && this.invention.getInventor().isPrincipal();
+		boolean projectDraftMode = true;
+		if (this.invention != null && this.invention.getProject() != null)
+			projectDraftMode = this.invention.getProject().getDraftMode();
+		status = this.invention != null && projectDraftMode && this.invention.getInventor().isPrincipal();
 		super.setAuthorised(status);
 	}
 
@@ -50,6 +53,12 @@ public class InventorInventionLinkProjectService extends AbstractService<Invento
 	@Override
 	public void validate() {
 		super.validateObject(this.invention);
+		{
+			boolean linkToPubProject = true;
+			if (this.invention.getProject() != null)
+				linkToPubProject = this.invention.getProject().getDraftMode() || !this.invention.getDraftMode();
+			super.state(linkToPubProject, "*", "acme.validation.link-pub-project");
+		}
 	}
 
 	@Override
@@ -60,12 +69,19 @@ public class InventorInventionLinkProjectService extends AbstractService<Invento
 	@Override
 	public void unbind() {
 		SelectChoices choices;
-		Tuple tuple;
 
 		Collection<Project> projects = this.repository.findProjectsByInventorId(this.invention.getInventor().getId());
 		choices = SelectChoices.from(projects, "title", this.invention.getProject());
 
-		tuple = super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		Tuple tuple;
+		double months = this.invention.getMonthsActive();
+		Money costs = this.invention.getCosts();
+		tuple = super.unbindObject(this.invention, //
+			"ticker", "startMoment", "endMoment", "name", //
+			"description", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("Costs", costs);
 		tuple.put("project", choices);
+		tuple.put("projectDraftMode", this.invention.getProject() != null ? this.invention.getProject().getDraftMode() : true);
 	}
 }

@@ -12,11 +12,16 @@
 
 package acme.features.auditor.auditreport;
 
+import java.util.Collection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.auditreport.AuditReport;
+import acme.entities.projects.Project;
 import acme.realms.Auditor;
 
 @Service
@@ -73,8 +78,21 @@ public class AuditorAuditReportUpdateService extends AbstractService<Auditor, Au
 
 	@Override
 	public void unbind() {
+		SelectChoices choices;
+		Tuple tuple;
 
-		super.unbindObject(this.auditReport, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		Collection<Project> projects = this.repository.findPublishedProjects();
+		choices = SelectChoices.from(projects, "title", this.auditReport.getProject());
+
+		double months = this.auditReport.getMonthsActive();
+		int hours = this.auditReport.getAllHours();
+		tuple = super.unbindObject(this.auditReport, //
+			"ticker", "startMoment", "endMoment", "name", //
+			"description", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("allHours", hours);
+		tuple.put("project", choices);
+		tuple.put("projectDraftMode", true);
 	}
 
 }

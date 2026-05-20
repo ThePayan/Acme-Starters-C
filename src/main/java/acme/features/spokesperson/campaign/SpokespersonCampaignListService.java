@@ -29,7 +29,9 @@ public class SpokespersonCampaignListService extends AbstractService<Spokesperso
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.getRequest().getPrincipal().hasRealmOfType(Spokesperson.class);
+		super.setAuthorised(status);
 	}
 
 	@Override

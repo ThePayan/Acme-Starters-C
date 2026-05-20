@@ -33,7 +33,9 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(true);
+		boolean status;
+		status = this.getRequest().getPrincipal().hasRealmOfType(Inventor.class);
+		super.setAuthorised(status);
 	}
 
 	@Override
@@ -53,7 +55,6 @@ public class InventorInventionCreateService extends AbstractService<Inventor, In
 
 	@Override
 	public void unbind() {
-
 		super.unbindObject(this.invention, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
 	}
 

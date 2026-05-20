@@ -6,6 +6,7 @@ import java.util.Collection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.datatypes.Money;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
@@ -64,13 +65,19 @@ public class SponsorSponsorshipLinkProjectService extends AbstractService<Sponso
 
 	@Override
 	public void unbind() {
-		Tuple tuple;
 		SelectChoices choices;
+		Tuple tuple;
 
 		Collection<Project> projects = this.repository.findPublishedProjects();
 		choices = SelectChoices.from(projects, "title", this.sponsorship.getProject());
 
-		tuple = super.unbindObject(this.sponsorship, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "draftMode");
+		double months = this.sponsorship.getMonthsActive();
+		Money money = this.sponsorship.getTotalMoney();
+		tuple = super.unbindObject(this.sponsorship, //
+			"ticker", "startMoment", "endMoment", "name", //
+			"description", "moreInfo", "draftMode");
+		tuple.put("monthsActive", months);
+		tuple.put("totalMoney", money);
 		tuple.put("project", choices);
 	}
 
